@@ -1,0 +1,47 @@
+*{
+  margin:0;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/Layout/fonts/Montserrat-ExtraBold.ttf") format("opentype");
+  font-weight: normal;
+}
+
+.topnav{
+  overflow:hidden;
+  background-color: #18A0FB;
+  font-size: 17px;
+  padding: 40px 16px;
+}
+
+h2{
+  position: absolute;
+  font-family: sans-serif;
+  color: white;
+  padding: 0px 50px;
+}
+
+h3{
+  display:block;
+  font-family: sans-serif;
+  float:right;
+  padding-right: 50px;
+}
+
+ p{
+  font-family: "Monsterrat", Arial;
+  font-size: 50px;
+  font-weight: bold;
+  width: 8em;
+  height: 10em;
+  margin: 0;
+   position: absolute;               /* 2 */
+   top: 30%;
+   left: 10%;                      /* 3 */
+}
+
+.container{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+}
