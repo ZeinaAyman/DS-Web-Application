@@ -53,13 +53,24 @@
    font-size: 24px;
    display: block;
  }
- .empinput
+ .empinput,.emplist
  {
   margin-left: 3.5%;
   background-color: #404B69;
   border-color: black;
   width: 93%;
  }
+ .createbut
+ {
+   width: 20%;
+   position: absolute;
+   left: 40%;
+   top: 80%;
+   border-radius: 6%;
+   height: 10%;
+   background-color: #E3B7A5;
+ }
+
 </style>
 <div class="header">
 <p class="title">Design Solutions</p>
@@ -71,8 +82,26 @@
 </div>
 
   <div class="container">
-    <label class="empname">Employee Name</label>
+    <form class="" action="index.html" method="post">
+      <label class="empname">Employee Name</label>
 
+      <input type="text" class="empinput" value="John">
+      <label class="empname">Employee Email</label>
+
+      <input type="text" class="empinput" value="Deo@ds.com">
+      <label class="empname">Employee role</label>
+
+     <select class="emplist" >
+      <option value="volvo">Designer</option>
+      <option value="volvo">Manager</option>
+     </select>
+
+      <label class="empname">Employee Password</label>
+
+      <input type="text" class="empinput" value="">
+      <input type="submit" class="createbut" value="Create">
+
+    </form>
 
   </div>
 </div>
