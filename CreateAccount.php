@@ -5,7 +5,61 @@
     margin: 0;
     background-color: #404B69;
   }
+  .create-acc
+  {
+   margin-left: 42%;
+    color: E3B7A5;
+    font-size: 36;
+    font-family: : "Montserrat";
+    opacity: 1;
+  }
+  .createacccontainer
+  {
+  position: fixed;
+  top: 30%;
+  left: 35%;
+  width: 30%;
+  height: 60%;
+  border-width: 2px;
+  border-color: #E3B7A5;
+  border-style: solid;
+  }
 
+  .empname
+  {
+   margin-top: 2.5%;
+   margin-bottom: 2.5%;
+   margin-left: 3.5%;
+   color : white;
+   font-size: 24px;
+   display: block;
+  }
+  .empinput,.emplist
+  {
+  margin-left: 3.5%;
+  background-color: #404B69;
+  border-color: black;
+  width: 93%;
+  }
+  .createbut
+  {
+   width: 20%;
+   position: absolute;
+   left: 40%;
+   top: 80%;
+   border-radius: 6%;
+   height: 10%;
+   background-color: #E3B7A5;
+  >>>>>>> c0dada39a38f180432399ab89780aee400c076b0
+  }
+  .container{
+    background-color: #E3B7A5;
+    width: 37%;
+    position: absolute;
+    top: 30%;
+    border-radius: 2px;
+    left: 50%;
+  }
 
 </style>
 <div class="topnav">
