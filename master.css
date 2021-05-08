@@ -37,7 +37,7 @@
 h1{
   font-family: sans-serif;
   color: #EDEAD3;
-      margin-bottom: 25px;
+      margin-bottom: 40px;
 }
 h2{
   position: absolute;
@@ -60,16 +60,8 @@ top: 22px;
 right: 25px;
 color: #EDEAD3;
 }
- p{
-  font-family: "Monsterrat", Arial;
-  font-size: 50px;
-  font-weight: bold;
-  width: 8em;
-  height: 10em;
-  margin: 0;
-   position: absolute;               /* 2 */
-   top: 30%;
-   left: 10%;                      /* 3 */
+li{
+  padding: 10px;
 }
 
 .container{
@@ -87,7 +79,7 @@ color: #EDEAD3;
   height: 100%;
 }
 .homecontainer{
-  width: 50%;
+  width: 100%;
   position: relative;
   margin: 7%;
   bottom: 65px;
@@ -101,6 +93,16 @@ bottom: 38px;
 
   background-color: #283149;
 }
+.timeline{
+  right: 300px;
+  float: right;
+  position: relative;
+  width: 26%;
+  background-color: #E3B7A5;
+}
+.test{
+  margin-bottom: 10%;
+}
 .homecontainer h2{
   font-weight: lighter;
 }
@@ -108,7 +110,9 @@ bottom: 38px;
   font-family: Arial;
   margin: 30px;
 }
-
+.recentprojects{
+  width: 50%;
+}
 .input{
   position: relative;
 margin: 45px 0;
