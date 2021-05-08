@@ -1,5 +1,6 @@
 *{
   margin:0;
+  box-sizing: border-box;
 }
 @font-face {
   font-family: "Montserrat";
@@ -33,6 +34,11 @@
   color: #EDEAD3;
   padding-left: 35px;
 }
+h1{
+  font-family: sans-serif;
+  color: #EDEAD3;
+      margin-bottom: 25px;
+}
 h2{
   position: absolute;
   font-family: sans-serif;
@@ -41,12 +47,19 @@ h2{
 }
 
 h3{
-  display:block;
+  position: absolute;
   font-family: sans-serif;
-  float:right;
-  padding-right: 50px;
+  font-weight: lighter;
+  color: #EDEAD3;
+  padding: 5px 80px;
 }
-
+h4{
+  position: relative;
+float: right;
+top: 22px;
+right: 25px;
+color: #EDEAD3;
+}
  p{
   font-family: "Monsterrat", Arial;
   font-size: 50px;
@@ -67,13 +80,26 @@ h3{
   border-radius: 2px;
   left: 50%;
 }
-
+.flex-container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
 .homecontainer{
-  width: 70%;
-  position: absolute;
-  top: 30%;
-  left: 5%;
+  width: 50%;
+  position: relative;
+  margin: 7%;
+  bottom: 65px;
+  left: 60px;
   border-radius: 2px;
+}
+.color{
+  margin:0;
+  position: relative;
+bottom: 38px;
+
+  background-color: #283149;
 }
 .homecontainer h2{
   font-weight: lighter;
@@ -192,22 +218,39 @@ width: 93%;
  height: 10%;
  background-color: #E3B7A5;
 }
+.img2{
+  border-radius: 50%;
+  width: 60% !important;
+  margin-left: 25px;
+}
+.image{
+   width: 32%;
+   float: left;
+   margin: 3px;
+}
+#color{
+   width: 23%;
+   float: left;
+   margin: 3px;
+}
+#first
+{
+  margin: 0 auto;
+  width:80%;
+  background-color: white;
+  border: 0.2em solid black;
+  flex-shrink:0;
+  flex-grow:1;
+}
+#second
+{
+   width:100%;
+   min-height:50%;
+   padding:50px;
+   background:#eeeeee;
+   box-shadow: 2px 1px 2px 1px #888;
+}
 img {
-  border-radius: 50%;
-  width: 18%;
-  margin-left: 25px;
-}
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 17%;
-  border-radius: 50%;
-  margin-left: 25px;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: #283149;
-}
-.homecontainer:hover .overlay {
-  opacity: 0.5;
+  border-radius: 10%;
+  width: 95%;
 }
