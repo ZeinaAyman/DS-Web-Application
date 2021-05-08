@@ -20,6 +20,19 @@
   padding: 40px 16px;
 }
 
+.navbar{
+  overflow:hidden;
+  background-color: #283149;
+  font-size: 17px;
+  padding: 20px 16px;
+}
+.navbar .links a{
+  float: right;
+  text-decoration: none;
+  font-family: Arial;
+  color: #EDEAD3;
+  padding-left: 35px;
+}
 h2{
   position: absolute;
   font-family: sans-serif;
@@ -55,6 +68,16 @@ h3{
   left: 50%;
 }
 
+.homecontainer{
+  width: 37%;
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  border-radius: 2px;
+}
+.homecontainer h2{
+  font-weight: lighter;
+}
 .container h1{
   font-family: Arial;
   margin: 30px;
@@ -121,4 +144,12 @@ margin: 45px 0;
 }
 .buttonx:hover{
   background-color: #283149;
+}
+
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
 }
