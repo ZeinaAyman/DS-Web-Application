@@ -1,0 +1,76 @@
+body{
+  font-family: "Monsterrat", Arial;
+  margin: 0px;
+  background: rgba(64,75,105,1);
+  height: 1200px;
+}
+.title{
+  color: rgba(237,234,211,1);
+  position: relative;
+  top: 80px;
+  left: 80px;
+}
+.project{
+  color: rgba(237,234,211,1);
+  font-size: 17px;
+  margin-bottom: 30px;
+  position: relative;
+  width: 80%;
+  height: 250px;
+  left: 60px;
+  top: 140px;
+
+  background: #E3B7A5;
+  border: 2px solid #EDEAD3;
+  box-sizing: border-box;
+  border-radius: 45px;
+}
+.p-img{
+  position: relative;
+  width: 25%;
+  height: 80%;
+  left: 20px;
+  top: 20px;
+
+  background: #C4C4C4;
+  border-radius: 45px;
+
+  float: left;
+}
+.p-info{
+  position: relative;
+  left: 5%;
+  top: 10%;
+  float: left;
+}
+.p-status{
+  margin: 0px;
+  position: relative;
+  top: 80%;
+  float: right;
+}
+.status-orange{
+  color: #FFAA05;
+
+}
+.status-green{
+  color: #09FA04;
+
+}
+.status-red{
+  color: #FF0000;
+
+}
+h3{
+  margin-bottom: 10px;
+  width: 200px;
+}
+h1{
+  margin: 0px;
+  width: 200px;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/Layout/fonts/Montserrat-ExtraBold.ttf") format("opentype");
+  font-weight: normal;
+}
