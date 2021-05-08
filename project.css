@@ -10,6 +10,20 @@ body{
   top: 80px;
   left: 80px;
 }
+.add-p{
+  font-size: 25px;
+  color: rgba(237,234,211,1);
+  position: relative;
+  top: 110px;
+  left: 870px;
+}
+.add-p-icon{
+  position: relative;
+  top: 10px;
+  left: 5px;
+  margin: 0px;
+  width: 40px;
+}
 .project{
   color: rgba(237,234,211,1);
   font-size: 17px;
@@ -21,7 +35,7 @@ body{
   top: 140px;
 
   background: #E3B7A5;
-  border: 2px solid #EDEAD3;
+  border: 2px solid #E3B7A5;
   box-sizing: border-box;
   border-radius: 45px;
 }
