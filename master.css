@@ -142,6 +142,18 @@ margin: 45px 0;
     color: rgba(0, 0, 0, 0.6);
     transition: top .4s, font-size .4s, transform .4s;
 }
+.input .option{
+  position: absolute;
+    top: calc(38% + 4px);
+    transform: translateY(-50%);
+    left: 75px;
+    color: #EDEAD3;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Arial;
+    color: rgba(0, 0, 0, 0.6);
+    transition: top .4s, font-size .4s, transform .4s;
+}
 .input .placeholder.selected {
     font-size: 14px;
     transform: translateX(-13px);
@@ -169,7 +181,7 @@ margin: 45px 0;
   border-radius: 6px;
 }
 .button:hover{
-  background-color: #283149;
+  background-color: #5F2934;
 }
 
 .buttonx{

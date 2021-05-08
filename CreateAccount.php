@@ -52,10 +52,14 @@
    border-radius: 6%;
    height: 10%;
    background-color: #76323F;
-  >>>>>>> c0dada39a38f180432399ab89780aee400c076b0
   }
 
-
+.input{
+  text-align: center;
+}
+.input .placeholder{
+  left: 145px;
+}
 </style>
 <div class="topnav">
   <h2>Designs Solutions</h2>
@@ -67,26 +71,54 @@
 </div>
 
   <div class="createacccontainer">
-    <form class="" action="index.html" method="post">
-      <label class="empname">Employee Name</label>
-
-      <input type="text" class="empinput" value="John">
-      <label class="empname">Employee Email</label>
-
-      <input type="text" class="empinput" value="Deo@ds.com">
-      <label class="empname">Employee role</label>
-
-     <select class="emplist" >
-      <option value="volvo">Designer</option>
-      <option value="volvo">Manager</option>
-     </select>
-
-      <label class="empname">Employee Password</label>
-
-      <input type="text" class="empinput" value="">
-      <input type="submit" class="createbut" value="Create">
-
+    <form action= "" method="post">
+      <div class="input">
+        <input class="info" type="text" placeholder="Employee Name"  name="name">
+      </div>
+      <div class="input">
+        <input class="info" type="text" placeholder="Employee Email" name="email"><br>
+      </div>
+      <div class="input">
+        <select class ="info">
+          <option disabled selected>Employee Role</option>
+          <option value="2">Designer</option>
+          <option value="3">Manager</option>
+        </select>
+      </div>
+      <div class="input">
+        <input class="info" type="password" placeholder="Password" name="password"><br>
+      </div>
+      <input class="button" type="submit" value="Create" name="Submit">
     </form>
 
   </div>
 </div>
+<script type="text/javascript">
+var inputs = document.querySelectorAll('.input input');
+for (let i = 0; i < inputs.length; i++) {
+  var placeholder = inputs[i].getAttribute('placeholder');
+  var newPlaceholder = document.createElement('div');
+  newPlaceholder.setAttribute('id', 'input' + i);
+  newPlaceholder.classList.add('placeholder');
+  newPlaceholder.innerHTML = placeholder;
+  inputs[i].setAttribute('placeholder', '');
+  inputs[i].parentElement.appendChild(newPlaceholder);
+  placeholder = document.getElementById('input' + i);
+  if (inputs[i].value.length > 0) {
+    placeholder.classList.add('selected');
+  } else {
+    placeholder.classList.remove('selected');
+  }
+
+  inputs[i].addEventListener('input', function() {
+    var placeholder = document.getElementById('input' + i);
+    if (this.value.length > 0) {
+      placeholder.classList.add('selected');
+      this.parentElement.classList.add('selected');
+    } else {
+      placeholder.classList.remove('selected');
+      this.parentElement.classList.remove('selected');
+    }
+  });
+}
+</script>
