@@ -51,6 +51,7 @@ h3{
   width: 37%;
   position: absolute;
   top: 30%;
+  border-radius: 2px;
   left: 50%;
 }
 
@@ -89,7 +90,6 @@ margin: 45px 0;
     outline: 0;
     background-color: #C2A199;
     position: relative;
-    text-transform: uppercase;
 }
 .button{
   background-color: #404B69;
@@ -99,8 +99,26 @@ margin: 45px 0;
   width: 24%;
   cursor: pointer;
   margin: 15px 57px;
+  margin-top: 2px;
   border-radius: 6px;
 }
 .button:hover{
+  background-color: #283149;
+}
+
+.buttonx{
+  display: block;
+  margin: 0px auto;
+  background-color: #404B69;
+  border: none;
+  padding: 14px 17px;
+  color: #EDEAD3;
+  width: 29%;
+  margin-top: 2%;
+  margin-bottom: 10%;
+  cursor: pointer;
+  border-radius: 6px;
+}
+.buttonx:hover{
   background-color: #283149;
 }
