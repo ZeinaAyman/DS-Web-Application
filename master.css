@@ -64,7 +64,13 @@ li{
   padding: 10px;
   color: #76323F;
 }
-
+.error-msg{
+  position: relative;
+  left: 45%;
+  color: #76323F;
+  font-style: bold;
+  font-size: 20px;
+}
 .container{
   background-color: #B1DBAD;
   width: 37%;

@@ -1,3 +1,23 @@
+<?php
+include 'DB.php';
+$msg='';
+
+ if(isset($_POST['Submit']))
+        {
+          $email=$_POST['email'];
+          $password=$_POST['password'];
+          $sql = "SELECT * FROM user Where Email='".$email."' And Password='".$password."'";
+          $result = $conn->query($sql);
+          if ($result->num_rows > 0) {
+            echo "done";
+            header("Location: Home.php");
+          }
+          else {
+            $msg='not found';
+          }
+
+        }
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -21,13 +41,18 @@
         <h1 style="color: #76323F;">Sign In</h1>
         <form action= "" method="post">
           <div class="input">
-            <input class="info" type="text" placeholder="Email"  name="name">
+            <input class="info" type="text" placeholder="Email"  name="email">
           </div>
           <div class="input">
             <input class="info" type="password" placeholder="Password" name="password"><br>
           </div>
         	<input class="button" type="submit" value="Log in" name="Submit">
         </form>
+        <div class="error-msg">
+          <?php if ($msg!='') {
+            echo $msg;
+          } ?>
+        </div>
       </div>
   </body>
   <script type="text/javascript">
