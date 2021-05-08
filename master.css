@@ -15,7 +15,7 @@
 
 .topnav{
   overflow:hidden;
-  background-color: #18A0FB;
+  background-color: #283149;
   font-size: 17px;
   padding: 40px 16px;
 }
@@ -23,7 +23,7 @@
 h2{
   position: absolute;
   font-family: sans-serif;
-  color: white;
+  color: #EDEAD3;
   padding: 0px 50px;
 }
 
@@ -47,12 +47,60 @@ h3{
 }
 
 .container{
+  background-color: #E3B7A5;
+  width: 37%;
   position: absolute;
-  top: 40%;
+  top: 30%;
   left: 50%;
 }
 
 .container h1{
   font-family: Arial;
-  padding-bottom: 40px;
+  margin: 30px;
+}
+
+.input{
+  position: relative;
+margin: 45px 0;
+}
+ .input .placeholder{
+  position: absolute;
+    top: calc(38% + 4px);
+    transform: translateY(-50%);
+    left: 75px;
+    color: #EDEAD3;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Arial;
+    color: rgba(0, 0, 0, 0.6);
+    transition: top .4s, font-size .4s, transform .4s;
+}
+.input .placeholder.selected {
+    font-size: 14px;
+    transform: translateX(-13px);
+    top: -17px;
+}
+.info{
+  width: 60%;
+    padding: 10px 20px;
+    border: 0;
+    margin-left: 10%;
+    font-size: 18px;
+    outline: 0;
+    background-color: #C2A199;
+    position: relative;
+    text-transform: uppercase;
+}
+.button{
+  background-color: #404B69;
+  border: none;
+  padding: 9px 18px;
+  color: #EDEAD3;
+  width: 24%;
+  cursor: pointer;
+  margin: 15px 57px;
+  border-radius: 6px;
+}
+.button:hover{
+  background-color: #283149;
 }
