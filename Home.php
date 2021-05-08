@@ -13,8 +13,8 @@
   <body>
     <div class="flex-container">
       <div class="homecontainer">
-        <h1>Recent Projects</h1>
-        <div class="projects">
+        <div class="recentprojects">
+          <h1>Recent Projects</h1>
           <div class="image">
             <img class="img2" src="images/SEO-illustrations-Project-02.png" alt="Avatar" height="150">
             <h3 style="padding: 5px 66px;">Project 1</h3>
@@ -26,6 +26,19 @@
           <div class="image">
             <img class="img2" src="images/SEO-illustrations-Project-02.png" alt="Avatar" height="150">
             <h3 style="padding: 5px 66px;">Project 3</h3>
+          </div>
+          <h3 style="position: absolute; bottom: 0px; left: 500px;">Create New Project</h3>
+        </div>
+
+        <div class="timeline">
+            <h1 style="color: #283149; padding: 20px; padding-bottom: 10px; margin-bottom: 0px;">Timeline</h1>
+          <div class="test">
+            <ul>
+              <li>project 35 end date 19/7/2021</li>
+              <li>project 35 end date 19/7/2021</li>
+              <li>project 35 end date 19/7/2021</li>
+              <li>project 35 end date 19/7/2021</li>
+            </ul>
           </div>
         </div>
       </div>
