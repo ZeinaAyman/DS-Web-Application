@@ -11,8 +11,15 @@
   </head>
   <body>
     <div class="homecontainer">
-      <h2>Recent Projects</h2>
-      <span class="dot"></span>
+      <h2 style="top: -30%;">Recent Projects</h2>
+      <div class="projects">
+        <img src="images/Project-Management-Mantenimiento-1.jpg" alt="Avatar">
+
+        <div class="overlay">
+
+        </div>
+
+      </div>
     </div>
   </body>
 </html>
