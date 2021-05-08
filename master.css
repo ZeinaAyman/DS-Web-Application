@@ -122,3 +122,50 @@ margin: 45px 0;
 .buttonx:hover{
   background-color: #283149;
 }
+
+.create-acc
+{
+ margin-left: 42%;
+  color: E3B7A5;
+  font-size: 36;
+  font-family: : "Montserrat";
+  opacity: 1;
+}
+.createacccontainer
+{
+position: fixed;
+top: 30%;
+left: 35%;
+width: 30%;
+height: 60%;
+border-width: 2px;
+border-color: #E3B7A5;
+border-style: solid;
+}
+
+.empname
+{
+ margin-top: 2.5%;
+ margin-bottom: 2.5%;
+ margin-left: 3.5%;
+ color : white;
+ font-size: 24px;
+ display: block;
+}
+.empinput,.emplist
+{
+margin-left: 3.5%;
+background-color: #404B69;
+border-color: black;
+width: 93%;
+}
+.createbut
+{
+ width: 20%;
+ position: absolute;
+ left: 40%;
+ top: 80%;
+ border-radius: 6%;
+ height: 10%;
+ background-color: #E3B7A5;
+}
