@@ -14,14 +14,13 @@
       <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit</p>
 
       <div class="container">
-        <h1>Login</h1>
+        <h1>Sign In</h1>
         <form action= "" method="post">
         	Name:<br>
         	<input type="text" name="name">  <br>
         	Password:<br>
         	<input type="password" name="password"><br>
         	<input type="submit" value="Submit" name="Submit">
-        	<input type="reset">
         </form>
       </div>
   </body>
