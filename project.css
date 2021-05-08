@@ -1,18 +1,18 @@
 body{
   font-family: "Monsterrat", Arial;
   margin: 0px;
-  background: rgba(64,75,105,1);
+  background: #847F79;
   height: 1200px;
 }
 .title{
-  color: rgba(237,234,211,1);
+  color: #D6E8E9;
   position: relative;
   top: 80px;
   left: 80px;
 }
 .add-p{
   font-size: 25px;
-  color: rgba(237,234,211,1);
+  color: #D6E8E9;
   position: relative;
   top: 110px;
   left: 870px;
@@ -25,7 +25,7 @@ body{
   width: 40px;
 }
 .project{
-  color: rgba(237,234,211,1);
+  color: #76323F;
   font-size: 17px;
   margin-bottom: 30px;
   position: relative;
@@ -34,7 +34,7 @@ body{
   left: 60px;
   top: 140px;
 
-  background: #E3B7A5;
+  background: #D6E8E9;
   border: 2px solid #E3B7A5;
   box-sizing: border-box;
   border-radius: 45px;
@@ -52,6 +52,7 @@ body{
   float: left;
 }
 .p-info{
+  color: #76323F;
   position: relative;
   left: 5%;
   top: 10%;
@@ -61,7 +62,13 @@ body{
   margin: 0px;
   position: relative;
   top: 80%;
-  float: right;
+  left: 20%;
+}
+.my-p-status{
+  margin: 0px;
+  position: relative;
+  top: 80%;
+  left: 70%;
 }
 .status-orange{
   color: #FFAA05;
@@ -75,13 +82,15 @@ body{
   color: #FF0000;
 
 }
-h3{
-  margin-bottom: 10px;
-  width: 200px;
+.p-h3{
+  margin: 0px;
+  color: #76323F;
+  width: 400px;
 }
 h1{
+  color: #76323F;
   margin: 0px;
-  width: 200px;
+  width: 300px;
 }
 @font-face {
   font-family: "Montserrat";

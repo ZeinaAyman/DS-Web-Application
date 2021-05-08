@@ -2,7 +2,7 @@
   body
   {
     margin: 0;
-    background-color: #404B69;
+    background-color: #847F79;
   }
   .create-form
   {
@@ -14,6 +14,7 @@
   }
   .form
   {
+    background-color: #B1DBAD;
     position: relative;
     top: 5%;
     left: 25%;
@@ -24,7 +25,7 @@
     border-style: solid;
     margin-bottom: 200px;
   }
-  .empname
+  .p-input
   {
    margin-top: 2.5%;
    margin-bottom: 2.5%;
@@ -36,35 +37,37 @@
   line-height: 24px;
   letter-spacing: -0.015em;
 
-  color: #EDEAD3;
+  color: #76323F;
    display: block;
   }
   .form-input,.emplist
   {
     margin-left: 3.5%;
-    background-color: #404B69;
+    background-color: #B1DBAD;
     border: 1px solid black;
     width: 93%;
     height: 30px;
-    color: white;
+    color: #76323F;
     padding-left: 10px;
   }
   .create-button
   {
+    color: #B1DBAD;
    margin-left: 3.5%;
    width: 70px;
    border-radius: 6%;
    height: 7%;
-   background-color: #E3B7A5;
+   background-color: #76323F;
    border-radius: 6px;
    border: none;
   }
   .create
   {
+    color: #B1DBAD;
    width: 90px;
    border-radius: 6%;
    height: 7%;
-   background-color: #E3B7A5;
+   background-color: #76323F;
    border-radius: 6px;
    border: none;
    position: relative;
@@ -82,7 +85,7 @@
     font-size: 36px;
     line-height: 36px;
     letter-spacing: -0.015em;
-    color: #E3B7A5;
+    color: #76323F;
   }
 
 
@@ -94,19 +97,19 @@
       <form class="form" action="index.html" method="post">
         <span class="form-title">Create New Project</span>
         <div class="create-form">
-        <label class="empname">Project Name</label>
+        <label class="p-input">Project Name</label>
         <input type="text" class="form-input" value="Project 1">
 
-        <label class="empname">Project Description</label>
+        <label class="p-input">Project Description</label>
         <input type="text" class="form-input" value="project 1 description here">
 
-        <label class="empname">Project Budget</label>
+        <label class="p-input">Project Budget</label>
         <input type="text" class="form-input" value="32000 L.E">
 
-        <label class="empname">Images</label>
+        <label class="p-input">Images</label>
         <input type="button" class="create-button" value="Upload">
 
-        <label class="empname">Files</label>
+        <label class="p-input">Files</label>
         <input type="button" class="create-button" value="Upload"><br>
       </div>
 
