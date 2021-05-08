@@ -3,12 +3,12 @@
   body
   {
     margin: 0;
-    background-color: #404B69;
+    background-color: #847F79;
   }
   .create-acc
   {
    margin-left: 42%;
-    color: E3B7A5;
+    color: #D6E8E9;
     font-size: 36;
     font-family: : "Montserrat";
     opacity: 1;
@@ -20,6 +20,7 @@
   left: 35%;
   width: 30%;
   height: 60%;
+  background-color: #B1DBAD;
   border-width: 2px;
   border-color: #E3B7A5;
   border-style: solid;
@@ -30,14 +31,14 @@
    margin-top: 2.5%;
    margin-bottom: 2.5%;
    margin-left: 3.5%;
-   color : white;
+   color : #76323F;
    font-size: 24px;
    display: block;
   }
   .empinput,.emplist
   {
   margin-left: 3.5%;
-  background-color: #404B69;
+  background-color: #9ABE9F;
   border-color: black;
   width: 93%;
   }
@@ -46,10 +47,11 @@
    width: 20%;
    position: absolute;
    left: 40%;
+   color: #B1DBAD;
    top: 80%;
    border-radius: 6%;
    height: 10%;
-   background-color: #E3B7A5;
+   background-color: #76323F;
   >>>>>>> c0dada39a38f180432399ab89780aee400c076b0
   }
 
@@ -57,7 +59,7 @@
 </style>
 <div class="topnav">
   <h2>Designs Solutions</h2>
-  <h3>LOGO</h3>
+  <!-- <h3>LOGO</h3> -->
 </div>
 
 <div class="create-acc">

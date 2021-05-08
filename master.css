@@ -16,14 +16,14 @@
 
 .topnav{
   overflow:hidden;
-  background-color: #283149;
+  background-color: #76323F;
   font-size: 17px;
   padding: 40px 16px;
 }
 
 .navbar{
   overflow:hidden;
-  background-color: #283149;
+  background-color: #76323F;
   font-size: 17px;
   padding: 20px 16px;
 }
@@ -31,12 +31,12 @@
   float: right;
   text-decoration: none;
   font-family: Arial;
-  color: #EDEAD3;
+  color: #B1DBAD;
   padding-left: 35px;
 }
 h1{
   font-family: sans-serif;
-  color: #EDEAD3;
+  color: #D6E8E9;
       margin-bottom: 40px;
 }
 h2{
@@ -50,7 +50,7 @@ h3{
   position: absolute;
   font-family: sans-serif;
   font-weight: lighter;
-  color: #EDEAD3;
+  color: #D6E8E9;
   padding: 5px 80px;
 }
 h4{
@@ -58,14 +58,15 @@ h4{
 float: right;
 top: 22px;
 right: 25px;
-color: #EDEAD3;
+color: #D6E8E9;
 }
 li{
   padding: 10px;
+  color: #76323F;
 }
 
 .container{
-  background-color: #E3B7A5;
+  background-color: #B1DBAD;
   width: 37%;
   position: absolute;
   top: 30%;
@@ -91,14 +92,14 @@ li{
   position: relative;
 bottom: 38px;
 
-  background-color: #283149;
+  background-color: #B1DBAD;
 }
 .timeline{
   right: 300px;
   float: right;
   position: relative;
   width: 26%;
-  background-color: #E3B7A5;
+  background-color: #D6E8E9;
 }
 .test{
   margin-bottom: 10%;
@@ -118,6 +119,7 @@ p{
  font-size: 50px;
  font-weight: bold;
  width: 8em;
+ color: #D6E8E9;
  height: 10em;
  margin: 0;
   position: absolute;               /* 2 */
@@ -173,7 +175,7 @@ margin: 45px 0;
 .buttonx{
   display: block;
   margin: 0px auto;
-  background-color: #404B69;
+  background-color: #76323F;
   border: none;
   padding: 14px 17px;
   color: #EDEAD3;
@@ -184,7 +186,7 @@ margin: 45px 0;
   border-radius: 6px;
 }
 .buttonx:hover{
-  background-color: #283149;
+  background-color: #5F2934;
 }
 
 .create-acc

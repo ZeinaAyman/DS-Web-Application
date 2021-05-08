@@ -3,7 +3,7 @@
 body
 {
   margin: 0;
-  background-color: #404B69;
+  background-color: #847F79;
 }
 table
 {
@@ -19,9 +19,12 @@ td,th
 {
   line-height: 30px;
 }
+th{
+  color: #76323F;
+}
 .r1
 {
-  background-color: #E3B7A5;
+  background-color: #B1DBAD;
 }
 td
 {
@@ -42,7 +45,6 @@ td
 </style>
 <div class="topnav">
   <h2>Designs Solutions</h2>
-  <h3>LOGO</h3>
 </div>
 
 <table>

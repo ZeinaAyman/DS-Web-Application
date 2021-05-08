@@ -4,11 +4,16 @@
     <link rel="stylesheet" href="master.css">
     <meta charset="utf-8">
     <title></title>
+    <style media="screen">
+      body{
+        background-color: #847F79;
+      }
+    </style>
   </head>
   <body>
     <div class="topnav">
       <h2>Designs Solutions</h2>
-      <h3>LOGO</h3>
+      <!-- <h3>LOGO</h3> -->
     </div>
 
       <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit</p>

@@ -6,7 +6,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style media="screen">
       body{
-        background-color: #404B69;
+        background-color: #847F79;
       }
     </style>
   </head>
@@ -31,7 +31,7 @@
         </div>
 
         <div class="timeline">
-            <h1 style="color: #283149; padding: 20px; padding-bottom: 10px; margin-bottom: 0px;">Timeline</h1>
+            <h1 style="color: #76323F; padding: 20px; padding-bottom: 10px; margin-bottom: 0px;">Timeline</h1>
           <div class="test">
             <ul>
               <li>project 35 end date 19/7/2021</li>
@@ -45,26 +45,26 @@
 
       <div class="color">
         <div class="homecontainer" style="width: 70%;">
-          <h1>My Projects</h1>
+          <h1 style="color:#76323F;">My Projects</h1>
           <div class="Myprojects">
             <div class="image" id="color">
               <img  src="images/Project-Management-Mantenimiento-1.jpg" alt="Avatar" height="150">
-              <h3>Project 1</h3>
+              <h3 style="color:#76323F;">Project 1</h3>
             </div>
             <div class="image" id="color">
               <img  src="images/Project-Management-Mantenimiento-1.jpg" alt="Avatar" height="150">
-              <h3>Project 2</h3>
+              <h3 style="color:#76323F;">Project 2</h3>
             </div>
             <div class="image" id="color">
               <img src="images/Project-Management-Mantenimiento-1.jpg" alt="Avatar" height="150">
-              <h3>Project 3</h3>
+              <h3 style="color:#76323F;">Project 3</h3>
             </div>
             <div class="image" id="color">
               <img  src="images/Project-Management-Mantenimiento-1.jpg" alt="Avatar" height="150">
-              <h3>Project 3</h3>
+              <h3 style="color:#76323F;">Project 3</h3>
             </div>
           </div>
-          <a href="myprojects.php"><h4>See More...</h4></a>
+          <a href="myprojects.php"><h4 style="color:#76323F;">See More...</h4></a>
         </div>
       </div>
 
