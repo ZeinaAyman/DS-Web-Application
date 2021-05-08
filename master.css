@@ -113,6 +113,17 @@ bottom: 38px;
 .recentprojects{
   width: 50%;
 }
+p{
+ font-family: "Monsterrat", Arial;
+ font-size: 50px;
+ font-weight: bold;
+ width: 8em;
+ height: 10em;
+ margin: 0;
+  position: absolute;               /* 2 */
+  top: 30%;
+  left: 10%;                      /* 3 */
+}
 .input{
   position: relative;
 margin: 45px 0;
