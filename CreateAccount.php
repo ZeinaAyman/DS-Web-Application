@@ -1,3 +1,5 @@
+<?php include "DB.php" ?>
+
 <link rel="stylesheet" href="master.css">
 <style media="screen">
   body
@@ -69,6 +71,28 @@
 <div class="create-acc">
   Create Account
 </div>
+<?php
+  $err="";
+  if(isset($_POST['Submit']) && !empty($_POST['Submit'])) {
+    $name = $_POST["name"];
+    //$uni_id = $_POST["id"];
+    $email = $_POST["email"];
+   $type = $_POST["Type"];
+   $pass =  $_POST["password"];
+    if(!preg_match('/[a-z0-9._%+-]+@+[a-z0-9._%+-]+.+[a-z0-9._%+-]/',$email)){
+      $msg="-Please enter a valid email <br>";
+      //echo "-Please enter a valid name <br>";
+      $err = true;
+    }
+
+    if(!$err)
+    {
+      $sql = "INSERT into User (Name,Email,Type,Password) VALUES('".$name."','".$email."','".$type."','".$pass."')";
+        mysqli_query($conn,$sql);
+    }
+  }
+
+ ?>
 
   <div class="createacccontainer">
     <form action= "" method="post">
@@ -79,7 +103,7 @@
         <input class="info" type="text" placeholder="Employee Email" name="email"><br>
       </div>
       <div class="input">
-        <select class ="info">
+        <select name="Type" class ="info">
           <option disabled selected>Employee Role</option>
           <option value="2">Designer</option>
           <option value="3">Manager</option>
