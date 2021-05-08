@@ -4,17 +4,21 @@
     <link rel="stylesheet" href="master.css">
     <meta charset="utf-8">
     <title></title>
+    <style media="screen">
+      body{
+        background-color: #847F79;
+      }
+    </style>
   </head>
   <body>
     <div class="topnav">
       <h2>Designs Solutions</h2>
-      <h3>LOGO</h3>
     </div>
 
       <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit</p>
 
       <div class="container">
-        <h1>Sign In</h1>
+        <h1 style="color: #76323F;">Sign In</h1>
         <form action= "" method="post">
           <div class="input">
             <input class="info" type="text" placeholder="Email"  name="name">
