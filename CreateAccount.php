@@ -52,14 +52,7 @@
    background-color: #E3B7A5;
   >>>>>>> c0dada39a38f180432399ab89780aee400c076b0
   }
-  .container{
-    background-color: #E3B7A5;
-    width: 37%;
-    position: absolute;
-    top: 30%;
-    border-radius: 2px;
-    left: 50%;
-  }
+
 
 </style>
 <div class="topnav">
