@@ -102,7 +102,7 @@
         echo $image;
         if(!$err)
         {
-          $sql = "INSERT into project (name,description,budget,images,files) VALUES('".$name."','".$description."','".$budget."','".$image."','".$file."')";
+          $sql = "INSERT into project (name,description,budget,images,files,status) VALUES('".$name."','".$description."','".$budget."','".$image."','".$file."','ongoing')";
           $result = $conn->query($sql);
           echo $conn->error;
         }
