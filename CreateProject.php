@@ -50,14 +50,13 @@
     color: #76323F;
     padding-left: 10px;
   }
-  .create-button
+  .form-file
   {
     color: #B1DBAD;
    margin-left: 3.5%;
-   width: 70px;
-   border-radius: 6%;
+   width: 120px;
+   border-radius: 20%;
    height: 7%;
-   background-color: #76323F;
    border-radius: 6px;
    border: none;
   }
@@ -90,30 +89,48 @@
 
 
 </style>
-<?php include 'navbar.php'; ?>
+<?php include 'navbar.php';
+      include 'DB.php';
+      $err="";
+      if(isset($_POST['submit']) && !empty($_POST['submit'])) {
+        $name = $_POST["name"];
+        $description = $_POST["description"];
+        $budget = $_POST["budget"];
+        $image =  $_POST["image"];
+        $file =  $_POST["file"];
+
+        echo $image;
+        if(!$err)
+        {
+          $sql = "INSERT into project (name,description,budget,images,files) VALUES('".$name."','".$description."','".$budget."','".$image."','".$file."')";
+          $result = $conn->query($sql);
+          echo $conn->error;
+        }
+      }
+
+
+      ?>
 <body>
-
-
-      <form class="form" action="index.html" method="post">
+      <form class="form" action="" method="post">
         <span class="form-title">Create New Project</span>
         <div class="create-form">
         <label class="p-input">Project Name</label>
-        <input type="text" class="form-input" value="Project 1">
+        <input type="text" class="form-input" name="name" value="Project 1">
 
         <label class="p-input">Project Description</label>
-        <input type="text" class="form-input" value="project 1 description here">
+        <input type="text" class="form-input" name="description" value="project 1 description here">
 
         <label class="p-input">Project Budget</label>
-        <input type="text" class="form-input" value="32000 L.E">
+        <input type="number" class="form-input" name="budget" value="32000 L.E">
 
         <label class="p-input">Images</label>
-        <input type="button" class="create-button" value="Upload">
+        <input type="file" class="form-file" name="image" value="Upload">
 
         <label class="p-input">Files</label>
-        <input type="button" class="create-button" value="Upload"><br>
+        <input type="file" class="form-file" name="file" value="Upload"><br>
       </div>
 
-        <input type="submit" class="create" value="Create">
+        <input type="submit" class="create" name="submit" value="Create">
 
 
       </form>

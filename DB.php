@@ -1,1 +1,1 @@
-<?php $conn = new mysqli('localhost', 'root', '', 'design solutions'); ?>
+<?php $conn = new mysqli('localhost', 'root', '', 'ds'); ?>
