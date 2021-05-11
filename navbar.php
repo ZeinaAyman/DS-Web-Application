@@ -9,10 +9,10 @@
     <div class="navbar">
       <h2>Designs Solutions</h2>
       <div class="links">
-        <a href="#">Log Out</a>
-        <a href="#">Profile</a>
-        <a href="#">Projects</a>
-        <a href="#">Home</a>
+        <a href="Login.php">Log Out</a>
+        <a href="Profile.php">Profile</a>
+        <a href="myprojects.php">Projects</a>
+        <a href="Home.php">Home</a>
       </div>
     </div>
   </body>

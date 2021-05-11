@@ -1,9 +1,9 @@
 <?php include 'navbar.php' ?>
 <link rel="stylesheet" href="Project.css">
 <body>
-  <h1 class="title">All Projects</h1>
+  <h1 class="title">My Projects</h1>
   <div class="add-p">
-    Create New Project
+    <a style="text-decoration:none; color: #D6E8E9;" href="CreateProject.php">Create New Project</a>
     <img src="images/add.png" alt="" class="add-p-icon">
   </div>
   <div class="project">

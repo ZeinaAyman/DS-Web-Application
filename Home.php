@@ -8,6 +8,16 @@
       body{
         background-color: #847F79;
       }
+      .create{
+        position: absolute;
+        font-family: sans-serif;
+        font-weight: lighter;
+        color: #D6E8E9;
+        padding: 5px 80px;
+        bottom: 0px;
+        left: 500px;
+        text-decoration: none;
+      }
     </style>
   </head>
   <body>
@@ -27,7 +37,7 @@
             <img class="img2" src="images/SEO-illustrations-Project-02.png" alt="Avatar" height="150">
             <h3 style="padding: 5px 66px;">Project 3</h3>
           </div>
-          <h3 style="position: absolute; bottom: 0px; left: 500px;">Create New Project</h3>
+          <a class="create" href="CreateProject.php">Create New Project</a>
         </div>
 
         <div class="timeline">
