@@ -1,10 +1,11 @@
+<?php include "Homenavbar.php"; ?>
 <style media="screen">
 .338_1453 {
 overflow:hidden;
 }
 .e338_1453 {
 background-color:rgba(132.0000073313713, 127.00000002980232, 121.00000038743019, 1);
-width:1440px;
+width:1519px;
 height:1024px;
 position:absolute;
 }
@@ -248,16 +249,5 @@ letter-spacing:-1.5;
   <div class=e338_1459>
     <div class="e338_1460"></div><span  class="e338_1461">About Us</span>
   </div>
-  <div class=e338_1462>
-    <div class=e338_1463><span  class="e338_1464">Logo</span>
-      <div class=e338_1465>
-        <div class="e338_1466"></div>
-        <div class="e338_1467"></div>
-      </div>
-      <div class=e338_1468>
-        <div class="e338_1469"></div>
-        <div class="e338_1470"></div>
-      </div>
-    </div><span  class="e338_1471">Home</span><span  class="e338_1472">Gallery</span><span  class="e338_1473">About Us</span><span  class="e338_1474">Contact</span>
-  </div>
+
 </div>

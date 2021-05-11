@@ -1546,7 +1546,7 @@ body {
   background: rgba(229,229,229,1);
   opacity: 1;
   position: absolute;
-  top: 59px;
+  top: 0px;
   left: 3px;
   overflow: hidden;
 }
