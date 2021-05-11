@@ -1,22 +1,30 @@
 <?php
 include 'DB.php';
 $msg='';
-
+$err = false;
  if(isset($_POST['Submit']))
-        {
+  {
           $email=$_POST['email'];
           $password=$_POST['password'];
-          $sql = "SELECT * FROM user Where Email='".$email."' And Password='".$password."'";
-          $result = $conn->query($sql);
-          if ($result->num_rows > 0) {
-            echo "done";
-            header("Location: Home.php");
-          }
-          else {
-            $msg='not found';
+
+          if(!preg_match('/[a-z0-9._%+-]+@+[a-z0-9._%+-]+.+[a-z0-9._%+-]/',$email)){
+            $msg="Please enter a valid email";
+            $err = true;
           }
 
-        }
+          if(!$err){
+            $sql = "SELECT * FROM user Where Email='".$email."' And Password='".$password."'";
+            $result = $conn->query($sql);
+            if ($result->num_rows > 0) {
+              echo "done";
+              header("Location: Home.php");
+            }
+            else {
+              $msg='User not found';
+            }
+          }
+
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -39,20 +47,20 @@ $msg='';
 
       <div class="container">
         <h1 style="color: #76323F;">Sign In</h1>
-        <form action= "" method="post">
-          <div class="input">
-            <input class="info" type="text" placeholder="Email"  name="email">
-          </div>
-          <div class="input">
-            <input class="info" type="password" placeholder="Password" name="password"><br>
-          </div>
-        	<input class="button" type="submit" value="Log in" name="Submit">
-        </form>
         <div class="error-msg">
           <?php if ($msg!='') {
             echo $msg;
           } ?>
         </div>
+        <form action= "" method="post">
+          <div class="input">
+            <input class="info" type="text" placeholder="Email" required name="email">
+          </div>
+          <div class="input">
+            <input class="info" type="password" placeholder="Password" required name="password"><br>
+          </div>
+        	<input class="button" type="submit" value="Log in" name="Submit">
+        </form>
       </div>
   </body>
   <script type="text/javascript">
