@@ -87,7 +87,7 @@ top: 110px;
    </div>
 
  <div class="profilecontainer">
-   <form class="" action="index.html" method="post">
+   <form class="" action="Profile.php" method="post">
      <label class="empinfo">First Name</label>
      <input type="text" class="empinput" value="John">
 
