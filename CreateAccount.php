@@ -1,4 +1,4 @@
-<?php include "DB.php" ?>
+<?php include "PHP/DB.php" ?>
 
 <link rel="stylesheet" href="master.css">
 <style media="screen">
@@ -87,8 +87,9 @@
 
     if(!$err)
     {
-      $sql = "INSERT into User (Name,Email,Type,Password) VALUES('".$name."','".$email."','".$type."','".$pass."')";
-        mysqli_query($conn,$sql);
+      $DB = new DB();
+      $DB->query = "INSERT into User (Name,Email,Type,Password) VALUES('".$name."','".$email."','".$type."','".$pass."')";
+      $result = $DB->query();
     }
   }
 
