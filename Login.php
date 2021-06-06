@@ -1,7 +1,9 @@
 <?php
 include 'PHP/DB.php';
+include 'PHP/classes.php';
 $msg='';
 $err = false;
+$DB = new DB();
  if(isset($_POST['Submit']))
   {
           $email=$_POST['email'];
@@ -13,17 +15,8 @@ $err = false;
           }
 
           if(!$err){
-            $DB = new DB();
-            $DB->query = "SELECT * FROM user Where Email='".$email."' And Password='".$password."'";
-            $result = $DB->query();
-            if ($DB->ok === 1) {
-              echo "done";
-              $DB->ok=0;
-              header("Location: Home.php");
-            }
-            else {
-              $msg='User not found';
-            }
+            $User= new User();
+            $User->Login($DB,$email,$password);
           }
 
   }
