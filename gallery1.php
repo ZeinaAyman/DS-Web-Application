@@ -70,5 +70,3 @@ include 'galleryNavbar.php';
     </div>
   </div>
 </body>
-
-</html>

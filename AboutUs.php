@@ -3,7 +3,7 @@ include 'galleryNavbar.php';
 ?>
 <link rel="stylesheet" href="master.css">
 <style media="screen">
-  .338_1453 {
+  .e338_1453 {
     overflow: hidden;
   }
 
@@ -108,7 +108,137 @@ include 'galleryNavbar.php';
     top: 0px;
   }
 
-  .338_1460 {
+  .e338_1460 {
+    border: 1px solid rgba(196.00000351667404, 196.00000351667404, 196.00000351667404, 1);
+  }
+
+  .e338_1461 {
+    color: rgba(227.00000166893005, 183.00000429153442, 165.00000536441803, 1);
+    width: 356px;
+    height: 67px;
+    position: absolute;
+    left: 0px;
+    top: 9px;
+    font-family: Montserrat;
+    text-align: center;
+    font-size: 48px;
+    letter-spacing: -1.5;
+    line-height: px;
+  }
+
+  .e338_1462 {
+
+    background-color: rgba(229.00000154972076, 229.00000154972076, 229.00000154972076, 1);
+    width: 1440px;
+    height: 60px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+
+
+  .e338_1453 {
+    background-color: rgba(132.0000073313713, 127.00000002980232, 121.00000038743019, 1);
+    width: 1440px;
+    height: 1024px;
+    position: absolute;
+  }
+
+  .e338_1454 {
+    width: 1440px;
+    height: 572px;
+    position: absolute;
+    left: 0px;
+    top: 60px;
+  }
+
+  .ei338_1454_338_1429 {
+    background-color: rgba(229.00000154972076, 229.00000154972076, 229.00000154972076, 1);
+    width: 1440px;
+    height: 572px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+
+  .i338_1454_338_1429 {
+    border: 1px solid rgba(0, 0, 0, 1);
+  }
+
+  .e338_1455 {
+    color: rgba(214.00000244379044, 232.00000137090683, 233.00000131130219, 1);
+    width: 903px;
+    height: 46px;
+    position: absolute;
+    left: 202px;
+    top: 668px;
+    font-family: Montserrat;
+    text-align: left;
+    font-size: 24px;
+    letter-spacing: -1.5;
+    line-height: px;
+  }
+
+  .e338_1456 {
+    color: rgba(214.00000244379044, 232.00000137090683, 233.00000131130219, 1);
+    width: 903px;
+    height: 153px;
+    position: absolute;
+    left: 202px;
+    top: 714px;
+    font-family: Montserrat;
+    text-align: left;
+    font-size: 18px;
+    letter-spacing: -1.5;
+    line-height: px;
+  }
+
+  .e338_1457 {
+    color: rgba(214.00000244379044, 232.00000137090683, 233.00000131130219, 1);
+    width: 903px;
+    height: 46px;
+    position: absolute;
+    left: 202px;
+    top: 826px;
+    font-family: Montserrat;
+    text-align: left;
+    font-size: 24px;
+    letter-spacing: -1.5;
+    line-height: px;
+  }
+
+  .e338_1458 {
+    color: rgba(214.00000244379044, 232.00000137090683, 233.00000131130219, 1);
+    width: 903px;
+    height: 153px;
+    position: absolute;
+    left: 201px;
+    top: 872px;
+    font-family: Montserrat;
+    text-align: left;
+    font-size: 18px;
+    letter-spacing: -1.5;
+    line-height: px;
+  }
+
+  .e338_1459 {
+    width: 393px;
+    height: 85px;
+    position: absolute;
+    left: 523px;
+    top: 261px;
+  }
+
+  .e338_1460 {
+    opacity: 0.30000001192092896;
+    width: 393px;
+    height: 85px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+
+  .e338_1460 {
     border: 1px solid rgba(196.00000351667404, 196.00000351667404, 196.00000351667404, 1);
   }
 
@@ -280,4 +410,6 @@ include 'galleryNavbar.php';
   <div class=e338_1462>
 
   </div>
+</div>
+
 </div>
