@@ -1,5 +1,5 @@
 <?php
-include 'DB.php';
+include 'PHP/DB.php';
 $msg='';
 $err = false;
  if(isset($_POST['Submit']))
@@ -13,10 +13,12 @@ $err = false;
           }
 
           if(!$err){
-            $sql = "SELECT * FROM user Where Email='".$email."' And Password='".$password."'";
-            $result = $conn->query($sql);
-            if ($result->num_rows > 0) {
+            $DB = new DB();
+            $DB->query = "SELECT * FROM user Where Email='".$email."' And Password='".$password."'";
+            $result = $DB->query();
+            if ($DB->ok === 1) {
               echo "done";
+              $DB->ok=0;
               header("Location: Home.php");
             }
             else {

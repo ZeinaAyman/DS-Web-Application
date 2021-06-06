@@ -77,8 +77,8 @@
     $name = $_POST["name"];
     //$uni_id = $_POST["id"];
     $email = $_POST["email"];
-   $type = $_POST["Type"];
-   $pass =  $_POST["password"];
+    $type = $_POST["Type"];
+    $pass =  $_POST["password"];
     if(!preg_match('/[a-z0-9._%+-]+@+[a-z0-9._%+-]+.+[a-z0-9._%+-]/',$email)){
       $msg="-Please enter a valid email <br>";
       //echo "-Please enter a valid name <br>";
@@ -88,7 +88,7 @@
     if(!$err)
     {
       $DB = new DB();
-      $DB->query = "INSERT into User (Name,Email,Type,Password) VALUES('".$name."','".$email."','".$type."','".$pass."')";
+      $DB->query = "INSERT into user (Name,Email,Type,Password) VALUES('".$name."','".$email."','".$type."','".$pass."')";
       $result = $DB->query();
     }
   }
