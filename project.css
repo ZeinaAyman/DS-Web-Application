@@ -27,17 +27,21 @@ body{
 .project{
   color: #76323F;
   font-size: 17px;
-  margin-bottom: 30px;
   position: relative;
   width: 80%;
   height: 250px;
   left: 60px;
   top: 140px;
 
+  margin: 0px;
+
   background: #D6E8E9;
   border: 2px solid #E3B7A5;
   box-sizing: border-box;
   border-radius: 45px;
+}
+.anch-project{
+  height: inherit;
 }
 .p-img{
   position: relative;
