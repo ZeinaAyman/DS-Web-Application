@@ -1,113 +1,134 @@
 <?php
 include 'navbar.php';
- ?>
- <link rel="stylesheet" href="master.css">
- <style media="screen">
-   body
-   {
-     margin: 0;
-     background-color: #847F79;
-   }
-   .create-acc
-   {
+?>
+<link rel="stylesheet" href="master.css">
+<style media="screen">
+  body {
+    margin: 0;
+    background-color: #847F79;
+  }
+
+  .create-acc {
     margin-left: 42%;
-     color: E3B7A5;
-     font-size: 36;
-     font-family: : "Montserrat";
-     opacity: 1;
-   }
-   .profilecontainer
-   {
+    color: E3B7A5;
+    font-size: 36;
+    font-family: "Montserrat";
+    opacity: 1;
+  }
 
-   }
+  .profilecontainer {
+    top: 200px;
+    padding-bottom: 100px;
+    border-radius: 10px;
+    border-color: #76323F;
+  }
 
-   .empinfo
-   {
+  .empinfo {
     margin-top: 1.5%;
     margin-left: 60%;
-    color : white;
-    font-size: 18px;
+    color: white;
+    font-size: 20px;
     display: block;
-   }
-   .empinput
-   {
-   margin-top: 1.5%;
-   color :#76323F;
-   margin-left: 60%;
-   background-color: #B1DBAD;
-   border-color: black;
-   width: 30%;
-   }
-   .updatebut
-   {
-     margin-top: 1.5%;
+  }
+
+  .empinput {
+    margin-top: 1.5%;
+    color: #76323F;
+    margin-left: 60%;
+    background-color: #B1DBAD;
+    border-color: black;
+    width: 30%;
+    height: 35px;
+    ;
+  }
+
+  .updatebut {
+    margin-top: 1.5%;
     width: 120px;
-    height : 50px;
+    height: 50px;
     margin-left: 60%;
     border-radius: 6%;
     color: #B1DBAD;
     background-color: #76323F;
-   >>>>>>> c0dada39a38f180432399ab89780aee400c076b0
-   }
- .info
- {
-margin:0px;
-position: absolute;
-width: 401px;
-height: 180px;
-left: 44px;
-top: 270px;
-background-color: #D6E8E9;
- }
- .personalimage
- {
-margin:0px;
-position: absolute;
-width: 422px;
-height: 275.35px;
-left: 44px;
-top: 110px;
- }
- .photo
- {
-   border-radius:0px;
- }
-   </style>
+    /* >>>>>>> c0dada39a38f180432399ab89780aee400c076b0 */
+  }
 
-     <div class="personalimage">
-       <img class="photo" alt="personal photo" src="images/personalphoto.png" width="250.19px" height="163.67px">
+  .info {
+    margin: 0px;
+    width: 401px;
+    height: 150px;
+    left: 44px;
+    top: 300px;
+    background-color: #D6E8E9;
+    overflow: hidden;
+    font-family: "Montserrat";
+    color: #847F79;
 
-      </img>
-     </div>
+  }
 
-   <div class="info">
-   <h1>John Deo</h1>
-   Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-   </div>
-   </div>
+  .personalimage {
+    margin: 0px;
+    position: absolute;
+    width: 422px;
+    height: 250px;
+    left: 44px;
+    top: 110px;
+    overflow: hidden;
+  }
 
- <div class="profilecontainer">
-   <form class="" action="index.html" method="post">
-     <label class="empinfo">First Name</label>
-     <input type="text" class="empinput" value="John">
+  .photo {
+    position: absolute;
 
-     <label class="empinfo">Last Name</label>
-     <input type="text" class="empinput" value="Deo">
 
-     <label class="empinfo">Email</label>
-     <input type="text" class="empinput" value="Deo@ds.com">
+  }
 
-     <label class="empinfo">Old Password</label>
-     <input type="password" class="empinput" value="123456">
+  .name {
+    text-align: left;
+    justify-content: left;
+    font-family: "Montserrat";
+    color: #847F79;
 
-     <label class="empinfo">New Password</label>
-     <input type="password" class="empinput" value="123456">
 
-     <label class="empinfo">Confirm Password</label>
-     <input type="password" class="empinput" value="123456">
-     <br>
-     <input type="submit" class="updatebut" value="Update Profile">
+  }
+</style>
 
-   </form>
+<div class="personalimage">
+  <img class="photo" alt="personal photo" src="images/profilepic.jpg">
+  </img>
+</div>
 
- </div>
+<div class="info">
+  <h2 class=name>John Doe</h2>
+  <br>
+  <br>
+  <span style="font-size: 15px; color: #847F79;   align-content: flex-end;">
+    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+  </span>
+
+</div>
+
+<div class="profilecontainer">
+  <form class="profilecontainer" action="Profile.php" method="post">
+    <label class="empinfo">First Name</label>
+    <input type="text" class="empinput" value="John">
+
+    <label class="empinfo">Last Name</label>
+    <input type="text" class="empinput" value="Deo">
+
+    <label class="empinfo">Email</label>
+    <input type="text" class="empinput" value="Deo@ds.com">
+
+    <label class="empinfo">Old Password</label>
+    <input type="password" class="empinput" value="123456">
+
+    <label class="empinfo">New Password</label>
+    <input type="password" class="empinput" value="123456">
+
+    <label class="empinfo">Confirm Password</label>
+    <input type="password" class="empinput" value="123456">
+    <br>
+    <input type="submit" class="updatebut" value="Update Profile">
+
+  </form>
+
+</div>
