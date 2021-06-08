@@ -1,4 +1,8 @@
-<?php include "PHP/DB.php" ?>
+<?php
+      include "PHP/DB.php";
+      include "PHP/classes.php";
+      $DB = new DB();
+?>
 
 <link rel="stylesheet" href="master.css">
 <style media="screen">
@@ -87,9 +91,10 @@
 
     if(!$err)
     {
-      $DB = new DB();
-      $DB->query = "INSERT into user (Name,Email,Type,Password) VALUES('".$name."','".$email."','".$type."','".$pass."')";
-      $result = $DB->query();
+      $EMP = new Employee();
+      $EMP->Feed($name,$email,$type,$pass);
+      $Admin = new Admin();
+      $Admin->CreateAccount($DB,$EMP);
     }
   }
 
