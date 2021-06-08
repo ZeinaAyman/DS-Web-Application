@@ -15,8 +15,8 @@ $DB = new DB();
           }
 
           if(!$err){
-            $User= new User();
-            $User->Login($DB,$email,$password);
+            $Emp= new Employee();
+            $Emp->Login($DB,$email,$password);
           }
 
   }
