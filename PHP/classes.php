@@ -44,6 +44,8 @@
           $this->Email=$row['Email'];
           $this->Password=$row['Password'];
           $this->Type=$row['Type'];
+          session_start();
+          $_SESSION['online']=serialize($this);
           header("Location: Home.php");
         }
         else
