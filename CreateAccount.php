@@ -92,7 +92,7 @@
     if(!$err)
     {
       $EMP = new Employee();
-      $EMP->Feed($name,$email,$type,$pass);
+      $EMP->Feed($name,$email,$pass,$type);
       $Admin = new Admin();
       $Admin->CreateAccount($DB,$EMP);
     }
