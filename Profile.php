@@ -1,5 +1,7 @@
 <?php
 include 'navbar.php';
+include 'PHP/classes.php';
+session_start();
 ?>
 <link rel="stylesheet" href="master.css">
 <style media="screen">
@@ -98,7 +100,7 @@ include 'navbar.php';
 </div>
 
 <div class="info">
-  <h2 class=name>John Doe</h2>
+  <h2 class=name><?php echo unserialize($_SESSION['online'])->Name; ?></h2>
   <br>
   <br>
   <span style="font-size: 15px; color: #847F79;   align-content: flex-end;">
@@ -110,22 +112,22 @@ include 'navbar.php';
 <div class="profilecontainer">
   <form class="profilecontainer" action="Profile.php" method="post">
     <label class="empinfo">First Name</label>
-    <input type="text" class="empinput" value="John">
+    <input type="text" class="empinput" value=<?php echo unserialize($_SESSION['online'])->Name; ?>>
 
     <label class="empinfo">Last Name</label>
     <input type="text" class="empinput" value="Deo">
 
     <label class="empinfo">Email</label>
-    <input type="text" class="empinput" value="Deo@ds.com">
+    <input type="text" class="empinput" value=<?php echo unserialize($_SESSION['online'])->Email; ?>>
 
     <label class="empinfo">Old Password</label>
-    <input type="password" class="empinput" value="123456">
+    <input type="password" class="empinput" value=<?php echo unserialize($_SESSION['online'])->Password; ?>>
 
     <label class="empinfo">New Password</label>
-    <input type="password" class="empinput" value="123456">
+    <input type="password" class="empinput" value="">
 
     <label class="empinfo">Confirm Password</label>
-    <input type="password" class="empinput" value="123456">
+    <input type="password" class="empinput" value="">
     <br>
     <input type="submit" class="updatebut" value="Update Profile">
 
