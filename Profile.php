@@ -1,7 +1,6 @@
 <?php
 include 'navbar.php';
 include 'PHP/classes.php';
-session_start();
 ?>
 <link rel="stylesheet" href="master.css">
 <style media="screen">
@@ -100,7 +99,7 @@ session_start();
 </div>
 
 <div class="info">
-  <h2 class=name><?php echo unserialize($_SESSION['online'])->Name; ?></h2>
+  <h2 class=name><?php echo unserialize($_SESSION['online'])->Type; ?></h2>
   <br>
   <br>
   <span style="font-size: 15px; color: #847F79;   align-content: flex-end;">
