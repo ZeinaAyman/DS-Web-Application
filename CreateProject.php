@@ -1,3 +1,11 @@
+
+<?php
+      include 'navbar.php';
+      include "PHP/DB.php";
+      include "PHP/classes.php";
+      $DB = new DB();
+?>
+
 <style media="screen">
   body
   {
@@ -89,8 +97,8 @@
 
 
 </style>
-<?php include 'navbar.php';
-      include 'DB.php';
+<?php
+
       $err="";
       if(isset($_POST['submit']) && !empty($_POST['submit'])) {
         $name = $_POST["name"];
@@ -99,12 +107,13 @@
         $image =  $_POST["image"];
         $file =  $_POST["file"];
 
-        echo $image;
+        
         if(!$err)
         {
-          $sql = "INSERT into project (name,description,budget,images,files,status) VALUES('".$name."','".$description."','".$budget."','".$image."','".$file."','ongoing')";
-          $result = $conn->query($sql);
-          echo $conn->error;
+          $Project = new Project();
+          $Project->Feed($name,$description,$budget,$image,$file);
+          $Designer = new Designer();
+          $Designer->CreateProject($DB,$Project);
         }
       }
 
