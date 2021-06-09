@@ -2,6 +2,7 @@
       include "PHP/DB.php";
       include "PHP/classes.php";
       $DB = new DB();
+      session_start();
 ?>
 
 <link rel="stylesheet" href="master.css">
@@ -93,8 +94,7 @@
     {
       $EMP = new Employee();
       $EMP->Feed($name,$email,$pass,$type);
-      $Admin = new Admin();
-      $Admin->CreateAccount($DB,$EMP);
+      unserialize($_SESSION['online'])->CreateAccount($DB,$EMP);
     }
   }
 

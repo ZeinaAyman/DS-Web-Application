@@ -45,8 +45,17 @@
           $this->Password=$row['Password'];
           $this->Type=$row['Type'];
           session_start();
-          $_SESSION['online']=serialize($this);
-          header("Location: Home.php");
+          if ($this->Type=="1") {
+            $online = new Admin();
+            $online->ID=$this->ID;
+            $online->Feed($this->Name,$this->Email,$this->Password,$this->Type);
+            $_SESSION['online'] = serialize($online);
+            header("Location: Admin.php");
+          }
+          else {
+            $_SESSION['online'] = serialize(new Designer());
+            header("Location: Home.php");
+          }
         }
         else
         {
