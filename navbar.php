@@ -1,3 +1,10 @@
+<?php
+session_start();
+if($_SESSION['online']===NULL)
+{
+  header("Location: Login.php");
+}
+ ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
