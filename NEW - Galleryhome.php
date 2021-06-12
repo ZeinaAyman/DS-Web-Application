@@ -1,4 +1,4 @@
-<?php include "Homenavbar.php"; ?>
+<?php include "NEW - Homenavbar.php"; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,7 +8,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/gif/png" href="dslogo.png">
         <title>Design Solutions</title>
-        <link rel="stylesheet" href="master.css">
         <link href="https://fonts.googleapis.com/css?family=Oswald:400" rel="stylesheet">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -27,13 +26,13 @@
       <div class="container">
         <div class="left-skew blink"></div>
         <div class="right-skew fade">
-            <img src="Home-Interior-Design0.jpg" alt="">
+            <img src="images/Home-Interior-Design0.jpg" alt="">
         </div>
         <div class="right-skew fade">
-            <img src="1.jpg" alt="">
+            <img src="images/1.jpg" alt="">
         </div>
         <div class="right-skew fade">
-            <img src="livingroom.jpg" alt="">
+            <img src="images/livingroom.jpg" alt="">
         </div>
       </div>
 
@@ -46,7 +45,7 @@
     </div>
   </div>
 </section> -->
-<div class="container" style="background-image:url(dark-living-room.jpg); background-size: cover;">
+<div class="container" style="background-color: white; margin-top: 370px;">
     <div></div>
     <div class="styles_ImagineContainer__3tztP">
       <div class="styles_ImagineHeader__oCsJu">
