@@ -53,7 +53,10 @@
             header("Location: Admin.php");
           }
           else {
-            $_SESSION['online'] = serialize(new Designer());
+            $online = new Designer();
+            $online->ID=$this->ID;
+            $online->Feed($this->Name,$this->Email,$this->Password,$this->Type);
+            $_SESSION['online'] = serialize($online);
             header("Location: Home.php");
           }
         }
