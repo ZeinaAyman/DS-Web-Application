@@ -27,6 +27,11 @@
             opacity: 0.1;
             background-position: center center;
         }
+        [class*='col'] {
+            padding-left: 65px;
+            line-height: 36px;
+            /* padding-right: 25px; */
+        }
         </style>
     </head>
     <body>

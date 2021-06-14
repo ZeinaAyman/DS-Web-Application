@@ -10,6 +10,7 @@ body{
   font-size: 15px;
   font-weight: 400;
   line-height: 1.5em;
+  overflow-x: hidden;
 }
 header{
   position: sticky;
@@ -374,8 +375,8 @@ header{
       </div>
       <div class="inner_main_menu">
           <ul id="menu">
-              <li class="one"><a href="">Home</a></li>
-              <li class="two"><a href="">About</a></li>
+              <li class="one"><a href="New_GalleryHome.php">Home</a></li>
+              <li class="two"><a href="AboutUs.php">About</a></li>
               <li class="three"><a href="">Gallery</a>
                  <ul>
                       <li><a href="">Residenial</a></li>
@@ -383,7 +384,7 @@ header{
                       <li><a href="">Corporate</a></li>
                 </ul>
               </li>
-              <li class="four"><a href="">Contact</a></li>
+              <li class="four"><a href="ContactUs.php">Contact</a></li>
               <li class="five"><a href="">Map</a></li>
               <li class="six"><a href="">Newsletter</a></li>
             <hr>

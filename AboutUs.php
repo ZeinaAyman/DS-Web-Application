@@ -1,415 +1,92 @@
-<?php
-include 'galleryNavbar.php';
-?>
-<link rel="stylesheet" href="master.css">
-<style media="screen">
-  .e338_1453 {
-    overflow: hidden;
-  }
+<?php include "New_Homenavbar.php"; ?>
 
-  .e338_1453 {
-    background-color: rgba(132.0000073313713, 127.00000002980232, 121.00000038743019, 1);
-    width: 1440px;
-    height: 1024px;
-    position: absolute;
-  }
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="css/about.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/gif/png" href="dslogo.png">
+        <title>Design Solutions</title>
+        <link href="https://fonts.googleapis.com/css?family=Oswald:400" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
-  .e338_1454 {
-    width: 1440px;
-    height: 572px;
-    position: absolute;
-    left: 0px;
-    top: 60px;
-  }
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <style media="screen">
+        #section-about-us-2 .image-container {
+            background: url(images/aboutus-photo.jpg);
+            background-size: cover;
+        }
+        .side-bg .image-container {
+          height: 100%;
+          width: 50%;
+          overflow: hidden;
+          padding: 0;
+          position: absolute;
+          background-size: cover !important;
+}
+        </style>
+    </head>
+    <body>
+      <section id="subheader" data-speed="8" data-type="background" style="background-position: 50% 0px;">
+            <div class="container-about">
+                <div class="row-about">
+                    <div class="col-md-12">
+                        <h1>About Us</h1>
+                        <ul class="crumb">
+                            <li><a href="index.html">Home</a></li>
+                            <li class="sep">/</li>
+                            <li>About Us</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="content" class="no-top no-bottom">
+          <section id="section-about-us-2" class="side-bg no-padding">
+                <div class="image-container col-md-5 pull-left" data-delay="0"></div>
 
-  .ei338_1454_338_1429 {
-    background-color: rgba(229.00000154972076, 229.00000154972076, 229.00000154972076, 1);
-    width: 1440px;
-    height: 572px;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-  }
+                <div class="container-about">
+                    <div class="row-about">
+                        <div class="inner-padding">
+                            <div class="col-about-left" data-animation="fadeInRight" data-delay="200">
+                                <h2>Mission</h2>
 
-  .i338_1454_338_1429 {
-    border: 1px solid rgba(0, 0, 0, 1);
-  }
+                                <p class="intro"><span class="id-color">Design Solution</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <span class="id-color">Design Solution Interior</span> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                                  <span class="id-color">Design Solution Interior</span> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
 
-  .e338_1455 {
-    color: rgba(214.00000244379044, 232.00000137090683, 233.00000131130219, 1);
-    width: 903px;
-    height: 46px;
-    position: absolute;
-    left: 202px;
-    top: 668px;
-    font-family: Montserrat;
-    text-align: left;
-    font-size: 24px;
-    letter-spacing: -1.5;
-    line-height: px;
-  }
+        <div id="content" class="no-top no-bottom">
+          <section id="section-about-us-2" class="side-bg no-padding">
+                <div class="image-container col-md-5 pull-right" data-delay="0" style="position: absolute;left: 50%;"></div>
 
-  .e338_1456 {
-    color: rgba(214.00000244379044, 232.00000137090683, 233.00000131130219, 1);
-    width: 903px;
-    height: 153px;
-    position: absolute;
-    left: 202px;
-    top: 714px;
-    font-family: Montserrat;
-    text-align: left;
-    font-size: 18px;
-    letter-spacing: -1.5;
-    line-height: px;
-  }
-
-  .e338_1457 {
-    color: rgba(214.00000244379044, 232.00000137090683, 233.00000131130219, 1);
-    width: 903px;
-    height: 46px;
-    position: absolute;
-    left: 202px;
-    top: 826px;
-    font-family: Montserrat;
-    text-align: left;
-    font-size: 24px;
-    letter-spacing: -1.5;
-    line-height: px;
-  }
-
-  .e338_1458 {
-    color: rgba(214.00000244379044, 232.00000137090683, 233.00000131130219, 1);
-    width: 903px;
-    height: 153px;
-    position: absolute;
-    left: 201px;
-    top: 872px;
-    font-family: Montserrat;
-    text-align: left;
-    font-size: 18px;
-    letter-spacing: -1.5;
-    line-height: px;
-  }
-
-  .e338_1459 {
-    width: 393px;
-    height: 85px;
-    position: absolute;
-    left: 523px;
-    top: 261px;
-  }
-
-  .e338_1460 {
-    opacity: 0.30000001192092896;
-    width: 393px;
-    height: 85px;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-  }
-
-  .e338_1460 {
-    border: 1px solid rgba(196.00000351667404, 196.00000351667404, 196.00000351667404, 1);
-  }
-
-  .e338_1461 {
-    color: rgba(227.00000166893005, 183.00000429153442, 165.00000536441803, 1);
-    width: 356px;
-    height: 67px;
-    position: absolute;
-    left: 0px;
-    top: 9px;
-    font-family: Montserrat;
-    text-align: center;
-    font-size: 48px;
-    letter-spacing: -1.5;
-    line-height: px;
-  }
-
-  .e338_1462 {
-
-    background-color: rgba(229.00000154972076, 229.00000154972076, 229.00000154972076, 1);
-    width: 1440px;
-    height: 60px;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-  }
+                <div class="container-about">
+                    <div class="row-about">
+                        <div class="inner-padding-right">
+                            <div class="col-about-right" data-animation="fadeInRight" data-delay="200">
+                                <h2>Vision</h2>
+                                  <p class="intro"><span class="id-color">Design Solution</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <span class="id-color">Design Solution Interior</span> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                                    <span class="id-color">Design Solution Interior</span> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
 
 
-  .e338_1453 {
-    background-color: rgba(132.0000073313713, 127.00000002980232, 121.00000038743019, 1);
-    width: 1440px;
-    height: 1024px;
-    position: absolute;
-  }
 
-  .e338_1454 {
-    width: 1440px;
-    height: 572px;
-    position: absolute;
-    left: 0px;
-    top: 60px;
-  }
+<?php include "includes/footer.php"; ?>
 
-  .ei338_1454_338_1429 {
-    background-color: rgba(229.00000154972076, 229.00000154972076, 229.00000154972076, 1);
-    width: 1440px;
-    height: 572px;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-  }
 
-  .i338_1454_338_1429 {
-    border: 1px solid rgba(0, 0, 0, 1);
-  }
-
-  .e338_1455 {
-    color: rgba(214.00000244379044, 232.00000137090683, 233.00000131130219, 1);
-    width: 903px;
-    height: 46px;
-    position: absolute;
-    left: 202px;
-    top: 668px;
-    font-family: Montserrat;
-    text-align: left;
-    font-size: 24px;
-    letter-spacing: -1.5;
-    line-height: px;
-  }
-
-  .e338_1456 {
-    color: rgba(214.00000244379044, 232.00000137090683, 233.00000131130219, 1);
-    width: 903px;
-    height: 153px;
-    position: absolute;
-    left: 202px;
-    top: 714px;
-    font-family: Montserrat;
-    text-align: left;
-    font-size: 18px;
-    letter-spacing: -1.5;
-    line-height: px;
-  }
-
-  .e338_1457 {
-    color: rgba(214.00000244379044, 232.00000137090683, 233.00000131130219, 1);
-    width: 903px;
-    height: 46px;
-    position: absolute;
-    left: 202px;
-    top: 826px;
-    font-family: Montserrat;
-    text-align: left;
-    font-size: 24px;
-    letter-spacing: -1.5;
-    line-height: px;
-  }
-
-  .e338_1458 {
-    color: rgba(214.00000244379044, 232.00000137090683, 233.00000131130219, 1);
-    width: 903px;
-    height: 153px;
-    position: absolute;
-    left: 201px;
-    top: 872px;
-    font-family: Montserrat;
-    text-align: left;
-    font-size: 18px;
-    letter-spacing: -1.5;
-    line-height: px;
-  }
-
-  .e338_1459 {
-    width: 393px;
-    height: 85px;
-    position: absolute;
-    left: 523px;
-    top: 261px;
-  }
-
-  .e338_1460 {
-    opacity: 0.30000001192092896;
-    width: 393px;
-    height: 85px;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-  }
-
-  .e338_1460 {
-    border: 1px solid rgba(196.00000351667404, 196.00000351667404, 196.00000351667404, 1);
-  }
-
-  .e338_1461 {
-    color: rgba(227.00000166893005, 183.00000429153442, 165.00000536441803, 1);
-    width: 356px;
-    height: 67px;
-    position: absolute;
-    left: 0px;
-    top: 9px;
-    font-family: Montserrat;
-    text-align: center;
-    font-size: 48px;
-    letter-spacing: -1.5;
-    line-height: px;
-  }
-
-  .e338_1462 {
-
-    background-color: rgba(229.00000154972076, 229.00000154972076, 229.00000154972076, 1);
-    width: 1440px;
-    height: 60px;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-  }
-
-  .e338_1463 {
-    background-color: rgba(40.00000141561031, 49.00000087916851, 73.00000324845314, 1);
-    width: 122.07408905029297px;
-    height: 32px;
-    position: absolute;
-    left: 80px;
-    top: 14px;
-  }
-
-  .e338_1464 {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    color: rgba(0, 0, 0, 1);
-    width: 87.70370483398438px;
-    height: 32px;
-    position: absolute;
-    left: 34.37038040161133px;
-    top: 0px;
-    font-family: Comfortaa;
-    text-align: center;
-    font-size: 28.444446563720703px;
-    letter-spacing: -1.5;
-  }
-
-  .e338_1465 {
-    background-color: rgba(204.00000303983688, 204.00000303983688, 204.00000303983688, 1);
-    width: 22.518518447875977px;
-    height: 22.518518447875977px;
-    position: absolute;
-    left: 0.000008098707439785358px;
-    top: 2.962960720062256px;
-  }
-
-  .e338_1466 {
-    background-color: rgba(196.00000351667404, 196.00000351667404, 196.00000351667404, 1);
-    width: 22.518518447875977px;
-    height: 6.672153472900391px;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-  }
-
-  .e338_1467 {
-    transform: rotate(-90deg);
-    background-color: rgba(196.00000351667404, 196.00000351667404, 196.00000351667404, 1);
-    width: 22.518518447875977px;
-    height: 6.672153472900391px;
-    position: absolute;
-    left: 6.672144889831543px;
-    top: 22.518522262573242px;
-  }
-
-  .e338_1468 {
-    transform: rotate(-180deg);
-    background-color: rgba(0, 0, 0, 1);
-    width: 22.518518447875977px;
-    height: 22.518518447875977px;
-    position: absolute;
-    left: 22.51852035522461px;
-    top: 25.481481552124023px;
-  }
-
-  .e338_1469 {
-    transform: rotate(-180deg);
-    background-color: rgba(196.00000351667404, 196.00000351667404, 196.00000351667404, 1);
-    width: 22.518518447875977px;
-    height: 6.672153472900391px;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-  }
-
-  .e338_1470 {
-    transform: rotate(90.00000000000003deg);
-    background-color: rgba(196.00000351667404, 196.00000351667404, 196.00000351667404, 1);
-    width: 22.518518447875977px;
-    height: 6.672153472900391px;
-    position: absolute;
-    left: -6.672139644622799px;
-    top: -22.518522262573242px;
-  }
-
-  .e338_1471 {
-    color: rgba(234.00000125169754, 232.00000137090683, 218.00000220537186, 1);
-    width: 47px;
-    height: 18px;
-    position: absolute;
-    left: 1046px;
-    top: 21px;
-    font-family: Montserrat;
-    text-align: center;
-    font-size: 15px;
-    letter-spacing: -1.5;
-  }
-
-  .e338_1472 {
-    color: rgba(234.00000125169754, 232.00000137090683, 218.00000220537186, 1);
-    width: 52px;
-    height: 18px;
-    position: absolute;
-    left: 1132px;
-    top: 21px;
-    font-family: Montserrat;
-    text-align: center;
-    font-size: 15px;
-    letter-spacing: -1.5;
-  }
-
-  .e338_1473 {
-    color: rgba(234.00000125169754, 232.00000137090683, 218.00000220537186, 1);
-    width: 69px;
-    height: 18px;
-    position: absolute;
-    left: 1215px;
-    top: 21px;
-    font-family: Montserrat;
-    text-align: center;
-    font-size: 15px;
-    letter-spacing: -1.5;
-  }
-
-  .e338_1474 {
-    color: rgba(234.00000125169754, 232.00000137090683, 218.00000220537186, 1);
-    width: 59px;
-    height: 18px;
-    position: absolute;
-    left: 1315px;
-    top: 21px;
-    font-family: Montserrat;
-    text-align: center;
-    font-size: 15px;
-    letter-spacing: -1.5;
-  }
-</style>
-
-<div class=e338_1453>
-  <div class=e338_1454>
-    <div class="ei338_1454_338_1429"></div>
-  </div><span class="e338_1455">Our Vision</span><span class="e338_1456">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</span><span class="e338_1457">Our Mission</span><span class="e338_1458">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</span>
-  <div class=e338_1459>
-    <div class="e338_1460"></div><span class="e338_1461">About Us</span>
-  </div>
-  <div class=e338_1462>
-
-  </div>
-</div>
-
-</div>
+    </body>
+</html>
