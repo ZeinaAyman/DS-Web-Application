@@ -1,5 +1,5 @@
 <?php
-include 'Controller.php';
+include_once('Controller.php') ;
   class UserController extends Controller
   {
       public function C_Login()

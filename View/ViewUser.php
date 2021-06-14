@@ -1,5 +1,5 @@
 <?php
-include "View.php";
+include_once("View.php") ;
 class ViewUser extends View
 {
 

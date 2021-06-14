@@ -1,12 +1,20 @@
 
 <?php
-      include 'navbar.php';
-      include "PHP/DB.php";
-      include "PHP/classes.php";
-      $DB = new DB();
-      session_start();
 
+//include 'Model/Designer.php';
+include_once('View/ViewDesigner.php');
+include_once('Controller/DesignerController.php');
+include_once('navbar.php') ;
+
+
+
+$Model = new Designer();
+$ViewDesigner = new ViewDesigner();
+$DesignerController = new DesignerController($Model);
+$DesignerController->C_CreatePorject();
 ?>
+
+
 
 <style media="screen">
   body
@@ -100,51 +108,5 @@
 
 </style>
 <?php
-
-      $err="";
-      if(isset($_POST['submit']) && !empty($_POST['submit'])) {
-        $name = $_POST["name"];
-        $description = $_POST["description"];
-        $budget = $_POST["budget"];
-        $image =  $_POST["image"];
-        $file =  $_POST["file"];
-
-
-        if(!$err)
-        {
-          $CurrentEmp = unserialize($_SESSION['online']);
-          $Project = new Project();
-          $Project->Feed($name,$description,$budget,$image,$file);
-
-          $CurrentEmp->CreateProject($DB,$Project);
-        }
-      }
-
-
-      ?>
-<body>
-      <form class="form" action="" method="post">
-        <span class="form-title">Create New Project</span>
-        <div class="create-form">
-        <label class="p-input">Project Name</label>
-        <input type="text" class="form-input" name="name" value="Project 1">
-
-        <label class="p-input">Project Description</label>
-        <input type="text" class="form-input" name="description" value="project 1 description here">
-
-        <label class="p-input">Project Budget</label>
-        <input type="number" class="form-input" name="budget" value="32000 L.E">
-
-        <label class="p-input">Images</label>
-        <input type="file" class="form-file" name="image" value="Upload">
-
-        <label class="p-input">Files</label>
-        <input type="file" class="form-file" name="file" value="Upload"><br>
-      </div>
-
-        <input type="submit" class="create" name="submit" value="Create">
-
-
-      </form>
-
-</body>
+ echo $ViewDesigner->CreateProjectForm();
+?>
