@@ -67,7 +67,10 @@
     }
     public function CreateProject($DB,$Project)
     {
-      $DB->query = "INSERT into project (name,description,budget,images,files,status) VALUES('".$Project->getName()."', '".$Project->getDesc()."','".$Project->getBudget()."','".$Project->getImages()."','".$Project->getFiles()."','".$Project->getStatus()."')";
+      $Project->addDesigner($this);
+      echo $Project->getDesigners();
+      $assignedID=$this->ID;
+      $DB->query = "INSERT into project (name,description,budget,images,files,status,AssignedDesigners) VALUES('".$Project->getName()."', '".$Project->getDesc()."','".$Project->getBudget()."','".$Project->getImages()."','".$Project->getFiles()."','".$Project->getStatus()."',$assignedID)";
       $result = $DB->query();
       echo $result;
     }
@@ -92,6 +95,7 @@
 
     public function CreateAccount($DB,$EMP)
     {
+
       $DB->query = "INSERT into user (Name,Email,Type,Password) VALUES('".$EMP->Name."','".$EMP->Email."','".$EMP->Type."','".$EMP->Password."')";
       $result = $DB->query();
     }
@@ -108,7 +112,7 @@
     private $budget;
     private $images;
     private $files;
-
+    private $designers=array();
     function __construct()
     {
 
@@ -180,6 +184,15 @@ function setFiles($files)
 function getFiles()
 {
  return $this->files;
+}
+
+function addDesigner($designer)
+{
+  array_push($this->designers,$designer);
+}
+function getDesigners()
+{
+  return print_r($this->designers);
 }
 }
  ?>
