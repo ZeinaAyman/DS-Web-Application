@@ -20,10 +20,8 @@
 
       <div class="container">
         <h1>Welcome</h1>
-
-        	<input class="buttonx" type="submit" value="Create Account" name="Submit"><br>
-
-          <input class="buttonx" type="submit" value="Manage Accounts" name="Submit">
+          <a href="CreateAccount.php"><input class="buttonx" type="submit" value="Create Account" name="Submit"><br></a>
+        	<a href="ManageAccounts.php"><input class="buttonx" type="submit" value="Manage Accounts" name="Submit"></a>
       </div>
   </body>
 </html>
