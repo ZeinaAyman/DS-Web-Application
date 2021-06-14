@@ -4,6 +4,8 @@
       include "PHP/DB.php";
       include "PHP/classes.php";
       $DB = new DB();
+      session_start();
+
 ?>
 
 <style media="screen">
@@ -107,13 +109,14 @@
         $image =  $_POST["image"];
         $file =  $_POST["file"];
 
-        
+
         if(!$err)
         {
+          $CurrentEmp = unserialize($_SESSION['online']);
           $Project = new Project();
           $Project->Feed($name,$description,$budget,$image,$file);
-          $Designer = new Designer();
-          $Designer->CreateProject($DB,$Project);
+
+          $CurrentEmp->CreateProject($DB,$Project);
         }
       }
 
