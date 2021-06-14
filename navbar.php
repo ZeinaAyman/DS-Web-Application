@@ -19,7 +19,6 @@ else {
     $NEW->ID=$online->ID;
     $NEW->Feed($online->Name,$online->Email,$online->Password,$online->Type);
     $_SESSION['online'] = serialize($NEW);
-    print_r($NEW);
   }
 }
  ?>
