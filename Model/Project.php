@@ -8,7 +8,7 @@ class Project extends Model
   private $status;
   private $budget;
   private $images;
-  private $files;
+  private $files=array();
   private $designers=array();
   function __construct()
   {
@@ -80,7 +80,8 @@ $this->files = $files;
 }
 function getFiles()
 {
-return $this->files;
+
+return implode(",",$this->files);
 }
 
 function addDesigner($designer)
@@ -91,6 +92,7 @@ function getDesigners()
 {
 return print_r($this->designers);
 }
+
 }
 
  ?>
