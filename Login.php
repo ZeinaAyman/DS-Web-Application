@@ -1,25 +1,13 @@
 <?php
-include 'PHP/DB.php';
-include 'PHP/classes.php';
+include 'Model/Employee.php';
+include 'View/ViewUser.php';
+include 'Controller/UserController.php';
 $msg='';
 $err = false;
-$DB = new DB();
- if(isset($_POST['Submit']))
-  {
-          $email=$_POST['email'];
-          $password=$_POST['password'];
-
-          if(!preg_match('/[a-z0-9._%+-]+@+[a-z0-9._%+-]+.+[a-z0-9._%+-]/',$email)){
-            $msg="Please enter a valid email";
-            $err = true;
-          }
-
-          if(!$err){
-            $Emp= new Employee();
-            $Emp->Login($DB,$email,$password);
-          }
-
-  }
+$Model = new Employee();
+$ViewUser = new ViewUser();
+$UserController = new UserController($Model);
+$UserController->C_Login();
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -47,15 +35,7 @@ $DB = new DB();
             echo $msg;
           } ?>
         </div>
-        <form action= "" method="post">
-          <div class="input">
-            <input class="info" type="text" placeholder="Email" required name="email">
-          </div>
-          <div class="input">
-            <input class="info" type="password" placeholder="Password" required name="password"><br>
-          </div>
-        	<input class="button" type="submit" value="Log in" name="Submit">
-        </form>
+        <?php echo $ViewUser->LoginForm(); ?>
       </div>
   </body>
   <script type="text/javascript">

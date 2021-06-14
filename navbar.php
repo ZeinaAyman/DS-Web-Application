@@ -1,8 +1,26 @@
 <?php
 session_start();
+include 'Model/Designer.php';
 if($_SESSION['online']===NULL)
 {
   header("Location: Login.php");
+}
+else {
+  $online=unserialize($_SESSION['online']);
+  if ($online->Type=="1") {
+    $NEW = new Admin();
+    $NEW->ID=$online->ID;
+    $NEW->Feed($online->Name,$online->Email,$online->Password,$online->Type);
+    $_SESSION['online'] = serialize($NEW);
+    header("Location: Admin.php");
+  }
+  else {
+    $NEW = new Designer();
+    $NEW->ID=$online->ID;
+    $NEW->Feed($online->Name,$online->Email,$online->Password,$online->Type);
+    $_SESSION['online'] = serialize($NEW);
+    print_r($NEW);
+  }
 }
  ?>
 <!DOCTYPE html>
