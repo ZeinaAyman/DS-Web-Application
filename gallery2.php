@@ -71,7 +71,7 @@
       width: 636px;
       height: 639px;
       position: absolute;
-      left: 788px;
+      left: 836px;
       top: 166px;
     }
 
@@ -80,7 +80,7 @@
       width: 636px;
       height: 354px;
       position: absolute;
-      left: 0px;
+      left: 48px;
       top: 0px;
     }
 
@@ -135,7 +135,7 @@
       width: 518px;
       height: 32px;
       position: absolute;
-      left: 820px;
+      left: 856px;
       top: 650;
       font-family: Montserrat;
       text-align: left;
@@ -149,13 +149,86 @@
       width: 518px;
       height: 106px;
       position: absolute;
-      left: 820px;
+      left: 856px;
       top: 700px;
       font-family: Mplus 1p Bold;
       text-align: left;
       font-size: 18px;
       letter-spacing: -1.5;
-      line-height: px;
+    }
+
+    .container-about {
+        width: 1170px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    section {
+        padding: 90px 0 90px 0;
+    }
+    .row-about {
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+    #subheader {
+        padding-bottom: 70px;
+        background: #151515;
+    }
+    section {
+        padding: 90px 0 90px 0;
+    }
+    #subheader h1 {
+        color: #eceff3;
+        font-size: 32px;
+        letter-spacing: 5px;
+        float: left;
+        padding-right: 40px;
+        margin-right: 40px;
+        text-transform: uppercase;
+    }
+    #subheader .crumb {
+        font-size: 15px;
+        letter-spacing: 3px;
+        color: #fff;
+        text-transform: uppercase;
+    }
+    .crumb {
+        color: #777;
+        float: right;
+        font-size: 12px;
+    }
+    .col-md-12 {
+        width: 100%;
+    }
+    .crumb li {
+        display: inline;
+        text-decoration: none;
+        padding: 0 2px 0 2px;
+        float: right !important;
+    }
+    .crumb a {
+        text-decoration: none;
+        color: #6e5c38;
+    }
+    section {
+        background: #18191b;
+    }
+    #content {
+        background: #18191b;
+    }
+    #content {
+        width: 100%;
+        padding: 90px 0 90px 0;
+        z-index: 100;
+    }
+    .no-top {
+        padding-top: 0 !important;
+    }
+    .no-bottom {
+        padding-bottom: 0 !important;
+    }
+    .no-bottom {
+        margin-bottom: 0;
+        padding-bottom: 0;
     }
   </style>
 
@@ -163,18 +236,33 @@
 
 <body>
   <!-- images -->
-
+  <section id="subheader" data-speed="8" data-type="background" style="background-position: 50% 0px; margin-left: 3%; padding-bottom: 23px;">
+        <div class="container-about">
+            <div class="row-about">
+                <div class="col-md-12">
+                    <h1>Project Details</h1>
+                    <ul class="crumb">
+                        <li>Project Details</li>
+                        <li class="sep">/</li>
+                        <li>Gallery</li>
+                        <li class="sep">/</li>
+                        <li><a href="New_Galleryhome.php">Home</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
   <div class="row2">
     <div class="column">
       <img src="images/building2.jpeg" style="width:100%">
-      <img src="images/building3.jpg" style="width:100%">
+      <img src="images/building3.jpg" style="width:100%;">
 
 
     </div>
     <div class="column">
       <img src="images/building3.jpg" style="width:100%">
-      <img src="images/building.jpg" style="width:100%">
+      <img src="images/building.jpg" style="width:100%; height: 199px;">
 
     </div>
 
@@ -182,21 +270,19 @@
   </div>
   <!-- end images -->
   </div>
-  <span class="e338_1425 title">Project Details</span><span class="e338_1426">
-  </span>
 
 
   <!-- image Background -->
-  <div class="e338_1432"></div>
+  <div class="e338_1432" style="margin-top: 200px;"></div>
   <!-- image position -->
-  <div class=e338_1433 style="margin-bottom: 120px;">
+  <div class="e338_1433" style="margin-bottom: 125px; margin-top: 200px;">
     <!-- main image -->
 
     <div class="ei338_1433_338_1429"><img src="images/building3.jpg" style="width:100%"></div>
     <!-- project Description  -->
   </div>
-  <span class="c4">Sed sssut perspiciatis unde omnis</span>
-  <span class="e338_1435">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</span>
+  <span class="c4" style="margin-top: 200px;">Sed sssut perspiciatis unde omnis</span>
+  <span class="e338_1435" style="margin-top: 200px;">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</span>
 
 
   <!-- footer and logos -->

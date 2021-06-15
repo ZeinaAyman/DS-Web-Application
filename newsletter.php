@@ -34,9 +34,9 @@
             <div class="container-about">
                 <div class="row-about">
                     <div class="col-md-12">
-                        <h1>About Us</h1>
+                        <h1>Newsletter</h1>
                         <ul class="crumb">
-                            <li>About Us</li>
+                            <li>Newsletter</li>
                             <li class="sep">/</li>
                             <li><a href="New_Galleryhome.php">Home</a></li>
                         </ul>

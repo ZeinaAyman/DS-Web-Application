@@ -37,11 +37,6 @@
     <body>
 
 
-      <div class="stem-wrapper">
-      	<div class="stem"></div>
-      	<div class="stem-background"></div>
-      </div>
-
       <div class="container">
         <div class="left-skew">
           <div class="container-fluid mainBanner--txt">
@@ -60,7 +55,7 @@
                       </span></h2>
                 </div>
                 <div class="overflow homeHeaderMobile">
-                  <div class="homeHeader"><a href="projects.html" class="btn-slider border-op-20">Learn More</a></div>
+                  <div class="homeHeader"><a href="AboutUs.php" class="btn-slider border-op-20">Learn More</a></div>
                 </div>
               </div>
             </div>

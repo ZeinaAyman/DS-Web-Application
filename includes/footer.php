@@ -89,6 +89,7 @@ address span {
 }
 address span {
    display: block;
+   color: #fff;
    border-bottom: solid 1px #222;
    padding-bottom: 5px;
    margin-bottom: 5px;
@@ -120,10 +121,9 @@ footer a {
                 <h6 style="color: #fff; font-weight: 400;">Navigation</h6>
                 <ul class="list-xxs">
                   <li><a href="#">About Us</a></li>
-                  <li><a href="#">Our Team</a></li>
-                  <li><a href="#">Our Clients</a></li>
-                  <li><a href="#">Services</a></li>
-                  <li><a href="#">News</a></li>
+                  <li><a href="#">Portfolio</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">Newsletter</a></li>
                 </ul>
               </div>
                         <div class="col-md-4">

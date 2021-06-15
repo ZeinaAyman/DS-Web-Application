@@ -377,7 +377,7 @@ header{
           <ul id="menu">
               <li class="one"><a href="New_GalleryHome.php">Home</a></li>
               <li class="two"><a href="AboutUs.php">About</a></li>
-              <li class="three"><a href="">Gallery</a>
+              <li class="three"><a href="gallery.php">Gallery</a>
                  <ul>
                       <li><a href="">Residenial</a></li>
                       <li><a href="">Retail</a></li>
@@ -385,8 +385,8 @@ header{
                 </ul>
               </li>
               <li class="four"><a href="ContactUs.php">Contact</a></li>
-              <li class="five"><a href="">Map</a></li>
-              <li class="six"><a href="">Newsletter</a></li>
+              <li class="five"><a href="ContactUs.php">Map</a></li>
+              <li class="six"><a href="newsletter.php">Newsletter</a></li>
             <hr>
           </ul>
       </div>

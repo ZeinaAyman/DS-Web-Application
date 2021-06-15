@@ -121,10 +121,99 @@
                 max-width: 100%;
             }
         }
+        .container-about {
+            width: 1170px;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+        section {
+            padding: 90px 0 90px 0;
+        }
+        .row-about {
+            margin-right: -15px;
+            margin-left: -15px;
+        }
+        #subheader {
+            padding-bottom: 70px;
+            background: #151515;
+        }
+        section {
+            padding: 90px 0 90px 0;
+        }
+        #subheader h1 {
+            color: #eceff3;
+            font-size: 32px;
+            letter-spacing: 5px;
+            float: left;
+            padding-right: 40px;
+            margin-right: 40px;
+            text-transform: uppercase;
+        }
+        #subheader .crumb {
+            font-size: 15px;
+            letter-spacing: 3px;
+            color: #fff;
+            text-transform: uppercase;
+        }
+        .crumb {
+            color: #777;
+            float: right;
+            font-size: 12px;
+        }
+        .col-md-12 {
+            width: 100%;
+        }
+        .crumb li {
+            display: inline;
+            text-decoration: none;
+            padding: 0 2px 0 2px;
+            float: right !important;
+        }
+        .crumb a {
+            text-decoration: none;
+            color: #6e5c38;
+        }
+        section {
+            background: #18191b;
+        }
+        #content {
+            background: #18191b;
+        }
+        #content {
+            width: 100%;
+            padding: 90px 0 90px 0;
+            z-index: 100;
+        }
+        .no-top {
+            padding-top: 0 !important;
+        }
+        .no-bottom {
+            padding-bottom: 0 !important;
+        }
+        .no-bottom {
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
     </style>
 </head>
 
 <body>
+
+  <section id="subheader" data-speed="8" data-type="background" style="background-position: 50% 0px; margin-left: 8%;">
+        <div class="container-about">
+            <div class="row-about">
+                <div class="col-md-12">
+                    <h1>Gallery</h1>
+                    <ul class="crumb">
+                        <li>Gallery</li>
+                        <li class="sep">/</li>
+                        <li><a href="New_Galleryhome.php">Home</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <div class="container2">
         <div class="gallery">
             <figure class="gallery__item gallery__item--word">
@@ -135,7 +224,7 @@
             </figure>
             <div class="row2">
                 <div class="column">
-                    <img src="images/building2.jpeg" style="width:100%">
+                    <a href="gallery2.php"><img src="images/building2.jpeg" style="width:100%"></a>
                     <img src="images/building3.jpg" style="width:100%">
                     <img src="images/building2.jpeg" style="width:100%">
 
