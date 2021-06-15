@@ -8,7 +8,7 @@
     public $Type;
     function __construct()
     {
-z$err = false;
+$err = false;
     }
 
     public function Feed($Name,$Email,$Password,$Type)

@@ -19,7 +19,12 @@
             background: url(images/aboutus-photo.jpg);
             background-size: cover;
         }
-        .side-bg .image-container {
+        #section-about-us-2 .image-container2 {
+            background: url(images/vision.jpg);
+            background-size: cover;
+        }
+
+        .side-bg .image-container, .side-bg .image-container2 {
           height: 100%;
           width: 50%;
           overflow: hidden;
@@ -66,7 +71,7 @@
 
         <div id="content" class="no-top no-bottom">
           <section id="section-about-us-2" class="side-bg no-padding">
-                <div class="image-container col-md-5 pull-right" data-delay="0" style="position: absolute;left: 50%;"></div>
+                <div class="image-container2 col-md-5 pull-right" data-delay="0" style="position: absolute;left: 50%;"></div>
 
                 <div class="container-about">
                     <div class="row-about">
