@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 11, 2021 at 05:22 PM
--- Server version: 10.1.37-MariaDB
--- PHP Version: 7.2.12
+-- Generation Time: Jun 15, 2021 at 02:20 PM
+-- Server version: 10.4.18-MariaDB
+-- PHP Version: 7.3.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -35,16 +34,17 @@ CREATE TABLE `project` (
   `budget` int(11) NOT NULL,
   `images` text NOT NULL,
   `files` text NOT NULL,
-  `status` varchar(20) NOT NULL
+  `status` varchar(20) NOT NULL,
+  `AssignedDesigners` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `project`
 --
 
-INSERT INTO `project` (`id`, `name`, `description`, `budget`, `images`, `files`, `status`) VALUES
-(3, 'shams abdelhamid', '6th of october villa', 32000, 'a1.jpeg', '', 'ongoing'),
-(4, 'zeina ayman', 'madinet nasr stairs', 40000, 'a2.jpeg', '', 'ongoing');
+INSERT INTO `project` (`id`, `name`, `description`, `budget`, `images`, `files`, `status`, `AssignedDesigners`) VALUES
+(53, 'North Costa', 'villa design ', 200000, 'Interior-Design-of-Luxury-Modern-Residence-6.1546900319.0638.jpg,Top-Interior-Design-Companies-Cairo-Egypt.jpg', 'Test1.pdf,Test2.docx', 'Ongoing', '4'),
+(54, 'New Cairo Project', 'Home design ', 30000, 'maxresdefault.jpg,Top-Interior-Design-Companies-Cairo-Egypt.jpg', 'Test1.pdf,Test2.docx', 'Ongoing', '4');
 
 --
 -- Indexes for dumped tables
@@ -64,7 +64,7 @@ ALTER TABLE `project`
 -- AUTO_INCREMENT for table `project`
 --
 ALTER TABLE `project`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
