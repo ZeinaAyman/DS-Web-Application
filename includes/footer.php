@@ -18,7 +18,7 @@ footer {
     display: flex;
     justify-content: space-between;
 }
-[class*='col'] {
+[class*='col-'] {
     padding-left: 65px;
     line-height: 36px;
     /* padding-right: 25px; */
