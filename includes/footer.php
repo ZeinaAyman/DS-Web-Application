@@ -14,20 +14,42 @@ footer {
     background: #151515;
     color: #ccc;
 }
-.row {
+.row-footer {
+    display: flex;
+    justify-content: space-between;
+}
+[class*='col-'] {
+    padding-left: 65px;
+    line-height: 36px;
+    /* padding-right: 25px; */
+}
+.col-md-4 {
+    width: 33.33333333333333%;
+}
+.row-footer {
    margin-right: -25px;
    margin-left: -15px;
 }
 .logo-small {
- height: auto;
- width: 35%;
+    height: auto;
+    width: 35%;
+}
+.text-center {
+    text-align: center !important;
 }
 footer h3, .de_light footer h3 {
    color: #fff;
    font-size: 20px;
 }
-.col-md-4 {
-    width: 33.33333333333333%;
+h6, .heading-6 {
+    font-size: 18px;
+    line-height: 1.44444;
+		margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 600;
+    color: #221F1E;
+    text-transform: uppercase;
+    letter-spacing: .5px;
 }
 h3 {
    margin-top: 0;
@@ -67,6 +89,7 @@ address span {
 }
 address span {
    display: block;
+   color: #fff;
    border-bottom: solid 1px #222;
    padding-bottom: 5px;
    margin-bottom: 5px;
@@ -89,7 +112,7 @@ footer a {
 
 <footer>
                 <div class="container-footer">
-                    <div class="row">
+                    <div class="row-footer">
                         <div class="col-md-4 text-center">
                             <img src="images/dslogo.png" class="logo-small" alt="SK-Touch"><br>
                             We are an Interior Design studio with a twist based in Lebanon and Kingdom of Saudi Arabia, offering turnkey Interior Design services and Smart living Solutions.
@@ -98,10 +121,9 @@ footer a {
                 <h6 style="color: #fff; font-weight: 400;">Navigation</h6>
                 <ul class="list-xxs">
                   <li><a href="#">About Us</a></li>
-                  <li><a href="#">Our Team</a></li>
-                  <li><a href="#">Our Clients</a></li>
-                  <li><a href="#">Services</a></li>
-                  <li><a href="#">News</a></li>
+                  <li><a href="#">Portfolio</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">Newsletter</a></li>
                 </ul>
               </div>
                         <div class="col-md-4">

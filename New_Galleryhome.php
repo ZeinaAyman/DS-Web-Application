@@ -27,15 +27,15 @@
             opacity: 0.1;
             background-position: center center;
         }
+        [class*='col'] {
+            padding-left: 65px;
+            line-height: 36px;
+            /* padding-right: 25px; */
+        }
         </style>
     </head>
     <body>
 
-
-      <div class="stem-wrapper">
-      	<div class="stem"></div>
-      	<div class="stem-background"></div>
-      </div>
 
       <div class="container">
         <div class="left-skew">
@@ -55,7 +55,7 @@
                       </span></h2>
                 </div>
                 <div class="overflow homeHeaderMobile">
-                  <div class="homeHeader"><a href="projects.html" class="btn-slider border-op-20">Learn More</a></div>
+                  <div class="homeHeader"><a href="AboutUs.php" class="btn-slider border-op-20">Learn More</a></div>
                 </div>
               </div>
             </div>
