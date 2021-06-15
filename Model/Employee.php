@@ -1,5 +1,5 @@
 <?php
-  include 'User.php';
+  include_once('User.php') ;
   //require_once('Designer.php');
   class Employee extends User
   {
@@ -43,12 +43,6 @@
         {
           $msg='User not found';
         }
-    }
-    public function CreateProject($DB,$Project)
-    {
-      $DB->query = "INSERT into project (name,description,budget,images,files,status) VALUES('".$Project->getName()."', '".$Project->getDesc()."','".$Project->getBudget()."','".$Project->getImages()."','".$Project->getFiles()."','".$Project->getStatus()."')";
-      $result = $DB->query();
-      echo $result;
     }
   }
  ?>

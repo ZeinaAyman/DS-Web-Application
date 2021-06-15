@@ -19,7 +19,7 @@ body{
 
 
 .container {
-  width: 70%;
+  width: 80%;
   height: 350px;
   margin-top: 170px;
   display: flex;
@@ -47,15 +47,7 @@ body{
     display: flex;
     justify-content: space-between;
 }
-[class*='col'] {
-    padding-left: 65px;
-    line-height: 36px;
-    /* padding-right: 25px; */
-}
 .col-12 {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 100%;
-    -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%;
 }

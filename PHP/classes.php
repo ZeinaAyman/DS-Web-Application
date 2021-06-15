@@ -65,15 +65,7 @@
           $msg='User not found';
         }
     }
-    public function CreateProject($DB,$Project)
-    {
-      $Project->addDesigner($this);
-      echo $Project->getDesigners();
-      $assignedID=$this->ID;
-      $DB->query = "INSERT into project (name,description,budget,images,files,status,AssignedDesigners) VALUES('".$Project->getName()."', '".$Project->getDesc()."','".$Project->getBudget()."','".$Project->getImages()."','".$Project->getFiles()."','".$Project->getStatus()."',$assignedID)";
-      $result = $DB->query();
-      echo $result;
-    }
+
   }
 
   class Designer extends Employee
@@ -82,6 +74,16 @@
     function __construct()
     {
 
+    }
+
+    public function CreateProject($DB,$Project)
+    {
+      $Project->addDesigner($this);
+      echo $Project->getDesigners();
+      $assignedID=$this->ID;
+      $DB->query = "INSERT into project (name,description,budget,images,files,status,AssignedDesigners) VALUES('".$Project->getName()."', '".$Project->getDesc()."','".$Project->getBudget()."','".$Project->getImages()."','".$Project->getFiles()."','".$Project->getStatus()."',$assignedID)";
+      $result = $DB->query();
+      echo $result;
     }
   }
 
@@ -102,6 +104,7 @@
 
 
   }
+
 
   class Project
   {
