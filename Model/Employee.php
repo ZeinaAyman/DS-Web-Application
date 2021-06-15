@@ -8,7 +8,7 @@
     public $Type;
     function __construct()
     {
-$err = false;
+      $err = false;
     }
 
     public function Feed($Name,$Email,$Password,$Type)
@@ -52,11 +52,11 @@ $err = false;
         if ($this->DB->ok === 1)
         {
           echo "done";
-          $DB->ok=0;
-          $online->ID=$id;
+          $this->DB->ok=0;
           $online->Name=$name;
           $online->Email=$email;
           $online->Password=$password;
+          $_SESSION['online']=serialize($online);
 
         }
         else

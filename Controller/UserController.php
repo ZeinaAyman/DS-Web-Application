@@ -46,7 +46,7 @@ include_once('Controller.php') ;
 
                  if(!$err){
                    $this->Model->connect();
-                   $this->Model->UpdateUser($this->Model,$name,$email,$password);
+                   $this->Model->UpdateUser($this->Model,$name,$email,$newpassword);
                  }
 
          }
