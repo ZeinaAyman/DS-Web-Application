@@ -250,7 +250,7 @@ animation-duration: 2.5s;
 .styles_PackageCard__2V_Wv {
     padding: 0 30px;
 }
-@media (min-width: 920px)
+@media (min-width: 920px){
 .styles_PackageCard__2V_Wv {
     flex: 0 0 auto;
     padding: 0 20px;
@@ -640,3 +640,4 @@ p {
  .fill_height {
      height: 100%;
  }
+}

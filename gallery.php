@@ -1,6 +1,4 @@
-<?php
-include 'galleryNavbar.php';
-?>
+<?php include "New_Homenavbar.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,9 +6,19 @@ include 'galleryNavbar.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="New_master.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/gif/png" href="dslogo.png">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
     <title>Gallery</title>
     <style>
@@ -28,32 +36,35 @@ include 'galleryNavbar.php';
         }
 
         body {
-            font-family: "Nunito", sans-serif;
-            color: #333;
+
+            font-family: 'Oswald', sans-serif;
+            color: #6e5c38;
             font-weight: 300;
             line-height: 1.6;
-            background-color: rgba(177.0000046491623, 219.0000021457672, 173.00000488758087, 1);
+            background-color: #151515;
         }
 
-        .container {
+        .container2 {
             width: 80%;
             margin: 2rem auto;
-            background-color: rgba(132.0000073313713, 127.00000002980232, 121.00000038743019, 1);
-            margin-top: 180px;
+            background-color: #6e5c38;
+            padding: 12px;
+            padding-right: 15px;
+            margin-top: 100px;
         }
 
 
 
 
         h1 {
-            font-family: Montserrat;
+            font-family: 'Oswald', sans-serif;
             text-align: center;
             font-size: 36px;
             color: rgba(214.00000244379044, 232.00000137090683, 233.00000131130219, 1);
         }
 
         p {
-            font-family: Montserrat;
+            font-family: 'Oswald', sans-serif;
             font-size: 22px;
             text-align: center;
             color: rgba(214.00000244379044, 232.00000137090683, 233.00000131130219, 1);
@@ -68,7 +79,7 @@ include 'galleryNavbar.php';
             top: 903px;
         }
 
-        .row {
+        .row2 {
             display: -ms-flexbox;
             /* IE10 */
             display: flex;
@@ -114,15 +125,15 @@ include 'galleryNavbar.php';
 </head>
 
 <body>
-    <div class="container">
+    <div class="container2">
         <div class="gallery">
             <figure class="gallery__item gallery__item--word">
-                <h1>Company Projects</h1>
+                <h1 id="title1">Company Projects</h1>
             </figure>
             <figure class="gallery__item gallery__item--p">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
             </figure>
-            <div class="row">
+            <div class="row2">
                 <div class="column">
                     <img src="images/building2.jpeg" style="width:100%">
                     <img src="images/building3.jpg" style="width:100%">
@@ -150,7 +161,8 @@ include 'galleryNavbar.php';
             </div>
         </div>
     </div>
-    <div class="e338_1408"></div>
+    <!-- <div class="e338_1408"></div> -->
+    <?php include "includes/footer.php"; ?>
 </body>
 
 </html>

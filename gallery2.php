@@ -1,22 +1,31 @@
-<?php
-include 'galleryNavbar.php';
-?>
+<?php include "New_Homenavbar.php"; ?>
 <html lang="en">
 
 <head>
   <meta charset="utf-8">
 
+  <link rel="stylesheet" href="New_master.css">
+  <link rel="icon" type="image/gif/png" href="dslogo.png">
+  <link href="https://fonts.googleapis.com/css?family=Oswald:400" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
   <title>Gallery</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Mplus+1p Bold&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet"> -->
 
-  <link rel="stylesheet" href="styles1.css">
+
+  <!-- <link rel="stylesheet" href="styles1.css"> -->
 
   <style>
+    @font-face {
+      font-family: DancingScript;
+      src: url('./fonts/DancingScript-Regular.ttf');
+    }
+
     *,
     *::after,
     *::before {
@@ -30,25 +39,52 @@ include 'galleryNavbar.php';
       color: #333;
       /* font-weight: 300;
       line-height: 1.6; */
-      background: #E5E5E5;
-      background-color: rgba(132.0000073313713, 127.00000002980232, 121.00000038743019, 1);
+      /* background: #E5E5E5; */
+      background-color: #151515;
     }
 
+    /* text project details */
     .e338_1425 {
-      color: rgba(214.00000244379044, 232.00000137090683, 233.00000131130219, 1);
+      font-family: DancingScript;
+      color: #fff;
       width: 695px;
       height: 64px;
       position: absolute;
-      left: 15px;
+      left: 25px;
       top: 166px;
-      font-family: Montserrat;
       text-align: left;
       font-size: 48px;
       letter-spacing: -1.5;
       line-height: px;
     }
 
-    .row {
+    .e338_1433 {
+      width: 636px;
+      height: 354px;
+      position: absolute;
+      left: 788px;
+      top: 166px;
+    }
+
+    .e338_1432 {
+      background-color: #6e5c38;
+      width: 636px;
+      height: 639px;
+      position: absolute;
+      left: 788px;
+      top: 166px;
+    }
+
+    .ei338_1433_338_1429 {
+      background-color: rgba(229.00000154972076, 229.00000154972076, 229.00000154972076, 1);
+      width: 636px;
+      height: 354px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+    }
+
+    .row2 {
       margin-top: 160;
       display: -ms-flexbox;
       /* IE10 */
@@ -56,6 +92,7 @@ include 'galleryNavbar.php';
       -ms-flex-wrap: wrap;
       /* IE10 */
       flex-wrap: wrap;
+      margin-left: 20px;
       padding: 0 4px;
     }
 
@@ -128,7 +165,7 @@ include 'galleryNavbar.php';
   <!-- images -->
 
 
-  <div class="row">
+  <div class="row2">
     <div class="column">
       <img src="images/building2.jpeg" style="width:100%">
       <img src="images/building3.jpg" style="width:100%">
@@ -144,7 +181,8 @@ include 'galleryNavbar.php';
 
   </div>
   <!-- end images -->
-  </div><span class="e338_1425">Project Details</span><span class="e338_1426">
+  </div>
+  <span class="e338_1425 title">Project Details</span><span class="e338_1426">
   </span>
 
 
@@ -162,13 +200,10 @@ include 'galleryNavbar.php';
 
 
   <!-- footer and logos -->
-  <div class="e338_1449"></div><span class="e338_1450">© Copyright 2021 - Desig-Solutions</span>
-  <div class=e338_1451>
-    <div class="ei338_1451_338_1617"></div>
-  </div>
-  <div class=e338_1452>
-    <div class="ei338_1452_338_1619"></div>
-  </div>
+
+
+  <?php include "includes/footer.php"; ?>
+
 </body>
 
 </html>
