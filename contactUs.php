@@ -105,7 +105,7 @@ h2{
             <div class="row-footer">
 
                 <div class="col-md-4">
-                    <h3>Contact Us <span class="id-color">Egypt</span></h3>
+                    <h3><span class="id-color">Egypt</span></h3>
                     <div class="widget widget-address">
                         <address>
                             <span>Bejjany Street, Louaize District</span>
@@ -118,7 +118,7 @@ h2{
                 </div>
 
                 <div class="col-md-4">
-                    <h3>Contact Us <span class="id-color">Saudi Arabia</span></h3>
+                    <h3><span class="id-color">Saudi Arabia</span></h3>
                     <div class="widget widget-address">
                         <address>
                             <span>CourtYard Building, Office #303</span>
@@ -130,7 +130,7 @@ h2{
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <h3>Contact Us <span class="id-color">Tunisia</span></h3>
+                    <h3><span class="id-color">Tunisia</span></h3>
                     <div class="widget widget-address">
                         <address>
                             <span>Bejjany Street, Louaize District</span>
