@@ -1,3 +1,5 @@
+
+
 <?php
 include_once('Model.php') ;
 class Project extends Model
@@ -7,7 +9,7 @@ class Project extends Model
   private $desc;
   private $status;
   private $budget;
-  private $images;
+  private $images=array();
   private $files=array();
   private $designers=array();
   function __construct()
@@ -71,7 +73,7 @@ $this->images = $images;
 }
 function getImages()
 {
-return $this->images;
+return implode(",",$this->images);
 }
 
 function setFiles($files)

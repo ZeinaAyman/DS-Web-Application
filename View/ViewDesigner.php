@@ -20,7 +20,7 @@ class ViewDesigner extends ViewUser
    $html.= "<input type='number' class='form-input' name='budget' value='32000 L.E'>";
 
    $html.="<label class='p-input'>Images</label>";
-   $html.="<input type='file' class='form-file' name='image' value='Upload'>";
+   $html.="<input type='file' class='form-file' name='image[]' value='Upload'  multiple>";
 
    $html.="<label class='p-input'>Files</label>";
    $html.="<input type='file' class='form-file' name='file[]' value='Upload' multiple > <br>";
