@@ -58,7 +58,7 @@ function getFileData(id,divid){
 
       var filename = document.getElementById(id).files[i].name;
       var div = document.getElementById(divid);
-      div.innerHTML += filename+"<br>";
+      div.innerHTML += filename+','+'&nbsp &nbsp';
 
     }
     for (var y = 0; y < numFiles; y++) {
