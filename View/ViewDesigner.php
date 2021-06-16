@@ -47,7 +47,7 @@ class ViewDesigner extends ViewUser
 }
  ?>
 <script type="text/javascript">
-var arr=[];
+var arr = new DataTransfer();
 function getFileData(id,divid){
     var numFiles = document.getElementById(id).files.length;
     console.log(divid);
@@ -60,10 +60,14 @@ function getFileData(id,divid){
       var div = document.getElementById(divid);
       div.innerHTML += filename+"<br>";
 
-      arr.push(document.getElementById(id).files);
     }
-     document.getElementById(id).files.push(arr[1]);
-     console.log(arr);
+    for (var y = 0; y < numFiles; y++) {
+      arr.items.add(document.getElementById(id).files[y]);
+    }
+    document.getElementById(id).files=arr.files;
+     //document.getElementById(id).files.push(arr[1]);
+     console.log(document.getElementById(id).files);
+     console.log(arr.files);
 }
 
 </script>
