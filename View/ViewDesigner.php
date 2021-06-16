@@ -40,14 +40,18 @@ class ViewDesigner extends ViewUser
 
 
  }
-
+ public function Projectslist($data)
+ {
+   echo $data;
+ }
 }
-
  ?>
 <script type="text/javascript">
+var arr=[];
 function getFileData(id,divid){
     var numFiles = document.getElementById(id).files.length;
     console.log(divid);
+
     for(var i=0;i<numFiles;i++)
     {
       //var str=myFile.toString();
@@ -55,9 +59,11 @@ function getFileData(id,divid){
       var filename = document.getElementById(id).files[i].name;
       var div = document.getElementById(divid);
       div.innerHTML += filename+"<br>";
-      console.log(filename);
-    }
 
+      arr.push(document.getElementById(id).files);
+    }
+     document.getElementById(id).files.push(arr[1]);
+     console.log(arr);
 }
 
 </script>
