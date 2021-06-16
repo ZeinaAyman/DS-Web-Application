@@ -1,13 +1,11 @@
 <?php
 include 'navbar.php';
-include 'Model/Employee.php';
 include 'View/ViewUser.php';
 include 'Controller/UserController.php';
 
 $err = false;
-$Model = new Employee();
 $ViewUser = new ViewUser();
-$UserController = new UserController($Model);
+$UserController = new UserController(unserialize($_SESSION['online']));
 $UserController->C_UpdateUser();
 //include 'PHP/classes.php';
 
