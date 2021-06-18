@@ -8,13 +8,12 @@
 
     }
 
-    public function CreateAccount($DB,$EMP)
+    public function CreateAccount($EMP)
     {
 
-      $DB->query = "INSERT into user (Name,Email,Type,Password) VALUES('".$EMP->Name."','".$EMP->Email."','".$EMP->Type."','".$EMP->Password."')";
-      $result = $DB->query();
+      $this->DB->query = "INSERT into user (Name,Email,Type,Password) VALUES('".$EMP->Name."','".$EMP->Email."','".$EMP->Type."','".$EMP->Password."')";
+      $result = $this->DB->query();
     }
-
 
   }
 
