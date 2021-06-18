@@ -5,9 +5,6 @@
     <meta charset="utf-8">
     <title></title>
     <style media="screen">
-      body{
-        background-color: #847F79;
-      }
     </style>
   </head>
   <body>
@@ -20,8 +17,8 @@
 
       <div class="container">
         <h1>Welcome</h1>
-          <a href="CreateAccount.php"><input class="buttonx" type="submit" value="Create Account" name="Submit"><br></a>
-        	<a href="ManageAccounts.php"><input class="buttonx" type="submit" value="Manage Accounts" name="Submit"></a>
+          <a href="CreateAccount.php" style="text-decoration: none;"><input class="buttonx" type="submit" value="Create Account" name="Submit"><br></a>
+        	<a href="ManageAccounts.php" style="text-decoration: none;"><input class="buttonx" type="submit" value="Manage Accounts" name="Submit"></a>
       </div>
   </body>
 </html>

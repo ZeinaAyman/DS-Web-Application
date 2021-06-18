@@ -11,7 +11,7 @@ include_once('navbar.php') ;
 body
 {
   margin: 0;
-  background-color: #847F79;
+  background-color: #E9E8E8;
 }
 </style>
 <?php

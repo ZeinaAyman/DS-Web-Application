@@ -11,9 +11,6 @@
     <title></title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style media="screen">
-      body{
-        background-color: #847F79;
-      }
       .create{
         position: absolute;
         font-family: sans-serif;
@@ -29,10 +26,13 @@
   <body>
     <div class="flex-container">
       <div class="homecontainer">
-        <?php echo $viewDesigner->Recentprojects($UserController->C_GetProjects()); ?>
+        <?php if(unserialize($_SESSION['online'])->Type==1){ echo $viewDesigner->Recentprojects($UserController->C_GetProjects());}
+        else {
+          echo $viewDesigner->Recentprojects($UserController->C_GetAllProjects());
+        } ?>
 
         <div class="timeline">
-            <h1 style="color: #76323F; padding: 20px; padding-bottom: 10px; margin-bottom: 0px;">Timeline</h1>
+            <h1 style="color: #151515; padding: 20px; padding-bottom: 10px; margin-bottom: 0px;">Timeline</h1>
           <div class="test">
             <ul>
               <li>project 35 end date 19/7/2021</li>
@@ -46,7 +46,7 @@
 
       <div class="color">
         <div class="homecontainer" style="width: 70%;">
-          <?php echo $viewDesigner->Myprojects($UserController->C_GetProjects()); ?>
+          <?php if(unserialize($_SESSION['online'])->Type==2){ echo $viewDesigner->Myprojects($UserController->C_GetProjects()); }?>
         </div>
       </div>
 
