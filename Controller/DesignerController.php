@@ -8,14 +8,12 @@ class DesignerController extends UserController
   {
 
     $err="";
-    $files=array();
-    $images=array();
     if(isset($_POST['submit']) && !empty($_POST['submit'])) {
       $name = $_POST["name"];
       $description = $_POST["description"];
       $budget = $_POST["budget"];
-
-
+      $images=array();
+      $files=array();
       if(count($_FILES["file"]['name'])>0)
       {
         $str="";
@@ -68,13 +66,7 @@ class DesignerController extends UserController
       }
     }
   }
-   public function C_GetProjects()
-  {
-    $this->Model->connect();
-    $res=$this->Model->getMyProjects();
-    return $res;
 
-  }
 }
 
 ?>
