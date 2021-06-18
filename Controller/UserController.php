@@ -44,6 +44,10 @@ include_once('Controller.php') ;
                    $err = true;
                  }
 
+                 if ($newpassword=="") {
+                   $newpassword=$password;
+                 }
+
                  if(!$err){
                    $this->Model->connect();
                    $this->Model->UpdateUser($this->Model,$name,$email,$newpassword);
