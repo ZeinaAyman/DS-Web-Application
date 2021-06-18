@@ -31,7 +31,7 @@ class ViewDesigner extends ViewUser
    $html.="<form class='form' action='' method='post' enctype='multipart/form-data' name='ProjectForm'>";
    $html.="<span class='form-title'>Create New Project</span>";
  $html.="<div class='create-form'>";
-   $html.="<label class='p-input'>Project Name</label>";
+   $html.="<label class='p-input'>Client Name</label>";
    $html.="<input type='text' class='form-input' name='name' value='Project 1'>";
 
    $html.="<label class='p-input'>Project Description</label>";
