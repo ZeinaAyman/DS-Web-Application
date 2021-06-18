@@ -1,7 +1,11 @@
 <?php
-      include "PHP/DB.php";
-      include "PHP/classes.php";
-      $DB = new DB();
+      include 'Model/Admin.php';
+      include 'View/ViewAdmin.php';
+      include 'Controller/AdminController.php';
+
+      $Model = new Admin();
+      $ViewAdmin = new ViewAdmin();
+      $DesignerController = new AdminController($Model);
       session_start();
 ?>
 
@@ -77,49 +81,11 @@
   Create Account
 </div>
 <?php
-  $err="";
-  if(isset($_POST['Submit']) && !empty($_POST['Submit'])) {
-    $name = $_POST["name"];
-    //$uni_id = $_POST["id"];
-    $email = $_POST["email"];
-    $type = $_POST["Type"];
-    $pass =  $_POST["password"];
-    if(!preg_match('/[a-z0-9._%+-]+@+[a-z0-9._%+-]+.+[a-z0-9._%+-]/',$email)){
-      $msg="-Please enter a valid email <br>";
-      //echo "-Please enter a valid name <br>";
-      $err = true;
-    }
-
-    if(!$err)
-    {
-      $EMP = new Employee();
-      $EMP->Feed($name,$email,$pass,$type);
-      unserialize($_SESSION['online'])->CreateAccount($DB,$EMP);
-    }
-  }
-
+  $DesignerController->C_CreateAccount();
  ?>
 
   <div class="createacccontainer">
-    <form action= "" method="post">
-      <div class="input">
-        <input class="info" type="text" placeholder="Employee Name"  name="name">
-      </div>
-      <div class="input">
-        <input class="info" type="text" placeholder="Employee Email" name="email"><br>
-      </div>
-      <div class="input">
-        <select name="Type" class ="info">
-          <option disabled selected>Employee Role</option>
-          <option value="2">Designer</option>
-          <option value="3">Manager</option>
-        </select>
-      </div>
-      <div class="input">
-        <input class="info" type="password" placeholder="Password" name="password"><br>
-      </div>
-      <input class="button" type="submit" value="Create" name="Submit">
-    </form>
+    <?php echo $ViewAdmin->CreateAccountForm(); ?>
 
   </div>
 </div>
