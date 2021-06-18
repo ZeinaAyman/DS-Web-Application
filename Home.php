@@ -1,4 +1,11 @@
-<?php include "navbar.php"; ?>
+<?php include "navbar.php";
+include 'View/ViewDesigner.php';
+include 'Controller/DesignerController.php';
+$Designer=new Designer();
+$ViewDesigner = new ViewDesigner();
+$DesignerController = new DesignerController($Designer);
+$res=$DesignerController->C_GetProjects();
+?>
 <html lang="en" dir="ltr">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -56,23 +63,9 @@
       <div class="color">
         <div class="homecontainer" style="width: 70%;">
           <h1 style="color:#76323F;">My Projects</h1>
-          <div class="Myprojects">
-            <div class="image" id="color">
-              <img  src="images/Project-Management-Mantenimiento-1.jpg" alt="Avatar" height="150">
-              <h3 style="color:#76323F;">Project 1</h3>
-            </div>
-            <div class="image" id="color">
-              <img  src="images/Project-Management-Mantenimiento-1.jpg" alt="Avatar" height="150">
-              <h3 style="color:#76323F;">Project 2</h3>
-            </div>
-            <div class="image" id="color">
-              <img src="images/Project-Management-Mantenimiento-1.jpg" alt="Avatar" height="150">
-              <h3 style="color:#76323F;">Project 3</h3>
-            </div>
-            <div class="image" id="color">
-              <img  src="images/Project-Management-Mantenimiento-1.jpg" alt="Avatar" height="150">
-              <h3 style="color:#76323F;">Project 3</h3>
-            </div>
+          <?php
+          echo $ViewDesigner->HomeMyProjects($res);
+           ?>
           </div>
           <a href="myprojects.php"><h4 style="color:#76323F;">See More...</h4></a>
         </div>
