@@ -75,6 +75,14 @@ class DesignerController extends UserController
     return $res;
 
   }
+
+  public function C_GetAllProjects()
+ {
+   $this->Model->connect();
+   $res=$this->Model->DB->fetchAll('project');
+   return $res;
+
+ }
 }
 
 ?>
