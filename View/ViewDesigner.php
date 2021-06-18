@@ -35,7 +35,7 @@ class ViewDesigner extends ViewUser
  public function Myprojects($result)
  {
    $html='';
-   $html.="<h1 style='color:#76323F;'>My Projects</h1>";
+   $html.="<h1 style='color:#E9E8E8;'>My Projects</h1>";
    $html.="<div class='Myprojects'>";
    for ($i=0;$i < 4; $i++){
      $row = $result->fetch_assoc();
@@ -45,12 +45,12 @@ class ViewDesigner extends ViewUser
      {
        $html.="<div class=image' id='color'>";
        $html.="<img  src='$firstimage' alt='Project Image' height='150'>";
-       $html.="<h3 style='color:#76323F;'>Project ".$row['id']."</h3>";
+       $html.="<h3 style='color:#E9E8E8;'>Project ".$row['id']."</h3>";
        $html.="</div>";
      }
    }
    $html.="</div>";
-   $html.="<a href='myprojects.php'><h4 style='color:#76323F;''>See More...</h4></a>";
+   $html.="<a href='myprojects.php'><h4 style='color:#E9E8E8;''>See More...</h4></a>";
    return $html;
 
  }
@@ -58,7 +58,7 @@ class ViewDesigner extends ViewUser
  public function Allprojects($result)
  {
    $html='';
-   $html.="<h1 style='color:#76323F;'>All Projects</h1>";
+   $html.="<h1 style='color:#151515;'>All Projects</h1>";
    $html.="<div class='Allprojects'>";
    for ($i=0;$i < 4; $i++){
      $row = $result->fetch_assoc();
@@ -68,7 +68,7 @@ class ViewDesigner extends ViewUser
      {
        $html.="<div class=image' id='color'>";
        $html.="<img  src='$firstimage' alt='Project Image' height='150'>";
-       $html.="<h3 style='color:#76323F;'>Project ".$row['id']."</h3>";
+       $html.="<h3 style='color:#151515;'>Project ".$row['id']."</h3>";
        $html.="</div>";
      }
    }

@@ -10,14 +10,14 @@
   }
   .form
   {
-    background-color: #B1DBAD;
+    background-color: #B89D5F;
     position: relative;
     top: 5%;
     left: 25%;
-    height: 80%;
+    height: 100%;
     width: 50%;
     border-width: 2px;
-    border-color: #E3B7A5;
+    border-color: #B89D5F;
     border-style: solid;
     margin-bottom: 200px;
   }
@@ -33,17 +33,17 @@
   line-height: 24px;
   letter-spacing: -0.015em;
 
-  color: #76323F;
+  color: #E9E8E8;
    display: block;
   }
   .form-input,.emplist
   {
     margin-left: 3.5%;
-    background-color: #B1DBAD;
+    background-color: #8C744D;
     border: 1px solid black;
     width: 93%;
     height: 30px;
-    color: #76323F;
+    color: #E9E8E8;
     padding-left: 10px;
   }
   .form-file
@@ -58,15 +58,15 @@
   }
   .create
   {
-    color: #B1DBAD;
+    color: #B89D5F;
    width: 90px;
    border-radius: 6%;
    height: 7%;
-   background-color: #76323F;
+   background-color: #E9E8E8;
    border-radius: 6px;
    border: none;
    position: relative;
-   top: 19%;
+   top: 5%;
    left: 44%;
   }
   .form-title
@@ -80,7 +80,7 @@
     font-size: 36px;
     line-height: 36px;
     letter-spacing: -0.015em;
-    color: #76323F;
+    color: #E9E8E8;
   }
 
 

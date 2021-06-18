@@ -1,11 +1,11 @@
 body{
   font-family: "Monsterrat", Arial;
   margin: 0px;
-  background: #847F79;
+  background: #E9E8E8;
   height: 1200px;
 }
 .title{
-  color: #D6E8E9;
+  color: #151515;
   position: relative;
   top: 80px;
   left: 80px;
@@ -25,17 +25,14 @@ body{
   width: 40px;
 }
 .project{
-  color: #76323F;
   font-size: 17px;
   position: relative;
   width: 80%;
   height: 250px;
   left: 60px;
   top: 140px;
-
-  margin: 0px;
-
-  background: #D6E8E9;
+  margin-top: 20px;
+  background: #B89D5F;
   border: 2px solid #E3B7A5;
   box-sizing: border-box;
   border-radius: 45px;
@@ -89,11 +86,11 @@ body{
 }
 .p-h3{
   margin: 0px;
-  color: #76323F;
+  color: #E9E8E8;
   width: 400px;
 }
 h1{
-  color: #76323F;
+  color: #E9E8E8;
   margin: 0px;
   width: 300px;
 }

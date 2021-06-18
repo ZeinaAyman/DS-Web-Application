@@ -2,6 +2,9 @@
   margin:0;
   box-sizing: border-box;
 }
+body{
+  background-color: #E9E8E8;
+}
 @font-face {
   font-family: "Montserrat";
   src: url("/Layout/fonts/Montserrat-ExtraBold.ttf") format("opentype");
@@ -50,7 +53,7 @@ h3{
   position: absolute;
   font-family: sans-serif;
   font-weight: lighter;
-  color: #D6E8E9;
+  color: #151515;
   padding: 5px 80px;
 }
 h4{
@@ -62,7 +65,7 @@ color: #D6E8E9;
 }
 li{
   padding: 10px;
-  color: #76323F;
+  color: #E9E8E8;
 }
 .error-msg{
   position: relative;
@@ -98,14 +101,14 @@ li{
   position: relative;
 bottom: 38px;
 
-  background-color: #B1DBAD;
+  background-color: #B89D5F;
 }
 .timeline{
   right: 300px;
   float: right;
   position: relative;
   width: 26%;
-  background-color: #D6E8E9;
+  background-color: #B89D5F;
 }
 .test{
   margin-bottom: 10%;
@@ -167,6 +170,7 @@ margin: 45px 0;
   width: 60%;
     padding: 10px 20px;
     border: 0;
+    color: #E9E8E8;
     margin-left: 10%;
     font-size: 18px;
     outline: 0;
@@ -191,10 +195,10 @@ margin: 45px 0;
 .buttonx{
   display: block;
   margin: 0px auto;
-  background-color: #76323F;
+  background-color: #E9E8E8;
   border: none;
   padding: 14px 17px;
-  color: #EDEAD3;
+  color: #B89D5F;
   width: 29%;
   margin-top: 2%;
   margin-bottom: 10%;
@@ -202,7 +206,8 @@ margin: 45px 0;
   border-radius: 6px;
 }
 .buttonx:hover{
-  background-color: #5F2934;
+  background-color: #8C744D;
+  color: #E9E8E8;
 }
 
 .create-acc

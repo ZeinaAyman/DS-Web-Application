@@ -16,9 +16,6 @@ $UserController->C_Login();
     <meta charset="utf-8">
     <title></title>
     <style media="screen">
-      body{
-        background-color: #E9E8E8;
-      }
     </style>
   </head>
   <body>

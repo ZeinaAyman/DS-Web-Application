@@ -11,15 +11,10 @@
 
 <link rel="stylesheet" href="master.css">
 <style media="screen">
-  body
-  {
-    margin: 0;
-    background-color: #847F79;
-  }
   .create-acc
   {
    margin-left: 42%;
-    color: #D6E8E9;
+    color: #151515;
     font-size: 36;
     font-family: : "Montserrat";
     opacity: 1;
@@ -31,7 +26,7 @@
   left: 35%;
   width: 30%;
   height: 60%;
-  background-color: #B1DBAD;
+  background-color: #B89D5F;
   border-width: 2px;
   border-color: #E3B7A5;
   border-style: solid;
