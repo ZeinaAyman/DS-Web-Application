@@ -12,22 +12,22 @@ class ViewDesigner extends ViewUser
  public function Recentprojects($result)
  {
    $html='';
-   $html.="<div class='recentprojects'>";
-   $html.="<h1>Recent Projects</h1>";
-   for ($i=0;$i < 3; $i++){
-     $row = $result->fetch_assoc();
-     $images=$row['images'];
-     $firstimage = "uploads/projects/images/".explode(",", $images)[0];
-     if($row['id'])
-     {
-       $html.="<div class='image'>";
-       $html.="<img class='img2' src='$firstimage' alt='Project Image' height='150'>";
-       $html.="<h3 style='padding: 5px 66px;''>Project ".$row['id']."</h3>";
-       $html.="</div>";
+     $html.="<div class='recentprojects'>";
+     $html.="<h1>Recent Projects</h1>";
+     for ($i=0;$i < 3; $i++){
+       $row = $result->fetch_assoc();
+       $images=$row['images'];
+       $firstimage = "uploads/projects/images/".explode(",", $images)[0];
+       if($row['id'])
+       {
+         $html.="<div class='image'>";
+         $html.="<img class='img2' src='$firstimage' alt='Project Image' height='150'>";
+         $html.="<h3 style='padding: 5px 66px;''>Project ".$row['id']."</h3>";
+         $html.="</div>";
+       }
      }
-   }
-   $html.="<a class='create' href='CreateProject.php'>Create New Project</a>";
-   $html.="</div>";
+     $html.="<a class='create' href='CreateProject.php'>Create New Project</a>";
+     $html.="</div>";
    return $html;
 
  }
@@ -35,6 +35,7 @@ class ViewDesigner extends ViewUser
  public function Myprojects($result)
  {
    $html='';
+   if (!is_string($result)) {
    $html.="<h1 style='color:#76323F;'>My Projects</h1>";
    $html.="<div class='Myprojects'>";
    for ($i=0;$i < 4; $i++){
@@ -51,6 +52,7 @@ class ViewDesigner extends ViewUser
    }
    $html.="</div>";
    $html.="<a href='myprojects.php'><h4 style='color:#76323F;''>See More...</h4></a>";
+  }
    return $html;
 
  }
