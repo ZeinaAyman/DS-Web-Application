@@ -69,10 +69,11 @@ class ViewDesigner extends ViewUser
     $id= $row["id"];
     $ClientName=$row["name"];
     $images=$row["images"];
+    $firstimage = "uploads/projects/images/".explode(",", $images)[0];
     $status=$row["status"];
     $html.="<div class='project'>";
     $html.= "<div class='p-img'>";
-    $html.="<img src='uploads/projects/images/maxresdefault.jpg'>";
+    $html.="<img src='$firstimage' height='100%' alt='project image' >";
     $html.="</div>";
     $html.="<div class='p-info'>";
     $html.="<h1>Project ID : $id</h1><br>";
