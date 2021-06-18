@@ -65,11 +65,6 @@
         }
     }
 
-    public function CreateProject($DB,$Project)
-    {
-      $DB->query = "INSERT into project (name,description,budget,images,files,status) VALUES('".$Project->getName()."', '".$Project->getDesc()."','".$Project->getBudget()."','".$Project->getImages()."','".$Project->getFiles()."','".$Project->getStatus()."')";
-      $result = $DB->query();
-      echo $result;
-    }
+
   }
  ?>
