@@ -7,11 +7,6 @@
  ?>
 <link rel="stylesheet" href="master.css">
 <style media="screen">
-body
-{
-  margin: 0;
-  background-color: #847F79;
-}
 table
 {
 width: 70%;
@@ -27,11 +22,11 @@ td,th
   line-height: 30px;
 }
 th{
-  color: #76323F;
+  color: #E9E8E8;
 }
 .r1
 {
-  background-color: #B1DBAD;
+  background-color: #B89D5F;
 }
 td
 {

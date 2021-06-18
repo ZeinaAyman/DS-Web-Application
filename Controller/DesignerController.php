@@ -4,7 +4,7 @@ include_once('Model/Project.php') ;
 include_once('UserController.php') ;
 class DesignerController extends UserController
 {
-  public function C_CreatePorject()
+  public function C_CreateProject()
   {
 
     $err="";

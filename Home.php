@@ -11,9 +11,6 @@
     <title></title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style media="screen">
-      body{
-        background-color: #847F79;
-      }
       .create{
         position: absolute;
         font-family: sans-serif;
@@ -35,7 +32,7 @@
         } ?>
 
         <div class="timeline">
-            <h1 style="color: #76323F; padding: 20px; padding-bottom: 10px; margin-bottom: 0px;">Timeline</h1>
+            <h1 style="color: #151515; padding: 20px; padding-bottom: 10px; margin-bottom: 0px;">Timeline</h1>
           <div class="test">
             <ul>
               <li>project 35 end date 19/7/2021</li>

@@ -11,13 +11,13 @@ include_once('navbar.php') ;
 body
 {
   margin: 0;
-  background-color: #847F79;
+  background-color: #E9E8E8;
 }
 </style>
 <?php
 $Model = new Designer();
 $ViewDesigner = new ViewDesigner();
 $DesignerController = new DesignerController($Model);
-$DesignerController->C_CreatePorject();
+$DesignerController->C_CreateProject();
 echo $ViewDesigner->CreateProjectForm();
 ?>
