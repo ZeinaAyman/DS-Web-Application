@@ -6,86 +6,87 @@
 <?php
 
 include_once("ViewUser.php") ;
+include_once("Model/Designer.php");
 class ViewDesigner extends ViewUser
 {
 
- public function Recentprojects($result)
- {
-   $html='';
-   $html.="<div class='recentprojects'>";
-   $html.="<h1>Recent Projects</h1>";
-   for ($i=0;$i < 3; $i++){
-     $row = $result->fetch_assoc();
-     $images=$row['images'];
-     $firstimage = "uploads/projects/images/".explode(",", $images)[0];
-     if($row['id'])
-     {
-       $html.="<div class='image'>";
-       $html.="<img class='img2' src='$firstimage' alt='Project Image' height='150'>";
-       $html.="<h3 style='padding: 5px 66px;''>Project ".$row['id']."</h3>";
-       $html.="</div>";
-     }
-   }
-   $html.="<a class='create' href='CreateProject.php'>Create New Project</a>";
-   $html.="</div>";
-   return $html;
-
- }
-
- public function Myprojects($result)
- {
-   $html='';
-   $html.="<h1 style='color:#76323F;'>My Projects</h1>";
-   $html.="<div class='Myprojects'>";
-   for ($i=0;$i < 4; $i++){
-     $row = $result->fetch_assoc();
-     $images=$row['images'];
-     $firstimage = "uploads/projects/images/".explode(",", $images)[0];
-     if($row['id'])
-     {
-       $html.="<div class=image' id='color'>";
-       $html.="<img  src='$firstimage' alt='Project Image' height='150'>";
-       $html.="<h3 style='color:#76323F;'>Project ".$row['id']."</h3>";
-       $html.="</div>";
-     }
-   }
-   $html.="</div>";
-   $html.="<a href='myprojects.php'><h4 style='color:#76323F;''>See More...</h4></a>";
-   return $html;
-
- }
-
- public function Allprojects($result)
- {
-   $html='';
-   $html.="<h1 style='color:#76323F;'>All Projects</h1>";
-   $html.="<div class='Allprojects'>";
-   for ($i=0;$i < 4; $i++){
-     $row = $result->fetch_assoc();
-     $images=$row['images'];
-     $firstimage = "uploads/projects/images/".explode(",", $images)[0];
-     if($row['id'])
-     {
-       $html.="<div class=image' id='color'>";
-       $html.="<img  src='$firstimage' alt='Project Image' height='150'>";
-       $html.="<h3 style='color:#76323F;'>Project ".$row['id']."</h3>";
-       $html.="</div>";
-     }
-   }
-   $html.="</div>";
-   $html.="<a href='AllProjects.php'><h4>See More...</h4></a>";
-   return $html;
+  public function Recentprojects($result)
+  {
+    $html='';
+    $html.="<div class='recentprojects'>";
+    $html.="<h1>Recent Projects</h1>";
+    for ($i=0;$i < 3; $i++){
+      $row = $result->fetch_assoc();
+      $images=$row['images'];
+      $firstimage = "uploads/projects/images/".explode(",", $images)[0];
+      if($row['id'])
+      {
+        $html.="<div class='image'>";
+        $html.="<img class='img2' src='$firstimage' alt='Project Image' height='150'>";
+        $html.="<h3 style='padding: 5px 66px;''>Project ".$row['id']."</h3>";
+        $html.="</div>";
+      }
+    }
+    $html.="<a class='create' href='CreateProject.php'>Create New Project</a>";
+    $html.="</div>";
+    return $html;
 
   }
 
- public function CreateProjectForm()
- {
-   $html='';
-   $html.="<form class='form' action='' method='post' enctype='multipart/form-data' name='ProjectForm'>";
-   $html.="<span class='form-title'>Create New Project</span>";
-   $html.="<div class='create-form'>";
-   $html.="<label class='p-input'>Client Name</label>";
-   $html.="<input type='text' class='form-input' name='name' value='Project 1'>";
+  public function Myprojects($result)
+  {
+    $html='';
+    $html.="<h1 style='color:#76323F;'>My Projects</h1>";
+    $html.="<div class='Myprojects'>";
+    for ($i=0;$i < 4; $i++){
+      $row = $result->fetch_assoc();
+      $images=$row['images'];
+      $firstimage = "uploads/projects/images/".explode(",", $images)[0];
+      if($row['id'])
+      {
+        $html.="<div class=image' id='color'>";
+        $html.="<img  src='$firstimage' alt='Project Image' height='150'>";
+        $html.="<h3 style='color:#76323F;'>Project ".$row['id']."</h3>";
+        $html.="</div>";
+      }
+    }
+    $html.="</div>";
+    $html.="<a href='myprojects.php'><h4 style='color:#76323F;''>See More...</h4></a>";
+    return $html;
+
+  }
+
+  public function Allprojects($result)
+  {
+    $html='';
+    $html.="<h1 style='color:#76323F;'>All Projects</h1>";
+    $html.="<div class='Allprojects'>";
+    for ($i=0;$i < 4; $i++){
+      $row = $result->fetch_assoc();
+      $images=$row['images'];
+      $firstimage = "uploads/projects/images/".explode(",", $images)[0];
+      if($row['id'])
+      {
+        $html.="<div class=image' id='color'>";
+        $html.="<img  src='$firstimage' alt='Project Image' height='150'>";
+        $html.="<h3 style='color:#76323F;'>Project ".$row['id']."</h3>";
+        $html.="</div>";
+      }
+    }
+    $html.="</div>";
+    $html.="<a href='AllProjects.php'><h4>See More...</h4></a>";
+    return $html;
+
+  }
+
+  public function CreateProjectForm()
+  {
+    $html='';
+    $html.="<form class='form' action='' method='post' enctype='multipart/form-data' name='ProjectForm'>";
+    $html.="<span class='form-title'>Create New Project</span>";
+    $html.="<div class='create-form'>";
+    $html.="<label class='p-input'>Client Name</label>";
+    $html.="<input type='text' class='form-input' name='name' value='Project 1'>";
 
     $html.="<label class='p-input'>Project Description</label>";
     $html.="<input type='text' class='form-input' name='description' value='project 1 description here'>";
@@ -145,49 +146,86 @@ class ViewDesigner extends ViewUser
     }
     return $html;
   }
-
-
-}
-?>
-<script type="text/javascript">
-var arr = new DataTransfer();
-var arr2=new DataTransfer();
-function getUploadedImages(id){
-  var numFiles = document.getElementById(id).files.length;
-
-  for(var i=0;i<numFiles;i++)
+  public function AllProjectsList($result)
   {
-    //var str=myFile.toString();
+    $html="";
 
-    var filename = document.getElementById(id).files[i].name;
-    var div = document.getElementById('uploadedimages');
-    div.innerHTML += filename+','+'&nbsp &nbsp';
+    if ($result->num_rows > 0)
+    {
 
+      while($row = $result->fetch_assoc())
+      {
+        $DesignersID=$row['AssignedDesigners'];
+        $Des=new Designer();
+        $Des->connect();
+        $Des->ById($DesignersID);
+        $DesName=$Des->Name;
+        $id=$row['id'];
+        $Client=$row['name'];
+        $images=$row["images"];
+        $firstimage = "uploads/projects/images/".explode(",", $images)[0];
+        $html.="<div class='project'>";
+        $html.="<div class='p-img'>";
+        $html.="<img src='$firstimage' height='100%' alt='project image' >";
+        $html.="</div>";
+        $html.="<div class='p-info'>";
+        $html.="<h1>Project:$id </h1><br>";
+        $html.="<div class='p-h3'>Client: $Client";
+        $html.="</div>";
+        $html.="<br>";
+        $html.="<div class='p-h3'>Designer 1 : $DesName</div><br>";
+        $html.="<div class='p-h3'>Designer 1 ID : $DesignersID</div>";
+        $html.="</div>";
+        $html.="</div>";
+      }
+
+    }
+   else {
+     echo "0 results";
+   }
+   return $html;
   }
-
-  for (var y = 0; y < numFiles; y++) {
-    arr.items.add(document.getElementById(id).files[y]);
-  }
-  document.getElementById(id).files=arr.files;
-
 }
+  ?>
+  <script type="text/javascript">
+  var arr = new DataTransfer();
+  var arr2=new DataTransfer();
+  function getUploadedImages(id){
+    var numFiles = document.getElementById(id).files.length;
 
-function getUploadedFiles(id){
-  var numFiles = document.getElementById(id).files.length;
-  for(var i=0;i<numFiles;i++)
-  {
+    for(var i=0;i<numFiles;i++)
+    {
+      //var str=myFile.toString();
 
-    var filename = document.getElementById(id).files[i].name;
-    var div = document.getElementById('uploadedfiles');
-    div.innerHTML += filename+','+'&nbsp &nbsp';
+      var filename = document.getElementById(id).files[i].name;
+      var div = document.getElementById('uploadedimages');
+      div.innerHTML += filename+','+'&nbsp &nbsp';
+
+    }
+
+    for (var y = 0; y < numFiles; y++) {
+      arr.items.add(document.getElementById(id).files[y]);
+    }
+    document.getElementById(id).files=arr.files;
 
   }
 
-  for (var y = 0; y < numFiles; y++) {
-    arr2.items.add(document.getElementById(id).files[y]);
-  }
-  document.getElementById(id).files=arr2.files;
+  function getUploadedFiles(id){
+    var numFiles = document.getElementById(id).files.length;
+    for(var i=0;i<numFiles;i++)
+    {
 
-}
+      var filename = document.getElementById(id).files[i].name;
+      var div = document.getElementById('uploadedfiles');
+      div.innerHTML += filename+','+'&nbsp &nbsp';
+
+    }
+
+    for (var y = 0; y < numFiles; y++) {
+      arr2.items.add(document.getElementById(id).files[y]);
+    }
+    document.getElementById(id).files=arr2.files;
+
+  }
 
 </script>
