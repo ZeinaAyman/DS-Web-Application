@@ -16,10 +16,12 @@ class ViewDesigner extends ViewUser
    $html.="<h1>Recent Projects</h1>";
    for ($i=0;$i < 3; $i++){
      $row = $result->fetch_assoc();
+     $images=$row['images'];
+     $firstimage = "uploads/projects/images/".explode(",", $images)[0];
      if($row['id'])
      {
        $html.="<div class='image'>";
-       $html.="<img class='img2' src='images/SEO-illustrations-Project-02.png' alt='Avatar' height='150'>";
+       $html.="<img class='img2' src='$firstimage' alt='Project Image' height='150'>";
        $html.="<h3 style='padding: 5px 66px;''>Project ".$row['id']."</h3>";
        $html.="</div>";
      }
@@ -37,10 +39,12 @@ class ViewDesigner extends ViewUser
    $html.="<div class='Myprojects'>";
    for ($i=0;$i < 4; $i++){
      $row = $result->fetch_assoc();
+     $images=$row['images'];
+     $firstimage = "uploads/projects/images/".explode(",", $images)[0];
      if($row['id'])
      {
        $html.="<div class=image' id='color'>";
-       $html.="<img  src='images/Project-Management-Mantenimiento-1.jpg' alt='Avatar' height='150'>";
+       $html.="<img  src='$firstimage' alt='Project Image' height='150'>";
        $html.="<h3 style='color:#76323F;'>Project ".$row['id']."</h3>";
        $html.="</div>";
      }
@@ -58,10 +62,12 @@ class ViewDesigner extends ViewUser
    $html.="<div class='Allprojects'>";
    for ($i=0;$i < 4; $i++){
      $row = $result->fetch_assoc();
+     $images=$row['images'];
+     $firstimage = "uploads/projects/images/".explode(",", $images)[0];
      if($row['id'])
      {
        $html.="<div class=image' id='color'>";
-       $html.="<img  src='images/Project-Management-Mantenimiento-1.jpg' alt='Avatar' height='150'>";
+       $html.="<img  src='$firstimage' alt='Project Image' height='150'>";
        $html.="<h3 style='color:#76323F;'>Project ".$row['id']."</h3>";
        $html.="</div>";
      }
@@ -140,31 +146,6 @@ class ViewDesigner extends ViewUser
     return $html;
   }
 
-  public function HomeMyProjects($result)
-  {
-    $html='';
-    if ($result->num_rows > 0) {
-        for($i=0;$i<4;$i++)
-        {
-          $row = $result->fetch_assoc();
-          $images=$row['images'];
-          $firstimage = "uploads/projects/images/".explode(",", $images)[0];
-          $id=$row['id'];
-          $html.="<div class='Myprojects'>";
-          $html.="<div class='image' id='color'>";
-          $html.="<img  src='$firstimage' alt='Project Image' height='150'>";
-          $html.="<h3 style='color:#76323F'>Project $id</h3>";
-          $html.="</div>";
-          $html.="</div>";
-        }
-
-      }
-
-    else {
-      echo "0 results";
-    }
-   return $html;
-  }
 
 }
 ?>
