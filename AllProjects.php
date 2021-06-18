@@ -18,10 +18,10 @@ function ready() {
     var projects = document.getElementsByClassName('project');
     for (var i = 0; i < projects.length; i++) {
       projects[i].addEventListener("mouseover",function functionName() {
-        this.style.background='#59a2a6';
+        this.style.background='#8C744D';
       });
       projects[i].addEventListener("mouseleave",function functionName() {
-        this.style.background='#D6E8E9';
+        this.style.background='#B89D5F';
       });
     }
 }
