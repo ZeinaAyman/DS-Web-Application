@@ -6,28 +6,27 @@ class ViewAdmin extends ViewUser
 
  public function CreateAccountForm()
  {
-   $html='';
-   <form action= "" method="post">
-     <div class="input">
-       <input class="info" type="text" placeholder="Employee Name"  name="name">
-     </div>
-     <div class="input">
-       <input class="info" type="text" placeholder="Employee Email" name="email"><br>
-     </div>
-     <div class="input">
-       <select name="Type" class ="info">
-         <option disabled selected>Employee Role</option>
-         <option value="2">Designer</option>
-         <option value="3">Manager</option>
-       </select>
-     </div>
-     <div class="input">
-       <input class="info" type="password" placeholder="Password" name="password"><br>
-     </div>
-     <input class="button" type="submit" value="Create" name="Submit">
-   </form>
+   $html="";
+   $html.="<form action= '' method='post'>";
+   $html.="<div class='input'>";
+   $html.="<input class='info' type='text' placeholder='Employee Name'  name='Name'>";
+   $html.="</div>";
+   $html.="<div class='input'>";
+   $html.="<input class='info' type='text' placeholder='Employee Email' name='Email'><br>";
+   $html.="</div>";
+   $html.="<div class='input'>";
+   $html.="<select name='Type' class ='info'>";
+   $html.="<option disabled selected>Employee Role</option>";
+   $html.="<option value='2'>Designer</option>";
+   $html.="<option value='3'>Manager</option>";
+   $html.="</select>";
+   $html.="</div>";
+   $html.="<div class='input'>";
+   $html.="<input class='info' type='password' placeholder='Password' name='Password'><br>";
+   $html.="</div>";
+   $html.="<input class='button' type='submit' value='Create' name='submit'>";
+   $html.="</form>";
    return $html;
-
  }
 
 }

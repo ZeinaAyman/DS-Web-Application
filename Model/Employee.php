@@ -51,7 +51,7 @@
         $result = $this->DB->query();
         if ($this->DB->ok === 1)
         {
-          echo "done";
+
           $this->DB->ok=0;
           $online->Name=$name;
           $online->Email=$email;
