@@ -15,7 +15,7 @@
         position: absolute;
         font-family: sans-serif;
         font-weight: lighter;
-        color: #D6E8E9;
+        color: #B89D5F;
         padding: 5px 80px;
         bottom: 0px;
         left: 500px;

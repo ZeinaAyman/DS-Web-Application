@@ -1,4 +1,14 @@
-<?php include "New_Homenavbar.php"; ?>
+<?php include "New_Homenavbar.php";
+      include 'Model/Admin.php';
+
+$admin = new Admin();
+$admin->connect();
+$result = $admin->DB->FetchAll("project");
+
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -223,13 +233,23 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
             </figure>
             <div class="row2">
-                <div class="column">
-                    <a href="gallery2.php"><img src="images/building2.jpeg" style="width:100%"></a>
-                    <img src="images/building3.jpg" style="width:100%">
-                    <img src="images/building2.jpeg" style="width:100%">
+              <div class="column">
+                <?php
+                if (mysqli_num_rows($result) > 0) {
+                while($row = mysqli_fetch_array($result)){
+                  $images=$row['images'];
+                  $firstimage = "uploads/projects/images/".explode(",", $images)[0];
 
+                  echo "<img src=".$firstimage.">";
+                }
+              }
 
-                </div>
+                 ?>
+                  <img src="images/building3.jpg" style="width:100%">
+                  <img src="images/building2.jpeg" style="width:100%">
+
+              </div>
+
                 <div class="column">
                     <img src="images/building3.jpg" style="width:100%">
                     <img src="images/building.jpg" style="width:100%">
