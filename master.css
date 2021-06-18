@@ -16,14 +16,14 @@
 
 .topnav{
   overflow:hidden;
-  background-color: #76323F;
+  background-color: #141414;
   font-size: 17px;
   padding: 40px 16px;
 }
 
 .navbar{
   overflow:hidden;
-  background-color: #76323F;
+  background-color: #151515;
   font-size: 17px;
   padding: 20px 16px;
 }
@@ -31,12 +31,12 @@
   float: right;
   text-decoration: none;
   font-family: Arial;
-  color: #B1DBAD;
+  color: #E9E8E8;
   padding-left: 35px;
 }
 h1{
   font-family: sans-serif;
-  color: #D6E8E9;
+  color: #151515;
       margin-bottom: 40px;
 }
 h2{
@@ -72,7 +72,7 @@ li{
   font-size: 20px;
 }
 .container{
-  background-color: #B1DBAD;
+  background-color: #B89D5F;
   width: 37%;
   position: absolute;
   top: 30%;
@@ -125,7 +125,7 @@ p{
  font-size: 50px;
  font-weight: bold;
  width: 8em;
- color: #D6E8E9;
+ color: #B89D5F;
  height: 10em;
  margin: 0;
   position: absolute;               /* 2 */
@@ -141,11 +141,9 @@ margin: 45px 0;
     top: calc(38% + 4px);
     transform: translateY(-50%);
     left: 75px;
-    color: #EDEAD3;
+    color: #E9E8E8;
     font-size: 16px;
-    font-weight: bold;
     font-family: Arial;
-    color: rgba(0, 0, 0, 0.6);
     transition: top .4s, font-size .4s, transform .4s;
 }
 .input .option{
@@ -172,14 +170,14 @@ margin: 45px 0;
     margin-left: 10%;
     font-size: 18px;
     outline: 0;
-    background-color: #9ABE9F;
+    background-color: #8C744D;
     position: relative;
 }
 .button{
-  background-color: #76323F;
+  background-color: #E9E8E8;
   border: none;
   padding: 9px 18px;
-  color: #B1DBAD;
+  color: #B89D5F;
   width: 24%;
   cursor: pointer;
   margin: 15px 57px;

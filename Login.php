@@ -17,7 +17,7 @@ $UserController->C_Login();
     <title></title>
     <style media="screen">
       body{
-        background-color: #847F79;
+        background-color: #E9E8E8;
       }
     </style>
   </head>
@@ -29,7 +29,7 @@ $UserController->C_Login();
       <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit</p>
 
       <div class="container">
-        <h1 style="color: #76323F;">Sign In</h1>
+        <h1 style="color: #E9E8E8;">Sign In</h1>
         <div class="error-msg">
           <?php if ($msg!='') {
             echo $msg;
