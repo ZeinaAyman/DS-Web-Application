@@ -17,5 +17,15 @@
       $result = $this->DB->query();
       echo $result;
     }
+
+    public function getMyProjects()
+    {
+     $DesId = unserialize($_SESSION['online'])->ID;
+     $this->DB->query="SELECT *from project Where AssignedDesigners=$DesId";
+     $result=$this->DB->query();
+     return $result;
+
+    }
+
   }
  ?>
