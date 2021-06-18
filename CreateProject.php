@@ -18,6 +18,6 @@ body
 $Model = new Designer();
 $ViewDesigner = new ViewDesigner();
 $DesignerController = new DesignerController($Model);
-$DesignerController->C_CreatePorject();
+$DesignerController->C_CreateProject();
 echo $ViewDesigner->CreateProjectForm();
 ?>
