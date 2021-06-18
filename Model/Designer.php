@@ -16,22 +16,7 @@
       $result = $this->DB->query();
       echo $result;
     }
-
-<<<<<<< HEAD
-    public function GetProjects()
-    {
-      $this->DB->query = "SELECT * FROM project";
-      $result = $this->DB->query();
-      if ($this->DB->ok === 1)
-      {
-        return $result;
-      }
-      else
-      {
-        $msg='User not found';
-      }
-    }
-=======
+    
     public function getMyProjects()
     {
      $DesId = unserialize($_SESSION['online'])->ID;
@@ -40,7 +25,5 @@
      return $result;
 
     }
-
->>>>>>> 39ccec2bde77125606114ddd62df71e4f330174f
   }
  ?>
