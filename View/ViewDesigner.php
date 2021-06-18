@@ -9,6 +9,22 @@ include_once("ViewUser.php") ;
 class ViewDesigner extends ViewUser
 {
 
+ public function Recentprojects($result)
+ {
+   $html='';
+   $html.="<div class='recentprojects'>";
+   $html.="<h1>Recent Projects</h1>";
+   for ($i=0;$i < 3; $i++){
+     $row = $result->fetch_assoc();
+     $html.="<div class='image'>";
+     $html.="<img class='img2' src='images/SEO-illustrations-Project-02.png' alt='Avatar' height='150'>";
+     $html.="<h3 style='padding: 5px 66px;''>Project ".$row['id']."</h3>";
+     $html.="</div>";
+   }
+   return $html;
+
+ }
+
  public function CreateProjectForm()
  {
    $html='';
