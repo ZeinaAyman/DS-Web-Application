@@ -1,3 +1,10 @@
+<?php
+  include 'View/ViewDesigner.php';
+  include 'Controller/DesignerController.php';
+  $viewDesigner = new ViewDesigner();
+  $Model = new Designer();
+  $UserController = new DesignerController($Model);
+ ?>
 <link rel="stylesheet" href="master.css">
 <style media="screen">
 body
