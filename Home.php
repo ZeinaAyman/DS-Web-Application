@@ -26,7 +26,7 @@
   <body>
     <div class="flex-container">
       <div class="homecontainer">
-        <?php if(unserialize($_SESSION['online'])->Type==1){ echo $viewDesigner->Recentprojects($UserController->C_GetProjects());}
+        <?php if(unserialize($_SESSION['online'])->Type==2){ echo $viewDesigner->Recentprojects($UserController->C_GetProjects());}
         else {
           echo $viewDesigner->Recentprojects($UserController->C_GetAllProjects());
         } ?>
