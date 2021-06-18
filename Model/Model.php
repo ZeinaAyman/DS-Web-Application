@@ -1,7 +1,7 @@
 <?php
 include_once('PHP/DB.php');
   abstract class Model{
-      protected $DB;
+      public $DB;
 
       public function connect(){
           if(null === $this->DB ){
