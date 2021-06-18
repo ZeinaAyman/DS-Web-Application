@@ -9,7 +9,6 @@ include_once("ViewUser.php") ;
 class ViewDesigner extends ViewUser
 {
 
-<<<<<<< HEAD
  public function Recentprojects($result)
  {
    $html='';
@@ -70,25 +69,9 @@ class ViewDesigner extends ViewUser
    $html.="</div>";
    $html.="<a href='AllProjects.php'><h4>See More...</h4></a>";
    return $html;
-=======
-  public function Recentprojects($result)
-  {
-    $html='';
-    $html.="<div class='recentprojects'>";
-    $html.="<h1>Recent Projects</h1>";
-    for ($i=0;$i < 3; $i++){
-      $row = $result->fetch_assoc();
-      $html.="<div class='image'>";
-      $html.="<img class='img2' src='images/SEO-illustrations-Project-02.png' alt='Avatar' height='150'>";
-      $html.="<h3 style='padding: 5px 66px;''>Project ".$row['id']."</h3>";
-      $html.="</div>";
-    }
-    return $html;
->>>>>>> d7f4cbb0c5ff937460797a765cd13f4c31d6ea50
 
   }
 
-<<<<<<< HEAD
  public function CreateProjectForm()
  {
    $html='';
@@ -97,16 +80,6 @@ class ViewDesigner extends ViewUser
    $html.="<div class='create-form'>";
    $html.="<label class='p-input'>Client Name</label>";
    $html.="<input type='text' class='form-input' name='name' value='Project 1'>";
-=======
-  public function CreateProjectForm()
-  {
-    $html='';
-    $html.="<form class='form' action='' method='post' enctype='multipart/form-data' name='ProjectForm'>";
-    $html.="<span class='form-title'>Create New Project</span>";
-    $html.="<div class='create-form'>";
-    $html.="<label class='p-input'>Client Name</label>";
-    $html.="<input type='text' class='form-input' name='name' value='Project 1'>";
->>>>>>> d7f4cbb0c5ff937460797a765cd13f4c31d6ea50
 
     $html.="<label class='p-input'>Project Description</label>";
     $html.="<input type='text' class='form-input' name='description' value='project 1 description here'>";
