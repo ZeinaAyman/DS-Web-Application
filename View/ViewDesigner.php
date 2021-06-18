@@ -35,12 +35,8 @@ class ViewDesigner extends ViewUser
  public function Myprojects($result)
  {
    $html='';
-<<<<<<< HEAD
    if (!is_string($result)) {
    $html.="<h1 style='color:#76323F;'>My Projects</h1>";
-=======
-   $html.="<h1 style='color:#E9E8E8;'>My Projects</h1>";
->>>>>>> 58ab9f4bc33c75109454c341a718c6e196746b28
    $html.="<div class='Myprojects'>";
    for ($i=0;$i < 4; $i++){
      $row = $result->fetch_assoc();
@@ -55,12 +51,8 @@ class ViewDesigner extends ViewUser
      }
    }
    $html.="</div>";
-<<<<<<< HEAD
    $html.="<a href='myprojects.php'><h4 style='color:#76323F;''>See More...</h4></a>";
   }
-=======
-   $html.="<a href='myprojects.php'><h4 style='color:#E9E8E8;''>See More...</h4></a>";
->>>>>>> 58ab9f4bc33c75109454c341a718c6e196746b28
    return $html;
 
  }
