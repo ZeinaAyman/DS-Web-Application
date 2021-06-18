@@ -16,11 +16,58 @@ class ViewDesigner extends ViewUser
    $html.="<h1>Recent Projects</h1>";
    for ($i=0;$i < 3; $i++){
      $row = $result->fetch_assoc();
-     $html.="<div class='image'>";
-     $html.="<img class='img2' src='images/SEO-illustrations-Project-02.png' alt='Avatar' height='150'>";
-     $html.="<h3 style='padding: 5px 66px;''>Project ".$row['id']."</h3>";
-     $html.="</div>";
+     if($row['id'])
+     {
+       $html.="<div class='image'>";
+       $html.="<img class='img2' src='images/SEO-illustrations-Project-02.png' alt='Avatar' height='150'>";
+       $html.="<h3 style='padding: 5px 66px;''>Project ".$row['id']."</h3>";
+       $html.="</div>";
+     }
    }
+   $html.="<a class='create' href='CreateProject.php'>Create New Project</a>";
+   $html.="</div>";
+   return $html;
+
+ }
+
+ public function Myprojects($result)
+ {
+   $html='';
+   $html.="<h1 style='color:#76323F;'>My Projects</h1>";
+   $html.="<div class='Myprojects'>";
+   for ($i=0;$i < 4; $i++){
+     $row = $result->fetch_assoc();
+     if($row['id'])
+     {
+       $html.="<div class=image' id='color'>";
+       $html.="<img  src='images/Project-Management-Mantenimiento-1.jpg' alt='Avatar' height='150'>";
+       $html.="<h3 style='color:#76323F;'>Project ".$row['id']."</h3>";
+       $html.="</div>";
+     }
+   }
+   $html.="</div>";
+   $html.="<a href='myprojects.php'><h4 style='color:#76323F;''>See More...</h4></a>";
+   return $html;
+
+ }
+
+ public function Allprojects($result)
+ {
+   $html='';
+   $html.="<h1 style='color:#76323F;'>All Projects</h1>";
+   $html.="<div class='Allprojects'>";
+   for ($i=0;$i < 4; $i++){
+     $row = $result->fetch_assoc();
+     if($row['id'])
+     {
+       $html.="<div class=image' id='color'>";
+       $html.="<img  src='images/Project-Management-Mantenimiento-1.jpg' alt='Avatar' height='150'>";
+       $html.="<h3 style='color:#76323F;'>Project ".$row['id']."</h3>";
+       $html.="</div>";
+     }
+   }
+   $html.="</div>";
+   $html.="<a href='AllProjects.php'><h4>See More...</h4></a>";
    return $html;
 
  }
@@ -30,7 +77,7 @@ class ViewDesigner extends ViewUser
    $html='';
    $html.="<form class='form' action='' method='post' enctype='multipart/form-data' name='ProjectForm'>";
    $html.="<span class='form-title'>Create New Project</span>";
- $html.="<div class='create-form'>";
+   $html.="<div class='create-form'>";
    $html.="<label class='p-input'>Client Name</label>";
    $html.="<input type='text' class='form-input' name='name' value='Project 1'>";
 
