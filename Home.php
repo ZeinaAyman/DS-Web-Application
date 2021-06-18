@@ -1,4 +1,10 @@
-<?php include "navbar.php"; ?>
+<?php include "navbar.php";
+      include 'View/ViewDesigner.php';
+      include 'Controller/DesignerController.php';
+      $viewDesigner = new ViewDesigner();
+      $Model = new Designer();
+      $UserController = new DesignerController($Model);
+      ?>
 <html lang="en" dir="ltr">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,22 +29,7 @@
   <body>
     <div class="flex-container">
       <div class="homecontainer">
-        <div class="recentprojects">
-          <h1>Recent Projects</h1>
-          <div class="image">
-            <img class="img2" src="images/SEO-illustrations-Project-02.png" alt="Avatar" height="150">
-            <h3 style="padding: 5px 66px;">Project 1</h3>
-          </div>
-          <div class="image">
-            <img class="img2" src="images/SEO-illustrations-Project-02.png" alt="Avatar" height="150">
-            <h3 style="padding: 5px 66px;">Project 2</h3>
-          </div>
-          <div class="image">
-            <img class="img2" src="images/SEO-illustrations-Project-02.png" alt="Avatar" height="150">
-            <h3 style="padding: 5px 66px;">Project 3</h3>
-          </div>
-          <a class="create" href="CreateProject.php">Create New Project</a>
-        </div>
+        <?php echo $viewDesigner->Recentprojects($UserController->C_GetProjects()); ?>
 
         <div class="timeline">
             <h1 style="color: #76323F; padding: 20px; padding-bottom: 10px; margin-bottom: 0px;">Timeline</h1>
@@ -55,50 +46,12 @@
 
       <div class="color">
         <div class="homecontainer" style="width: 70%;">
-          <h1 style="color:#76323F;">My Projects</h1>
-          <div class="Myprojects">
-            <div class="image" id="color">
-              <img  src="images/Project-Management-Mantenimiento-1.jpg" alt="Avatar" height="150">
-              <h3 style="color:#76323F;">Project 1</h3>
-            </div>
-            <div class="image" id="color">
-              <img  src="images/Project-Management-Mantenimiento-1.jpg" alt="Avatar" height="150">
-              <h3 style="color:#76323F;">Project 2</h3>
-            </div>
-            <div class="image" id="color">
-              <img src="images/Project-Management-Mantenimiento-1.jpg" alt="Avatar" height="150">
-              <h3 style="color:#76323F;">Project 3</h3>
-            </div>
-            <div class="image" id="color">
-              <img  src="images/Project-Management-Mantenimiento-1.jpg" alt="Avatar" height="150">
-              <h3 style="color:#76323F;">Project 3</h3>
-            </div>
-          </div>
-          <a href="myprojects.php"><h4 style="color:#76323F;">See More...</h4></a>
+          <?php echo $viewDesigner->Myprojects($UserController->C_GetProjects()); ?>
         </div>
       </div>
 
       <div class="homecontainer" style="width: 70%;">
-        <h1>All Projects</h1>
-        <div class="Allprojects">
-          <div class="image" id="color">
-            <img  src="images/Project-Management-Mantenimiento-1.jpg" alt="Avatar" height="150">
-            <h3>Project 1</h3>
-          </div>
-          <div class="image" id="color">
-            <img  src="images/Project-Management-Mantenimiento-1.jpg" alt="Avatar" height="150">
-            <h3>Project 2</h3>
-          </div>
-          <div class="image" id="color">
-            <img src="images/Project-Management-Mantenimiento-1.jpg" alt="Avatar" height="150">
-            <h3>Project 3</h3>
-          </div>
-          <div class="image" id="color">
-            <img  src="images/Project-Management-Mantenimiento-1.jpg" alt="Avatar" height="150">
-            <h3>Project 3</h3>
-          </div>
-        </div>
-        <a href="AllProjects.php"><h4>See More...</h4></a>
+        <?php echo $viewDesigner->Allprojects($UserController->C_GetAllProjects()); ?>
       </div>
     </div>
 
