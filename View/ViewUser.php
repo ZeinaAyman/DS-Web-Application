@@ -22,7 +22,7 @@ class ViewUser extends View
   public function ProfileEditForm($online)
   {
       $html="";
-      $html.="<form class='profilecontainer' action='Profile.php' method='post'>";
+      $html.="<form class='profilecontainer' action='Profile.php' method='post' enctype='multipart/form-data'>";
       $html.="<label class='empinfo'>First Name</label>";
       $html.="<input type='text' name='name' class='empinput' value='".unserialize($online)->Name."'>";
 
@@ -37,6 +37,11 @@ class ViewUser extends View
 
       $html.="<label class='empinfo'>Confirm Password</label>";
       $html.="<input type='password' name='ConfirmPassword' class='empinput' value='' >";
+
+      $html.="<label class='p-input'>Images</label>";
+      $html.="<div class='input'>";
+      $html.="<input type='file' class='form-file' id='imageupload' name='image' value='Upload'>";
+
       $html.="<br>";
       $html.="<input type='submit' name='submit' class='updatebut' value='Update Profile'>";
 

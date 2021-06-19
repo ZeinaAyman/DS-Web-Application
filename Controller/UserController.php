@@ -34,6 +34,30 @@ include_once('Controller.php') ;
                  $newpassword=$_POST['NewPassword'];
                  $confirmpassword=$_POST['ConfirmPassword'];
 
+                 $file_name = $_FILES['image']['name'];
+                 $file_size =$_FILES['image']['size'];
+                 $file_tmp =$_FILES['image']['tmp_name'];
+                 $file_type=$_FILES['image']['type'];
+                 $temp=(explode('.',$_FILES['image']['name']));
+                 $file_ext=strtolower(end($temp));
+                 $extensions= array("jpeg","jpg","png");
+                 if(in_array($file_ext,$extensions)=== false){
+                    $errors[]="extension not allowed, please choose a JPEG or PNG file. ";
+
+                 }
+
+                 if(empty($errors)==true)
+                 {
+                   move_uploaded_file($file_tmp,"uploads/profilepictures/".$file_name);
+                 }
+
+
+                 else{
+                    echo implode(',', $errors);
+                    echo "<br>";
+                    $flag=0;
+                 }
+
                  if(!preg_match('/[a-z0-9._%+-]+@+[a-z0-9._%+-]+.+[a-z0-9._%+-]/',$email)){
                    $msg="Please enter a valid email";
                    $err = true;
@@ -50,7 +74,7 @@ include_once('Controller.php') ;
 
                  if(!$err){
                    $this->Model->connect();
-                   $this->Model->UpdateUser($this->Model,$name,$email,$newpassword);
+                   $this->Model->UpdateUser($this->Model,$name,$email,$newpassword,$file_name);
                  }
 
          }

@@ -25,13 +25,9 @@ class AdminController extends UserController
 
       }
 
-      if($file_size > 2097152){
-         $errors[]='File size must not exceed 2 MB';
-      }
-
       if(empty($errors)==true)
       {
-        move_uploaded_file($file_tmp,"images/".$file_name);
+        move_uploaded_file($file_tmp,"uploads/profilepictures/".$file_name);
 
       }
 
@@ -50,7 +46,7 @@ class AdminController extends UserController
           if(!$err)
           {
             $EMP = new Employee();
-            $EMP->Feed($name,$email,$pass,$type);
+            $EMP->Feed($name,$email,$pass,$type,$file_name);
             $this->Model->connect();
             $this->Model->CreateAccount($EMP);
           }

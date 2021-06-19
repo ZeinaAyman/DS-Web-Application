@@ -6,17 +6,19 @@
     public $ID;
     public $Password;
     public $Type;
+    public $Picture;
     function __construct()
     {
       $err = false;
     }
 
-    public function Feed($Name,$Email,$Password,$Type)
+    public function Feed($Name,$Email,$Password,$Type,$Picture)
     {
       $this->Name=$Name;
       $this->Email=$Email;
       $this->Password=$Password;
       $this->Type=$Type;
+      $this->Picture=$Picture;
     }
 
     public function Login($email,$password)
@@ -33,6 +35,7 @@
           $this->Email=$row['Email'];
           $this->Password=$row['Password'];
           $this->Type=$row['Type'];
+          $this->Picture=$row['picture'];
           session_start();
 
           $_SESSION['online'] = serialize($this);
@@ -45,9 +48,9 @@
         }
     }
 
-    public function UpdateUser($online,$name,$email,$password)
+    public function UpdateUser($online,$name,$email,$password,$picture)
     {
-        $this->DB->query = "UPDATE user SET Name='".$name."',Email='".$email."',Password='".$password."' Where ID='".$online->ID."'";
+        $this->DB->query = "UPDATE user SET Name='".$name."',Email='".$email."',Password='".$password."' ,picture='".$picture."' Where ID='".$online->ID."'";
         $result = $this->DB->query();
         if ($this->DB->ok === 1)
         {
@@ -56,6 +59,7 @@
           $online->Name=$name;
           $online->Email=$email;
           $online->Password=$password;
+          $online->Picture=$picture;
           $_SESSION['online']=serialize($online);
 
         }

@@ -56,6 +56,7 @@ class ViewDesigner extends ViewUser
         }
       }
     }
+    $html.="<h2 style='color:#76323F;'>My Projects</h2>";
 
     $html.="</div>";
     $html.="<a href='myprojects.php'><h4 style='color:#76323F;''>See More...</h4></a>";
@@ -123,33 +124,36 @@ class ViewDesigner extends ViewUser
     $online_name=unserialize($_SESSION['online'])->Name;
     $online_id=unserialize($_SESSION['online'])->ID;
     $html='';
-    if ($result->num_rows > 0) {
-      // output data of each row
-      while($row = $result->fetch_assoc()) {
+    if(!is_string($result))
+    {
+      if ($result->num_rows > 0) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
 
-        $id= $row["id"];
-        $ClientName=$row["name"];
-        $images=$row["images"];
-        $firstimage = "uploads/projects/images/".explode(",", $images)[0];
-        $status=$row["status"];
-        $html.="<div class='project'>";
-        $html.= "<div class='p-img'>";
-        $html.="<img src='$firstimage' height='100%' alt='project image' >";
-        $html.="</div>";
-        $html.="<div class='p-info'>";
-        $html.="<h1>Project ID : $id</h1><br>";
-        $html.="<div class='p-h3'>Client : $ClientName</div><br>";
-        $html.="<div class='p-h3'>Designer 1: $online_name</div><br>";
-        $html.="<div class='p-h3'>Designer ID :$online_id</div>";
-        $html.="</div>";
-        $html.="<div class='my-p-status'>";
-        $html.="<h3>Status:<span class='status-orange'>$status</span></h3>";
-        $html.="</div>";
-        $html.="</div>";
+          $id= $row["id"];
+          $ClientName=$row["name"];
+          $images=$row["images"];
+          $firstimage = "uploads/projects/images/".explode(",", $images)[0];
+          $status=$row["status"];
+          $html.="<div class='project'>";
+          $html.= "<div class='p-img'>";
+          $html.="<img src='$firstimage' height='100%' alt='project image' >";
+          $html.="</div>";
+          $html.="<div class='p-info'>";
+          $html.="<h1>Project ID : $id</h1><br>";
+          $html.="<div class='p-h3'>Client : $ClientName</div><br>";
+          $html.="<div class='p-h3'>Designer 1: $online_name</div><br>";
+          $html.="<div class='p-h3'>Designer ID :$online_id</div>";
+          $html.="</div>";
+          $html.="<div class='my-p-status'>";
+          $html.="<h3>Status:<span class='status-orange'>$status</span></h3>";
+          $html.="</div>";
+          $html.="</div>";
+        }
       }
     }
     else {
-      echo "0 results";
+      $html.="<div> 0 results </div>";
     }
     return $html;
   }

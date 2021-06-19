@@ -7,7 +7,7 @@ class ViewAdmin extends ViewUser
  public function CreateAccountForm()
  {
    $html="";
-   $html.="<form action= '' method='post'>";
+   $html.="<form action= '' method='post' enctype='multipart/form-data'>";
    $html.="<div class='input'>";
    $html.="<input class='info' type='text' placeholder='Employee Name'  name='Name'>";
    $html.="</div>";
@@ -24,6 +24,9 @@ class ViewAdmin extends ViewUser
    $html.="<div class='input'>";
    $html.="<input class='info' type='password' placeholder='Password' name='Password'><br>";
    $html.="</div>";
+   $html.="<label class='p-input'>Images</label>";
+   $html.="<div class='input'>";
+   $html.="<input type='file' class='form-file' id='imageupload' name='image' value='Upload'>";
    $html.="<input class='button' type='submit' value='Create' name='submit'>";
    $html.="</form>";
    return $html;

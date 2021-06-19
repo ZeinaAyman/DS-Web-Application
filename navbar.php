@@ -11,14 +11,14 @@ else {
   if ($online->Type=="1") {
     $NEW = new Admin();
     $NEW->ID=$online->ID;
-    $NEW->Feed($online->Name,$online->Email,$online->Password,$online->Type);
+    $NEW->Feed($online->Name,$online->Email,$online->Password,$online->Type,$online->Picture);
     $_SESSION['online'] = serialize($NEW);
     header("Location: Admin.php");
   }
   else {
     $NEW = new Designer();
     $NEW->ID=$online->ID;
-    $NEW->Feed($online->Name,$online->Email,$online->Password,$online->Type);
+    $NEW->Feed($online->Name,$online->Email,$online->Password,$online->Type,$online->Picture);
     $_SESSION['online'] = serialize($NEW);
   }
 }
