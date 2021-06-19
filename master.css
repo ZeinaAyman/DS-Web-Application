@@ -189,7 +189,7 @@ margin: 45px 0;
   border-radius: 6px;
 }
 .button:hover{
-  background-color: #5F2934;
+  background-color: #8C744D;
 }
 
 .buttonx{
@@ -207,9 +207,12 @@ margin: 45px 0;
 }
 .buttonx:hover{
   background-color: #8C744D;
-  color: #E9E8E8;
+  color: white;
 }
-
+.form-file{
+  padding-bottom: 31px;
+      padding-right: 106px;
+  }
 .create-acc
 {
  margin-left: 42%;

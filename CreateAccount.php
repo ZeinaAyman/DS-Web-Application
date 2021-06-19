@@ -19,19 +19,36 @@
     font-family: : "Montserrat";
     opacity: 1;
   }
+  .info{
+    width: 80%;
+    margin-left: 0;
+  }
   .createacccontainer
   {
-  position: fixed;
-  top: 30%;
-  left: 35%;
-  width: 30%;
-  height: 60%;
+  position: relative;
+  top: 10%;
+    width: 30%;
+  height: 80%;
   background-color: #B89D5F;
   border-width: 2px;
   border-color: #E3B7A5;
   border-style: solid;
   }
+  .p-input
+  {
+   margin-top: 2.5%;
+   margin-bottom: 2.5%;
+   margin-left: 3.5%;
+   font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: -0.015em;
 
+  color: #E9E8E8;
+   display: block;
+  }
   .empname
   {
    margin-top: 2.5%;
@@ -62,9 +79,6 @@
 
 .input{
   text-align: center;
-}
-.input .placeholder{
-  left: 145px;
 }
 </style>
 <div class="topnav">

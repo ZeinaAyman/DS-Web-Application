@@ -185,7 +185,7 @@
               <div class="contact-column">
                 <h4 class="contact-header">If you can envision it, then we can design it. <br>Tell us more about your project!</h4>
               </div>
-              <div class="col-xl-2 text-xl-right"><a class="button button-secondary" href="#" data-toggle="modal" data-target="#modalContact">Contact Us</a></div>
+              <div class="col-xl-2 text-xl-right"><a class="button button-secondary" href="mailto:info@design-solution.com">Get Your Quote</a></div>
             </div>
           </div>
         </section>

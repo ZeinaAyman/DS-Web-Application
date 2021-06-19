@@ -203,9 +203,9 @@ header{
               <li class="two"><a href="AboutUs.php">About</a></li>
               <li class="three"><a href="gallery.php">Gallery</a>
                  <ul>
-                      <li><a href="">Residenial</a></li>
-                      <li><a href="">Retail</a></li>
-                      <li><a href="">Commercial</a></li>
+                      <li><a href="gallery_Residential.php">Residenial</a></li>
+                      <li><a href="gallery_Retail.php">Retail</a></li>
+                      <li><a href="gallery_Commercial.php">Commercial</a></li>
                 </ul>
               </li>
               <li class="four"><a href="ContactUs.php">Contact</a></li>

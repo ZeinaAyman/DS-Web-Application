@@ -4,7 +4,7 @@ a {
     transition: .33s all ease;
 }
 .container-footer{
-      width: 100%;
+  width: 100%;
   padding-left: 15px;
   margin-top: 70px;
 }
@@ -115,7 +115,7 @@ footer a {
 </style>
 
 <footer>
-                <div class="container-footer">
+                <div class="container-footer" style="padding-left: 0!important;">
                     <div class="row-footer">
                         <div class="col-md-4 text-center">
                             <img src="images/dslogo.jpg" class="logo-small" alt="SK-Touch"><br>
@@ -130,10 +130,10 @@ footer a {
                         <div class="col-md-6">
                 <h6 style="color: #fff; font-weight: 400;">Navigation</h6>
                 <ul class="list-xxs" style="margin-left: 30px;">
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Portfolio</a></li><br>
-                  <li><a href="#">Contact Us</a></li>
-                  <li><a href="#">Newsletter</a></li>
+                  <li><a href="AboutUs.php">About Us</a></li>
+                  <li><a href="gallery.php">Portfolio</a></li><br>
+                  <li><a href="ContactUs.php">Contact Us</a></li>
+                  <li><a href="Newsletter.php">Newsletter</a></li>
                 </ul>
               </div>
                         <div class="col-md-4">

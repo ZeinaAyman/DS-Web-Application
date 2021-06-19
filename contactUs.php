@@ -65,9 +65,8 @@ h2{
 
 
 <div id="map"></div>
-
-
-<div class="form_col">
+<div class="container-global">
+        <div class="form_col">
                 <div class="slider-form context-light bg-default">
                   <h4 class="heading-decorated">Send us a Message</h4>
                   <!-- RD Mailform-->
@@ -95,58 +94,60 @@ h2{
                     <button class="button button-primary" type="submit">Submit</button>
                   </form>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    </div>
+</div>
 
-        <h2>Global Offices</h2><br><br>
-        <div class="container-footer">
-            <div class="row-footer">
 
-              <div class="col-md-4">
-                  <h3><span class="id-color">Egypt</span></h3>
-                  <div class="widget widget-address">
-                      <address>
-                          <span>Building 7218 Rd. 81, District S.</span>
-                          <span>Mokattam, Cairo.</span>
-                          <span><strong>Phone:</strong><a href="tel:+201000604745">+20 1000604745</a></span>
-                          <span><strong>Email:</strong><a href="mailto:info@design-solution.com">info@design-solution.com</a></span>
-                      </address>
-                  </div>
-              </div>
+<div class="container-global">
+  <h2>Global Offices</h2><br><br>
+  <div class="container-footer">
+      <div class="row-footer">
 
-              <div class="col-md-4">
-                  <h3><span class="id-color">Saudi Arabia</span></h3>
-                  <div class="widget widget-address">
-                      <address>
-                          <span>Al-Shati, Prince Muhammad Bin Abdulaiz Street</span>
-                          <span>Gizan, KSA.</span>
-                          <span><strong>Phone:</strong><a href="tel:+966530141967">+966 530141967</a></span>
-                          <span><strong>Email:</strong><a href="mailto:info@design-solution.com">info@design-solution.com</a></span>
-                      </address>
-                  </div>
-              </div>
-              <div class="col-md-4">
-                  <h3><span class="id-color">Tunisia</span></h3>
-                  <div class="widget widget-address">
-                      <address>
-                          <span>Espace Tunis, Monplaisir bloc C 5'eme Etage</span>
-                          <span>Tunis, Tunisia.</span>
-                          <span><strong>Phone:</strong><a href="tel:+21622908271">+21 622908271</a></span>
-                          <span><strong>Email:</strong><a href="mailto:info@design-solution.com">info@design-solution.com</a></span>
-                      </address>
-                  </div>
-              </div>
-
-            </div>
-            <div class="icons">
-              <a href="https://twitter.com/Design_Solu" title="twitter"><img src="images/twitter.png" alt="twitter" style=" width: 5%;"></a>
-              <a href="https://www.facebook.com/I.DesignSolu" title="facebook"><img src="images/facebook (2).png" alt="facebook" style=" width: 3%; margin-right: 8px;"></a>
-              <a href="https://www.instagram.com/interior.design.solution" title="instagram"><img src="images/instagram.png" alt="instagram" style=" width: 3%; margin-right: 10px;"></a>
-              <a href="https://www.snapchat.com/add/design.solution" title="snapchat"><img src="images/snapchat.png" alt="snapchat" style=" width: 3%;"></a>
+        <div class="col-md-4">
+            <h3><span class="id-color">Egypt</span></h3>
+            <div class="widget widget-address">
+                <address>
+                    <span>Building 7218 Rd. 81, District S.</span>
+                    <span>Mokattam, Cairo.</span>
+                    <span><strong>Phone:</strong><a href="tel:+201000604745">+20 1000604745</a></span>
+                    <span><strong>Email:</strong><a href="mailto:info@design-solution.com">info@design-solution.com</a></span>
+                </address>
             </div>
         </div>
+
+        <div class="col-md-4">
+            <h3><span class="id-color">Saudi Arabia</span></h3>
+            <div class="widget widget-address">
+                <address>
+                    <span>Al-Shati, Prince Muhammad Bin Abdulaiz Street</span>
+                    <span>Gizan, KSA.</span>
+                    <span><strong>Phone:</strong><a href="tel:+966530141967">+966 530141967</a></span>
+                    <span><strong>Email:</strong><a href="mailto:info@design-solution.com">info@design-solution.com</a></span>
+                </address>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <h3><span class="id-color">Tunisia</span></h3>
+            <div class="widget widget-address">
+                <address>
+                    <span>Espace Tunis, Monplaisir bloc C 5'eme Etage</span>
+                    <span>Tunis, Tunisia.</span>
+                    <span><strong>Phone:</strong><a href="tel:+21622908271">+21 622908271</a></span>
+                    <span><strong>Email:</strong><a href="mailto:info@design-solution.com">info@design-solution.com</a></span>
+                </address>
+            </div>
+        </div>
+
+      </div>
+      <div class="icons2">
+        <a href="https://twitter.com/Design_Solu" title="twitter"><img src="images/twitter.png" class="first" alt="twitter" style="width: 5%;"></a>
+        <a href="https://www.facebook.com/I.DesignSolu" title="facebook"><img src="images/facebook (2).png" class="others" alt="facebook" style="margin-right: 8px;"></a>
+        <a href="https://www.instagram.com/interior.design.solution" title="instagram"><img src="images/instagram.png" class="others" alt="instagram" style="margin-right: 10px;"></a>
+        <a href="https://www.snapchat.com/add/design.solution" title="snapchat"><img src="images/snapchat.png" class="others" alt="snapchat"></a>
+      </div>
+  </div>
+</div>
+
 
 <script>
   function initMap(){

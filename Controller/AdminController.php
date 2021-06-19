@@ -7,6 +7,7 @@ class AdminController extends UserController
   public function C_CreateAccount()
   {
       $err="";
+      $msg="";
       if(isset($_POST['submit']) && !empty($_POST['submit']))
       {
           $name = $_POST["Name"];
@@ -42,7 +43,7 @@ class AdminController extends UserController
             //echo "-Please enter a valid name <br>";
             $err = true;
           }
-
+          echo $msg;
           if(!$err)
           {
             $EMP = new Employee();

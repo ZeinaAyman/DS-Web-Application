@@ -103,7 +103,7 @@ $result = $admin->DB->FetchAll("project");
         .column {
             -ms-flex: 25%;
             /* IE10 */
-            flex: 25%;
+            flex: 27%;
             max-width: 35%;
             padding: 0 4px;
         }
@@ -253,7 +253,7 @@ $result = $admin->DB->FetchAll("project");
                 <h1 id="title1">Company Projects</h1>
             </figure>
             <figure class="gallery__item gallery__item--p">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+                <p>A showcase of some of the best designs made by our designers.</p>
             </figure>
             <div class="row2">
               <div class="column">
@@ -271,7 +271,7 @@ $result = $admin->DB->FetchAll("project");
                   echo "<p class=\"img_name\">". $row['name'] ."</p>";
                   echo "</div>";
 
-                  if($count % 5 == 0){
+                  if($count % 3 == 0){
                     echo "</div>";
                     echo "<div class=\"column\">";
                   }
@@ -279,28 +279,6 @@ $result = $admin->DB->FetchAll("project");
               }
 
                  ?>
-                  <!-- <img src="images/building3.jpg" style="width:100%">
-                  <img src="images/building2.jpeg" style="width:100%">
-
-              </div>
-
-                <div class="column">
-                    <img src="images/building3.jpg" style="width:100%">
-                    <img src="images/building.jpg" style="width:100%">
-                    <img src="images/building3.jpg" style="width:100%">
-
-                </div>
-                <div class="column">
-                    <img src="images/building2.jpeg" style="width:100%">
-                    <img src="images/building3.jpg" style="width:100%">
-                    <img src="images/building2.jpeg" style="width:100%">
-
-                </div>
-                <div class="column">
-                    <img src="images/building3.jpg" style="width:100%">
-                    <img src="images/building.jpg" style="width:100%">
-                    <img src="images/building.jpg" style="width:100%">
-                </div> -->
             </div>
         </div>
     </div>

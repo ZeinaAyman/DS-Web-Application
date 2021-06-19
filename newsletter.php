@@ -30,7 +30,7 @@
         </style>
     </head>
     <body>
-      <section id="subheader" data-speed="8" data-type="background" style="background-position: 50% 0px;">
+      <section id="subheader" data-speed="8" data-type="background" style="background-position: 50% 0px; margin-left: 8%;">
             <div class="container-about">
                 <div class="row-about">
                     <div class="col-md-12">
@@ -52,10 +52,20 @@
                     <div class="row-about">
                         <div class="inner-padding">
                             <div class="col-about-left" data-animation="fadeInRight" data-delay="200">
-                                <h2>Mission</h2>
-
-                                <p class="intro"><span class="id-color">Design Solution</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <span class="id-color">Design Solution Interior</span> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                                  <span class="id-color">Design Solution Interior</span> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                                                <h4 class="heading-decorated">Subscription Newsletter</h4>
+                                                <p>Receive the latest design updates, architecture news and interiors inspiration straight to your inbox</p>
+                                                <form class="rd-mailform rd-mailform_style-1" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
+                                                  <div class="form-wrap form-wrap_icon">
+                                                    <i class="far fa-user"></i>
+                                                    <input class="form-input" id="contact-order-name" type="text" name="name" data-constraints="@Required">
+                                                    <label class="form-label" for="contact-order-name">Your name</label>
+                                                  </div>
+                                                  <div class="form-wrap form-wrap_icon">
+                                                    <i class="far fa-envelope"></i>
+                                                    <input class="form-input" id="contact-order-email" type="email" name="email" data-constraints="@Required @Email">
+                                                    <label class="form-label" for="contact-order-email">Your e-mail</label>
+                                                  </div>
+                                                  <button class="button button-primary" type="submit">Submit</button>
                             </div>
                             <div class="clearfix"></div>
                         </div>
@@ -64,24 +74,6 @@
             </section>
         </div>
 
-        <div id="content" class="no-top no-bottom">
-          <section id="section-about-us-2" class="side-bg no-padding">
-                <div class="image-container col-md-5 pull-right" data-delay="0" style="position: absolute;left: 50%;"></div>
-
-                <div class="container-about">
-                    <div class="row-about">
-                        <div class="inner-padding-right">
-                            <div class="col-about-right" data-animation="fadeInRight" data-delay="200">
-                                <h2>Vision</h2>
-                                  <p class="intro"><span class="id-color">Design Solution</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <span class="id-color">Design Solution Interior</span> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                                    <span class="id-color">Design Solution Interior</span> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
 
 
 
