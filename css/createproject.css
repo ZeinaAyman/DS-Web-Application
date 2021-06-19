@@ -14,7 +14,6 @@
     position: relative;
     top: 5%;
     left: 25%;
-    height: 100%;
     width: 50%;
     border-width: 2px;
     border-color: #B89D5F;
@@ -38,13 +37,24 @@
   }
   .form-input,.emplist
   {
-    margin-left: 3.5%;
-    background-color: #8C744D;
-    border: 1px solid black;
-    width: 93%;
-    height: 30px;
-    color: #E9E8E8;
-    padding-left: 10px;
+    width: 60%;
+      padding: 10px 20px;
+      border: 0;
+      color: #E9E8E8;
+      margin-left: 5%;
+      font-size: 18px;
+      outline: 0;
+      background-color: #8C744D;
+      position: relative;
+  }
+  .emplist{
+      margin-left: 3.5%;
+      background-color: #8C744D;
+      border: 1px solid black;
+      width: 93%;
+      height: 30px;
+      color: #E9E8E8;
+      padding-left: 10px;
   }
   .form-file
   {
@@ -74,6 +84,7 @@
    position: relative;
    left: 29%;
    top: 20px;
+   margin-bottom: 20px;
    font-family: Montserrat;
     font-style: normal;
     font-weight: bold;

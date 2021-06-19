@@ -104,16 +104,39 @@ $result = $admin->DB->FetchAll("project");
             -ms-flex: 25%;
             /* IE10 */
             flex: 25%;
-            max-width: 25%;
+            max-width: 35%;
             padding: 0 4px;
         }
-
+        .img_wrap{
+          position:relative;
+          text-align: center;
+        }
         .column img {
             margin-top: 8px;
             vertical-align: middle;
             width: 100%;
         }
+        .column img:hover{
+          outline: 4px solid white;
+          transition: outline 0.12s linear;
+          outline-offset: -10px;
+        }
+        .img_name{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 30px;
+          color: #fff;
+          visibility: hidden;
+          opacity: 0;
+        }
 
+        .img_wrap:hover .img_name {
+          visibility: visible;
+          cursor: pointer;
+          opacity: 1;
+        }
         /* Responsive layout - makes a two column-layout instead of four columns */
         @media screen and (max-width: 800px) {
             .column {
@@ -235,17 +258,28 @@ $result = $admin->DB->FetchAll("project");
             <div class="row2">
               <div class="column">
                 <?php
+                $count = 0;
                 if (mysqli_num_rows($result) > 0) {
                 while($row = mysqli_fetch_array($result)){
+                  $count++;
                   $images=$row['images'];
+                  $id = $row['id'];
                   $firstimage = "uploads/projects/images/".explode(",", $images)[0];
+                  echo "<div class=\"img_wrap\">";
+                  ?>
+                  <a href="gallery2.php?project_id=<?php echo $id?>"> <?php echo "<img src=".$firstimage."></a>";
+                  echo "<p class=\"img_name\">". $row['name'] ."</p>";
+                  echo "</div>";
 
-                  echo "<img src=".$firstimage.">";
+                  if($count % 5 == 0){
+                    echo "</div>";
+                    echo "<div class=\"column\">";
+                  }
                 }
               }
 
                  ?>
-                  <img src="images/building3.jpg" style="width:100%">
+                  <!-- <img src="images/building3.jpg" style="width:100%">
                   <img src="images/building2.jpeg" style="width:100%">
 
               </div>
@@ -266,12 +300,19 @@ $result = $admin->DB->FetchAll("project");
                     <img src="images/building3.jpg" style="width:100%">
                     <img src="images/building.jpg" style="width:100%">
                     <img src="images/building.jpg" style="width:100%">
-                </div>
+                </div> -->
             </div>
         </div>
+    </div>
     </div>
     <!-- <div class="e338_1408"></div> -->
     <?php include "includes/footer.php"; ?>
 </body>
-
+<script type="text/javascript">
+  $("a").hover(function(){
+    $(this).css("opacity", "0.3");
+    }, function(){
+      $(this).css("opacity", "1");
+    });
+</script>
 </html>

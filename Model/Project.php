@@ -9,6 +9,7 @@ class Project extends Model
   private $desc;
   private $status;
   private $budget;
+  private $property;
   private $images=array();
   private $files=array();
   private $designers=array();
@@ -17,12 +18,13 @@ class Project extends Model
 
   }
 
-  public function Feed($name,$desc,$budget,$images,$files)
+  public function Feed($name,$desc,$budget,$property,$images,$files)
   {
     $this->name=$name;
     $this->desc=$desc;
     $this->status="Ongoing";
     $this->budget=$budget;
+    $this->property=$property;
     $this->images=$images;
     $this->files=$files;
 
@@ -63,6 +65,10 @@ function setBudget($budget)
 {
 $this->budget = $budget;
 }
+function setPropertyType($property)
+{
+return $this->property;
+}
 function getBudget()
 {
 return $this->budget;
@@ -93,6 +99,11 @@ array_push($this->designers,$designer);
 function getDesigners()
 {
 return print_r($this->designers);
+}
+
+function getPropertyType()
+{
+return print_r($this->property);
 }
 
 }

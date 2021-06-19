@@ -12,11 +12,11 @@
     {
       $Project->addDesigner($Des);
       $assignedID=$Des->ID;
-      $this->DB->query = "INSERT into project (name,description,budget,images,files,status,AssignedDesigners) VALUES('".$Project->getName()."', '".$Project->getDesc()."','".$Project->getBudget()."','".$Project->getImages()."','".$Project->getFiles()."','".$Project->getStatus()."',$assignedID)";
+      $this->DB->query = "INSERT into project (name,description,budget,Property_Type,images,files,status,AssignedDesigners) VALUES('".$Project->getName()."', '".$Project->getDesc()."','".$Project->getBudget()."','".$Project->getPropertyType()."','".$Project->getImages()."','".$Project->getFiles()."','".$Project->getStatus()."',$assignedID)";
       $result = $this->DB->query();
       echo $result;
     }
-    
+
     public function getMyProjects()
     {
      $DesId = unserialize($_SESSION['online'])->ID;

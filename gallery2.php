@@ -1,4 +1,12 @@
-<?php include "New_Homenavbar.php"; ?>
+<?php include "New_Homenavbar.php";
+      include 'Model/Admin.php';
+
+$projectid = $_GET['project_id'];
+
+$admin = new Admin();
+$admin->connect();
+$result = $admin->DB->FetchById("project",$projectid);
+?>
 <html lang="en">
 
 <head>
@@ -255,7 +263,24 @@
 
   <div class="row2">
     <div class="column">
-      <img src="images/building2.jpeg" style="width:100%">
+      <?php
+      $count = 0;
+      while($row = mysqli_fetch_array($result)){
+        $count++;
+        $images=$row['images'];
+        $id = $row['id'];
+        $test = array();
+        $test = explode(",", $images);
+        echo "<img src=\"uploads/projects/images/.$images.\"></a>";
+
+        if($count % 5 == 0){
+          echo "</div>";
+          echo "<div class=\"column\">";
+        }
+      }
+
+       ?>
+      <!-- <img src="images/building2.jpeg" style="width:100%">
       <img src="images/building3.jpg" style="width:100%;">
 
 
@@ -264,7 +289,7 @@
       <img src="images/building3.jpg" style="width:100%">
       <img src="images/building.jpg" style="width:100%; height: 199px;">
 
-    </div>
+    </div> -->
 
 
   </div>

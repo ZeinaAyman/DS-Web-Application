@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
 <style media="screen">
 *{
   margin: 0;
@@ -68,37 +70,6 @@ header{
    background: #ddd;
    color: #262626;
  }
- .one:hover ~ hr {
-   display:block;
-   width: 4.5%;
-   margin-left: 0.5%;
-}
- .two:hover ~ hr {
-   display:block;
-   width: 5%;
-  margin-left: 6%;
-}
-.three:hover ~ hr {
-  display:block;
-  width: 5.5%;
-  margin-left: 12%;
-}
-
-.four:hover ~ hr {
-  display:block;
-  width: 6%;
-  margin-left: 56.5%;
-}
-.five:hover ~ hr {
-  display:block;
-  width: 6%;
-  margin-left: 62.5%;
-}
-.six:hover ~ hr {
-  display:block;
-  width: 6.5%;
-  margin-left: 69.5%;
-}
  hr {
   top: 100%;
   height: 0.25rem;
@@ -131,247 +102,100 @@ header{
    top: 0;
    width: 80%;
  }
- #main_menu{width: 100%; position: relative;}
+ .main_menu{width: 100%; position: relative;}
  .logo_area{width: 300px; height: 300px; position: absolute; left: 50%; top: 0; content: ""; margin-left:-150px; text-align: center; }
- .logo_area img{height: auto;width: 50%; border-radius: 40px;}
+ .logo_area img{height: auto;width: 47%; border-radius: 40px;}
 
- .container {
-   width: 100%;
-   height: 350px;
-   margin-top: 170px;
-   display: flex;
-   overflow: hidden;
- }
-
- .left-skew {
-   width: calc(51% + 95px);
-       height: 90%;
-       transform: skewX(-26deg);
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       position: absolute;
-       right: 54%;
- }
-
- .right-skew {
-   width: calc(50% + 115px);
-   height: 90%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
- }
-
-
- .left-skew {
-   margin-left: -135px;
-       padding-left: 122px;
-       background-color: #6e5c38;
-       border: 8px solid #151515;
- }
- .right-skew {
-   position: absolute;
-   margin-top: 7px;
-       margin-right: -115px;
-       padding-right: 115px;
-       color: white;
-       z-index: -1;
-       left: 34.8%;
- }
-
- .right-skew img{
-   max-width: 100%;
-   max-height: 100%;
-   position: absolute;
-   width: 100%;
-   left: 1px;
-   background-size: cover;
- }
-
- .active {
-   background-color: #717171;
- }
-
- /* Fading animation */
- .fade {
-   animation-name: fade;
- animation-duration: 2.5s;
- }
-
- @keyframes fade {
-   from {opacity: .4}
-   to {opacity: 1}
- }
-
- .styles_ImagineContainer__3tztP {
-   display: flex;
-   padding: 3% 5%;
-   z-index: 2;
- }
-
-
- @media (min-width: 1100px){
- .styles_ImagineHeader__oCsJu {
-     flex: 0 1 auto;
-     width: auto;
-   }
- }
- @media (min-width: 1100px){
- .styles_ImagineHeader__oCsJu h1 {
-     font-size: 40px;
-     margin: 63px 0 0;
-     max-width: 336px;
-   }
- }
-
- .styles_ImagineHeader__oCsJu h1 {
-     font-family: GT Walsheim;
-     color: White;
-     font-size: 26px;
-     letter-spacing: normal;
-     font-weight: 900!important;
-     margin: 100px 0 45px;
-     max-width: 350px;
- }
-
- @media (min-width: 1100px){
- .styles_ImagineWrapper__4xP9D {
-     flex: 0 1 auto;
-   }
- }
- .styles_Imagine__1sEZh {
-     display: flex;
-     flex-direction: column;
- }
-
- .styles_ImagineCopy__3yFth {
-     color: #000;
-     font-size: 14px;
-     line-height: 22px;
-     max-width: 350px;
-     align-self: flex-end;
- height: 273px;
- }
-
- .content-section {
-     display: block;
-     overflow: hidden;
-     background-color: #e9e8e8;
-     padding-top: 25px;
-     padding-bottom: 75px;
-     text-align: center;
-     -o-object-position: 50% 50%;
-     object-position: 50% 50%;
- }
-
- .content-wrapper {
-     position: relative;
-     width: 100%;
-     max-width: 1265px;
-     margin-top: 0;
-     padding-top: 0;
-     padding-right: 25px;
-     padding-left: 25px;
- }
- .w-container {
-     margin-left: auto;
-     margin-right: auto;
-     max-width: 940px;
- }
- ._49-column-2 {
-   display: block;
-       width: 60%;
-       max-width: 708px;
-       margin-right: auto;
-       margin-left: auto;
-       text-align: center;
- }
- .mini-title {
-     margin-bottom: 10px;
-     font-size: 13.5px;
- }
- .center-box, .mini-title {
-     font-family: Roboto,sans-serif;
-     color: #b89d5f;
-     font-weight: 700;
-     letter-spacing: 1.5px;
-     text-transform: uppercase;
- }
- .top-border-2._10 {
-     margin-top: 10px;
- }
- .top-border-2 {
-   position: relative;
-     z-index: 10;
-     margin-top: 20px;
- }
- p {
-   color: #141414;
-     margin-top: 0;
-     font-size: 20px;
-     margin-bottom: 10px;
- }
- .top-border._20 {
-     margin-top: 20px;
- }
- .form-block-2 {
-   box-sizing: border-box;
-     display: block;
-     max-width: 600px;
-     margin-bottom: 0;
- }
- .w-form {
-     margin: 0 0 15px;
- }
- .flex-2 {
-     display: flex;
-     width: 100%;
-     -webkit-flex-wrap: wrap;
-     -ms-flex-wrap: wrap;
-     flex-wrap: wrap;
- }
- .text-field-2 {
-   font-family: 'Austin-Italic';
-   font-style: italic;
-     width: 34%;
-     height: 60px;
-     padding-left: 21px;
-     border-style: solid none solid solid;
-     border-width: 1px;
-     border-color: #b89d5f;
-     border-top-left-radius: 3px;
-     border-bottom-left-radius: 3px;
- }
- .submit-button-2 {
-   font-family: 'Bahnschrift';
-     font-weight: 700;
-   width: 23%;
-     float: left;
-   height: 64px;
-   border: none;
-   margin: 0;
-   background: #b89d5f;
-   color: #fff;
-   text-transform: uppercase;
-   font-size: 12px;
-   margin: 0;
- }
 
  @media only screen and (min-width: 200px) and (max-width: 767px) {
      .slicknav_menu{display: block;}
      .inner_main_menu{display: none;}
      .logo_area {height: auto;left: 0;margin-left: 0;position: relative;top: 0;width: 130px;}
-     .logo_area img{height: auto;width: 100%;}
+     .logo_area img{height: auto;width: 80%;}
+
+ }
+
+ .main_menu.responsive {
+     overflow: hidden;
+     background-color: #6e5c38;
+ }
+ .links a{
+   color: white !important;
+   display: none;
+ }
+
+ .main_menu .links a {
+     font-size: 17px;
+     padding: 14px 16px;
+     float: right;
+     text-decoration: none;
+     font-family: Arial;
+     color: #6e5c38;
+     text-align: center;
+ }
 
 
+ .main_menu a:hover {
+     background-color: #ddd;
+     color: #6e5c38;
+ }
+
+.main_menu .icon {
+     display: none;
+ }
+
+.hide{
+  display: none;
+}
+ @media screen and (max-width: 600px) {
+     .main_menu a {
+         display: none;
+     }
+
+     .main_menu a.icon {
+         float: right;
+         display: block;
+     }
+
+     .hide{
+       display: block;
+     }
+ }
+
+ @media screen and (max-width: 600px) {
+
+     .main_menu.responsive {
+         position: relative;
+     }
+
+     .main_menu.responsive .icon {
+         position: absolute;
+         right: 0;
+         top: 0;
+     }
+
+     .main_menu.responsive a {
+         float: none;
+         display: block;
+         text-align: left;
+     }
 
  }
 </style>
 
 <header>
-  <div id="main_menu">
-      <div class="logo_area">
-          <img src="images/dslogo.png" alt="">
+  <div class="main_menu" id="itmain_menu">
+        <div class="links">
+            <a class="hide" href="ContactUs.php">Contact</a>
+            <a class="hide" href="AboutUs.php">About</a>
+            <a class="hide" href="gallery.php">Gallery</a>
+            <a class="hide" href="New_GalleryHome.php">Home</a>
+            <a  href="javascript:void(0);" class="icon" style="color:#6e5c38 !important;" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+      <div class="logo_area" id="logo">
+          <img src="images/dslogo.jpg" alt="">
       </div>
       <div class="inner_main_menu">
           <ul id="menu">
@@ -381,7 +205,7 @@ header{
                  <ul>
                       <li><a href="">Residenial</a></li>
                       <li><a href="">Retail</a></li>
-                      <li><a href="">Corporate</a></li>
+                      <li><a href="">Commercial</a></li>
                 </ul>
               </li>
               <li class="four"><a href="ContactUs.php">Contact</a></li>
@@ -392,3 +216,22 @@ header{
       </div>
   </div>
 </header>
+<script>
+    function myFunction() {
+
+        var x = document.getElementById("itmain_menu");
+        var y = document.getElementById("logo");
+        if (x.className === "main_menu") {
+            x.className += " responsive";
+        } else {
+            x.className = "main_menu";
+        }
+
+
+        if (y.style.display === "none") {
+          y.style.display = "block";
+        } else {
+          y.style.display = "none";
+        }
+    }
+</script>

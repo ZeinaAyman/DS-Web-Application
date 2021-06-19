@@ -12,6 +12,7 @@
         <link href="https://fonts.googleapis.com/css?family=Oswald:400" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <style media="screen">
@@ -35,7 +36,7 @@
         </style>
     </head>
     <body>
-      <section id="subheader" data-speed="8" data-type="background" style="background-position: 50% 0px;">
+      <section id="subheader" data-speed="8" data-type="background" style="background-position: 50% 0px;margin-left: 8%;">
             <div class="container-about">
                 <div class="row-about">
                     <div class="col-md-12">

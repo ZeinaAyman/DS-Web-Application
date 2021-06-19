@@ -14,6 +14,7 @@ class DesignerController extends UserController
       $name = $_POST["name"];
       $description = $_POST["description"];
       $budget = $_POST["budget"];
+      $property = $_POST["type"];
 
 
       if(count($_FILES["file"]['name'])>0)
@@ -60,7 +61,7 @@ class DesignerController extends UserController
         $CurrentDes = unserialize($_SESSION['online']);
         //$CurrentDes->CreateProject($DB,$Project);
         $Project = new Project();
-        $Project->Feed($name,$description,$budget,$images,$files);
+        $Project->Feed($name,$description,$budget,$property,$images,$files);
         $this->Model->connect();
         $this->Model->CreateProject($Project,$CurrentDes);
 

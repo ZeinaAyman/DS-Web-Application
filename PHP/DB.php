@@ -32,5 +32,12 @@
         $result = $this->query();
         return $result;
       }
+
+      public function fetchById($table, $id)
+      {
+        $this->query="SELECT * FROM $table Where id='".$id."'";
+        $result = $this->query();
+        return $result;
+      }
   }
  ?>

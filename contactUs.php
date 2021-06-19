@@ -35,7 +35,7 @@ h2{
     font-size: 32px;
     letter-spacing: 5px;
     float: left;
-        padding: 55px;
+        padding: 46px;
     margin-right: 40px;
     text-transform: uppercase;
 }
@@ -45,7 +45,7 @@ h2{
         </style>
     </head>
     <body>
-      <section id="subheader" data-speed="8" data-type="background" style="background-position: 50% 0px;">
+      <section id="subheader" data-speed="8" data-type="background" style="background-position: 50% 0px;margin-left: 8%;">
             <div class="container-about">
                 <div class="row-about">
                     <div class="col-md-12">
@@ -100,56 +100,59 @@ h2{
           </div>
         </div>
 
-        <h2>Global Offices</h2>
+        <h2>Global Offices</h2><br><br>
         <div class="container-footer">
             <div class="row-footer">
 
-                <div class="col-md-4">
-                    <h3><span class="id-color">Egypt</span></h3>
-                    <div class="widget widget-address">
-                        <address>
-                            <span>Bejjany Street, Louaize District</span>
-                            <span>Baabda, Lebanon.</span>
-                            <span><strong>Phone:</strong><a href="tel:+96170951312">+961 70 951312</a></span>
-                            <span><strong></strong><a href="tel:+9615922913">+961 5 922 913</a></span>
-                            <span><strong>Email:</strong><a href="mailto:info@design-solution.com">info@design-solution.com</a></span>
-                        </address>
-                    </div>
-                </div>
+              <div class="col-md-4">
+                  <h3><span class="id-color">Egypt</span></h3>
+                  <div class="widget widget-address">
+                      <address>
+                          <span>Building 7218 Rd. 81, District S.</span>
+                          <span>Mokattam, Cairo.</span>
+                          <span><strong>Phone:</strong><a href="tel:+201000604745">+20 1000604745</a></span>
+                          <span><strong>Email:</strong><a href="mailto:info@design-solution.com">info@design-solution.com</a></span>
+                      </address>
+                  </div>
+              </div>
 
-                <div class="col-md-4">
-                    <h3><span class="id-color">Saudi Arabia</span></h3>
-                    <div class="widget widget-address">
-                        <address>
-                            <span>CourtYard Building, Office #303</span>
-                            <span>Khaledia District, Jeddah KSA.</span>
-                            <span><strong>Phone:</strong><a href="tel:+966505644518">+966-505 644 518</a></span>
-                            <span><strong></strong><a href="tel:+966126066980">+966-12 606 6980</a></span>
-                            <span><strong>Email:</strong><a href="mailto:info@design-solution.com">info@design-solution.com</a></span>
-                        </address>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <h3><span class="id-color">Tunisia</span></h3>
-                    <div class="widget widget-address">
-                        <address>
-                            <span>Bejjany Street, Louaize District</span>
-                            <span>Baabda, Lebanon.</span>
-                            <span><strong>Phone:</strong><a href="tel:+96170951312">+961 70 951312</a></span>
-                            <span><strong></strong><a href="tel:+9615922913">+961 5 922 913</a></span>
-                            <span><strong>Email:</strong><a href="mailto:info@design-solution.com">info@design-solution.com</a></span>
-                        </address>
-                    </div>
-                </div>
+              <div class="col-md-4">
+                  <h3><span class="id-color">Saudi Arabia</span></h3>
+                  <div class="widget widget-address">
+                      <address>
+                          <span>Al-Shati, Prince Muhammad Bin Abdulaiz Street</span>
+                          <span>Gizan, KSA.</span>
+                          <span><strong>Phone:</strong><a href="tel:+966530141967">+966 530141967</a></span>
+                          <span><strong>Email:</strong><a href="mailto:info@design-solution.com">info@design-solution.com</a></span>
+                      </address>
+                  </div>
+              </div>
+              <div class="col-md-4">
+                  <h3><span class="id-color">Tunisia</span></h3>
+                  <div class="widget widget-address">
+                      <address>
+                          <span>Espace Tunis, Monplaisir bloc C 5'eme Etage</span>
+                          <span>Tunis, Tunisia.</span>
+                          <span><strong>Phone:</strong><a href="tel:+21622908271">+21 622908271</a></span>
+                          <span><strong>Email:</strong><a href="mailto:info@design-solution.com">info@design-solution.com</a></span>
+                      </address>
+                  </div>
+              </div>
 
+            </div>
+            <div class="icons">
+              <a href="https://twitter.com/Design_Solu" title="twitter"><img src="images/twitter.png" alt="twitter" style=" width: 5%;"></a>
+              <a href="https://www.facebook.com/I.DesignSolu" title="facebook"><img src="images/facebook (2).png" alt="facebook" style=" width: 3%; margin-right: 8px;"></a>
+              <a href="https://www.instagram.com/interior.design.solution" title="instagram"><img src="images/instagram.png" alt="instagram" style=" width: 3%; margin-right: 10px;"></a>
+              <a href="https://www.snapchat.com/add/design.solution" title="snapchat"><img src="images/snapchat.png" alt="snapchat" style=" width: 3%;"></a>
             </div>
         </div>
 
 <script>
   function initMap(){
-    var egy = {lat: 30.030104, lng: 31.233576};
-    var tunisia = {lat: 36.797409, lng: 10.187146};
-    var saudia = {lat: 24.646518, lng: 46.717691};
+    var egy = {lat: 30.014500, lng: 31.308916};
+    var tunisia = {lat: 36.818152, lng: 10.187018};
+    var saudia = {lat: 16.929063, lng: 42.556959};
     var map = new google.maps.Map(document.getElementById("map"), {
       zoom: 4,
       center: egy,
@@ -182,7 +185,6 @@ h2{
 </script>
 
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtQlLfvyLrxCLLdPm04K0P0Sce4zNs6_o&callback=initMap"></script>
-<?php include "includes/footer.php"; ?>
 
 
     </body>

@@ -20,18 +20,13 @@
             width: 100%;
             z-index: -2;
             top: 313px;
-            height: 70%;
-            background-image:url(images/Design-team-office-fitout.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            opacity: 0.1;
+            height: 30%;
             background-position: center center;
         }
-        [class*='col'] {
+        /* [class*='col'] {
             padding-left: 65px;
             line-height: 36px;
-            /* padding-right: 25px; */
-        }
+        } */
         </style>
     </head>
     <body>
@@ -76,7 +71,7 @@
 
 <div class="portfolio">
   <section class="styles_Root__1bJKm">
-    <div class="col-md-6 col-md-offset-3 text-center" style="opacity: 500;visibility: visible;animation-name: fadeInUp;">
+    <div class="col-md-offset-3 text-center" style="opacity: 500;visibility: visible;animation-name: fadeInUp;">
         <h1>What We Do</h1>
         <div class="separator"><span><i class="fa fa-circle"></i></span></div>
         <div class="spacer-single"></div>
@@ -87,7 +82,7 @@
           <div class="styles_InfoContainer__3vlk3">
             <article class="thumb-flat thumb-flat-modern"><img class="thumb-flat__image" src="images/residential.jpg" alt="" width="418" height="245"/>
                             <div class="thumb-flat__body">
-                              <p class="heading-6"><a href="#">Residential Design</a></p>
+                              <p class="heading-3"><a href="#">Residential Design</a></p>
                               <p>We take a dedicated approach to help our commercial clients create the interior for their company offices and other spaces.</p><a class="button button-primary" href="#">View Projects</a>
                             </div>
                           </article>
@@ -99,7 +94,7 @@
           <div class="styles_InfoContainer__3vlk3">
             <article class="thumb-flat thumb-flat-modern"><img class="thumb-flat__image" src="images/retail.jpg" alt="" width="418" height="245"/>
                             <div class="thumb-flat__body">
-                              <p class="heading-6"><a href="#">Retail Design</a></p>
+                              <p class="heading-3"><a href="#">Retail Design</a></p>
                               <p>We take a dedicated approach to help our commercial clients create the interior for their company offices and other spaces.</p><a class="button button-primary" href="#">View Projects</a>
                             </div>
                           </article>
@@ -112,14 +107,14 @@
         <div class="styles_InfoContainer__3vlk3">
           <article class="thumb-flat thumb-flat-modern"><img class="thumb-flat__image" src="images/corporate.png" alt="" width="418" height="245"/>
                           <div class="thumb-flat__body">
-                            <p class="heading-6"><a href="#">Corporate Design</a></p>
+                            <p class="heading-3"><a href="#">Corporate Design</a></p>
                             <p>We take a dedicated approach to help our commercial clients create the interior for their company offices and other spaces.</p><a class="button button-primary" href="#">View Projects</a>
                           </div>
                         </article>
                       </div>
       </div>
 </div>
-      <div class="homeHeader" style="margin-top: 50px; text-align: center;"><a href="projects.html" class="btn-slider-inverse">View Portfolio</a></div>
+      <div class="homeHeader" style="margin-top: 50px; text-align: center;"><a href="gallery.php" class="btn-slider-inverse">View Portfolio</a></div>
     </section>
 </div>
 
@@ -187,8 +182,8 @@
   <section class="section-sm bg-accent text-center">
           <div class="container-contact">
             <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
-              <div class="col-xl-8 text-xl-left">
-                <h4 class="heading-decoratedIf">If you can envision it, then we can design it. <br>Tell us more about your project!</h4>
+              <div class="contact-column">
+                <h4 class="contact-header">If you can envision it, then we can design it. <br>Tell us more about your project!</h4>
               </div>
               <div class="col-xl-2 text-xl-right"><a class="button button-secondary" href="#" data-toggle="modal" data-target="#modalContact">Contact Us</a></div>
             </div>

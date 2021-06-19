@@ -94,13 +94,22 @@ class ViewDesigner extends ViewUser
     $html.="<span class='form-title'>Create New Project</span>";
     $html.="<div class='create-form'>";
     $html.="<label class='p-input'>Client Name</label>";
-    $html.="<input type='text' class='form-input' name='name' value='Project 1'>";
+    $html.="<input type='text' class='form-input' name='name' value='Project Name'>";
 
     $html.="<label class='p-input'>Project Description</label>";
-    $html.="<input type='text' class='form-input' name='description' value='project 1 description here'>";
+    $html.="<textarea type='textarea' class='form-input' name='description' value='project description here'></textarea>";
 
     $html.="<label class='p-input'>Project Budget</label>";
     $html.= "<input type='number' class='form-input' name='budget' value='32000 L.E'>";
+
+    $html.="<label class='p-input'>Property Type</label>";
+    $html.="<div class='input'>";
+    $html.="<select name='type' class ='form-input'>";
+    $html.="<option value='1'>Residential</option>";
+    $html.="<option value='2'>Retail</option>";
+    $html.="<option value='2'>Commercial</option>";
+    $html.="</select>";
+    $html.="</div>";
 
     $html.="<label class='p-input'>Images</label>";
 
