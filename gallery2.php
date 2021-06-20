@@ -77,7 +77,7 @@ $result = $admin->DB->FetchById("project",$projectid);
     .e338_1432 {
       background-color: #6e5c38;
       width: 636px;
-      height: 639px;
+      height: 739px;
       position: absolute;
       left: 836px;
       top: 166px;
@@ -155,14 +155,14 @@ $result = $admin->DB->FetchById("project",$projectid);
     .e338_1435 {
       color: rgba(234.00000125169754, 232.00000137090683, 218.00000220537186, 1);
       width: 518px;
-      height: 106px;
+      height: 121px;
       position: absolute;
       left: 856px;
-      top: 700px;
+      top: 698px;
       font-family: Mplus 1p Bold;
       text-align: left;
       font-size: 18px;
-      letter-spacing: -1.5;
+      letter-spacing: 0.5px;
     }
 
     .container-about {
@@ -238,12 +238,24 @@ $result = $admin->DB->FetchById("project",$projectid);
         margin-bottom: 0;
         padding-bottom: 0;
     }
+    h2{
+     color: #eceff3;
+       font-size: 20px;
+       letter-spacing: 5px;
+       padding-left: 49px;
+       text-transform: uppercase;
+   }
+   @media (max-width: 600px) {
+     a h2{
+       display: none;
+     }
+   }
   </style>
 
 </head>
 
 <body>
-  <!-- images -->
+  <a href="gallery.php" style="text-decoration: none;"><h2>Back</h2></a>
   <section id="subheader" data-speed="8" data-type="background" style="background-position: 50% 0px; margin-left: 3%; padding-bottom: 23px;">
         <div class="container-about">
             <div class="row-about">
@@ -268,28 +280,34 @@ $result = $admin->DB->FetchById("project",$projectid);
       while($row = mysqli_fetch_array($result)){
         $count++;
         $images=$row['images'];
+        $name= $row['name'];
+        $desc= $row['description'];
         $id = $row['id'];
-        $test = array();
-        $test = explode(",", $images);
-        echo "<img src=\"uploads/projects/images/.$images.\"></a>";
+        $first = "uploads/projects/images/".explode(",", $images)[0];
+        $test1 = "uploads/projects/images/".explode(",", $images)[1];
+        echo "<img src=".$test1."></a>";
 
-        if($count % 5 == 0){
-          echo "</div>";
-          echo "<div class=\"column\">";
-        }
+        // if($count % 5 == 0){
+        //   echo "</div>";
+        //   echo "<div class=\"column\">";
+        // }
       }
 
        ?>
-      <!-- <img src="images/building2.jpeg" style="width:100%">
-      <img src="images/building3.jpg" style="width:100%;">
+       <?php $test2 = "uploads/projects/images/".explode(",", $images)[2];
+       $test3 = "uploads/projects/images/".explode(",", $images)[3];
+        echo "<img src=".$test2."></a>";
+        echo "<img src=".$test3."></a>";
 
 
-    </div>
-    <div class="column">
-      <img src="images/building3.jpg" style="width:100%">
-      <img src="images/building.jpg" style="width:100%; height: 199px;">
+          echo "</div>";
+        echo "<div class=\"column\">";
 
-    </div> -->
+        echo "</div>";
+        ?>
+      <!-- <img src="images/building3.jpg" style="width:100%;"> -->
+
+
 
 
   </div>
@@ -303,11 +321,11 @@ $result = $admin->DB->FetchById("project",$projectid);
   <div class="e338_1433" style="margin-bottom: 125px; margin-top: 200px;">
     <!-- main image -->
 
-    <div class="ei338_1433_338_1429"><img src="images/building3.jpg" style="width:100%"></div>
+    <div class="ei338_1433_338_1429"><?php echo "<img src=".$first." style=\"width:100%\"></a>"; ?></div>
     <!-- project Description  -->
   </div>
-  <span class="c4" style="margin-top: 200px;">Sed sssut perspiciatis unde omnis</span>
-  <span class="e338_1435" style="margin-top: 200px;">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</span>
+  <span class="c4" style="margin-top: 200px;"><?php echo $name; ?></span>
+  <span class="e338_1435" style="margin-top: 200px;"><?php echo $desc; ?></span>
 
 
   <!-- footer and logos -->

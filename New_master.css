@@ -705,3 +705,19 @@ p {
  .fill_height {
      height: 100%;
  }
+ #scrollToTopBtn {
+   display: none;
+   position: fixed;
+   bottom: 20px;
+   right: 30px;
+   width: 50px;
+   font-size: 18px;
+   z-index:20;
+   border: none;
+   outline: none;
+   background-color: #34A89A;
+   color: white;
+   cursor: pointer;
+   padding: 15px;
+   border-radius: 50%;
+ }

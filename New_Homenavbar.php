@@ -199,7 +199,7 @@ header{
       </div>
       <div class="inner_main_menu">
           <ul id="menu">
-              <li class="one"><a href="New_GalleryHome.php">Home</a></li>
+              <li class="one"><a href="New_Galleryhome.php">Home</a></li>
               <li class="two"><a href="AboutUs.php">About</a></li>
               <li class="three"><a href="gallery.php">Gallery</a>
                  <ul>
@@ -208,8 +208,8 @@ header{
                       <li><a href="gallery_Commercial.php">Commercial</a></li>
                 </ul>
               </li>
-              <li class="four"><a href="ContactUs.php">Contact</a></li>
-              <li class="five"><a href="ContactUs.php">Map</a></li>
+              <li class="four"><a href="contactUs.php">Contact</a></li>
+              <li class="five"><a href="contactUs.php">Map</a></li>
               <li class="six"><a href="newsletter.php">Newsletter</a></li>
             <hr>
           </ul>

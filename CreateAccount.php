@@ -80,12 +80,25 @@
 .input{
   text-align: center;
 }
+a h2{
+ color: #151515;
+   font-size: 20px;
+   letter-spacing: 1px;
+   padding-left: 49px;
+   padding-top: 20px;
+   text-transform: uppercase;
+}
+@media (max-width: 600px) {
+ a h2{
+   display: none;
+ }
+}
 </style>
 <div class="topnav">
   <h2>Designs Solutions</h2>
   <!-- <h3>LOGO</h3> -->
 </div>
-
+<a href="Admin.php" style="text-decoration: none;"><h2>Back</h2></a>
 <div class="create-acc">
   Create Account
 </div>

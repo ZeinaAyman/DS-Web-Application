@@ -30,7 +30,31 @@
         </style>
     </head>
     <body>
+      <?php
+      $error = false;
+      $msg="";
+      $success="";
 
+        if(isset($_POST['submit']))
+        {
+          $name = $_POST["name"];
+          $email = $_POST["email"];
+          if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+            $msg="-Please enter a valid email <br>";
+            //echo "-Please enter a valid email<br>";
+            $error = true;
+          }
+
+          if(!$error){
+            $success="Thank you for Subscribing to our Newsletter.";
+
+          }
+        }
+
+
+
+
+       ?>
 
       <div class="container">
         <div class="left-skew">
@@ -83,7 +107,7 @@
             <article class="thumb-flat thumb-flat-modern"><img class="thumb-flat__image" src="images/residential.jpg" alt="" width="418" height="245"/>
                             <div class="thumb-flat__body">
                               <p class="heading-3"><a href="#">Residential Design</a></p>
-                              <p>We take a dedicated approach to help our commercial clients create the interior for their company offices and other spaces.</p><a class="button button-primary" href="#">View Projects</a>
+                              <p>We take a dedicated approach to help our commercial clients create the interior for their company offices and other spaces.</p><a class="button button-primary" href="gallery_Residential.php">View Projects</a>
                             </div>
                           </article>
                         </div>
@@ -95,7 +119,7 @@
             <article class="thumb-flat thumb-flat-modern"><img class="thumb-flat__image" src="images/retail.jpg" alt="" width="418" height="245"/>
                             <div class="thumb-flat__body">
                               <p class="heading-3"><a href="#">Retail Design</a></p>
-                              <p>We take a dedicated approach to help our commercial clients create the interior for their company offices and other spaces.</p><a class="button button-primary" href="#">View Projects</a>
+                              <p>We take a dedicated approach to help our commercial clients create the interior for their company offices and other spaces.</p><a class="button button-primary" href="gallery_Retail.php">View Projects</a>
                             </div>
                           </article>
                         </div>
@@ -107,8 +131,8 @@
         <div class="styles_InfoContainer__3vlk3">
           <article class="thumb-flat thumb-flat-modern"><img class="thumb-flat__image" src="images/corporate.png" alt="" width="418" height="245"/>
                           <div class="thumb-flat__body">
-                            <p class="heading-3"><a href="#">Corporate Design</a></p>
-                            <p>We take a dedicated approach to help our commercial clients create the interior for their company offices and other spaces.</p><a class="button button-primary" href="#">View Projects</a>
+                            <p class="heading-3"><a href="#">Commercial Design</a></p>
+                            <p>We take a dedicated approach to help our commercial clients create the interior for their company offices and other spaces.</p><a class="button button-primary" href="gallery_Commercial">View Projects</a>
                           </div>
                         </article>
                       </div>
@@ -197,12 +221,14 @@
       <div class="mini-title">NEWSLETTER</div>
       <div class="top-border-2 _10">
         <p>Receive the latest design updates, architecture news and interiors inspiration straight to your inbox</p>
+        <h7 style="color:red;"><?php echo $msg; ?></h7>
+        <h3 style="color:green;"><?php echo $success; ?></h3>
         <div class="top-border _20">
           <div class="form-block-2 w-form">
             <form data-name="Newsletter" name="wf-form-Newsletter" class="flex-2">
-              <input type="text" class="text-field-2 w-input" maxlength="256" name="Name" data-name="Name" placeholder="Your name" required="">
-              <input type="email" class="text-field-2 _2 w-input" maxlength="256" name="Email" data-name="Email" placeholder="Your email" required="">
-              <input type="submit" value="Subscribe" data-wait="Please wait..." class="submit-button-2 w-button">
+              <input type="text" class="text-field-2 w-input" maxlength="256" name="name" placeholder="Your name" required="">
+              <input type="email" class="text-field-2 _2 w-input" maxlength="256" name="email" placeholder="Your email" required="">
+              <input type="submit" value="Subscribe" name="submit" class="submit-button-2 w-button">
             </form>
             </div>
           </div>
@@ -210,8 +236,6 @@
       </div>
   </div>
 </div>
-
-
 <?php include "includes/footer.php"; ?>
 
 
@@ -234,4 +258,5 @@ function showSlides() {
   slides[slideIndex-1].style.display = "block";
   setTimeout(showSlides, 6000); // Change image every 4 seconds
 }
+
 </script>

@@ -237,6 +237,7 @@ section {
 }
 .slider-form {
     padding: 45px 30px;
+    z-index: 2;
 }
 h4, .heading-4 {
     font-size: 30px;

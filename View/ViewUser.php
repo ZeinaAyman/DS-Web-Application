@@ -39,9 +39,7 @@ class ViewUser extends View
       $html.="<input type='password' name='ConfirmPassword' class='empinput' value='' >";
 
       $html.="<label class='p-input'>Images</label>";
-      $html.="<div class='input'>";
       $html.="<input type='file' class='form-file' id='imageupload' name='image' value='Upload'>";
-
       $html.="<br>";
       $html.="<input type='submit' name='submit' class='updatebut' value='Update Profile'>";
 

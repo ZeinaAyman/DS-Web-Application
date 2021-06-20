@@ -6,7 +6,7 @@
     <style>
         .navbar {
             overflow: hidden;
-            background-color: #76323F;
+            background-color: #151515;
 
         }
 
@@ -16,7 +16,7 @@
             float: right;
             text-decoration: none;
             font-family: Arial;
-            color: #B1DBAD;
+            color: #E9E8E8;
 
             display: block;
             text-align: center;

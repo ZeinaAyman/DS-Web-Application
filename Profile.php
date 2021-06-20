@@ -16,7 +16,7 @@ $ViewUser = new ViewUser();
 <style media="screen">
   body {
     margin: 0;
-    background-color: #847F79;
+    background-color: #E9E8E8;
   }
 
   .create-acc {
@@ -35,18 +35,18 @@ $ViewUser = new ViewUser();
   }
 
   .empinfo {
-    margin-top: 1.5%;
+    margin-top: 0.5%;
     margin-left: 60%;
-    color: white;
+    color: #151515;
     font-size: 20px;
     display: block;
   }
 
   .empinput {
     margin-top: 1.5%;
-    color: #76323F;
+    color: #E9E8E8;
     margin-left: 60%;
-    background-color: #B1DBAD;
+    background-color: #B89D5F;
     border-color: black;
     width: 30%;
     height: 35px;
@@ -54,14 +54,13 @@ $ViewUser = new ViewUser();
   }
 
   .updatebut {
-    margin-top: 1.5%;
+    margin-top: 0.5%;
     width: 120px;
     height: 50px;
     margin-left: 60%;
     border-radius: 6%;
-    color: #B1DBAD;
-    background-color: #76323F;
-    /* >>>>>>> c0dada39a38f180432399ab89780aee400c076b0 */
+    color: #E9E8E8;
+    background-color: #B89D5F;
   }
 
   .info {
@@ -70,7 +69,7 @@ $ViewUser = new ViewUser();
     height: 150px;
     left: 44px;
     top: 300px;
-    background-color: #D6E8E9;
+    background-color: #B89D5F;
     overflow: hidden;
     font-family: "Montserrat";
     color: #847F79;
@@ -101,6 +100,19 @@ $ViewUser = new ViewUser();
 
 
   }
+  .p-input{
+    margin-top: 0.5%;
+        margin-left: 60%;
+        color: #151515;
+        font-size: 20px;
+        display: block;
+  }
+  .form-file {
+    padding-bottom: 31px;
+    position: absolute;
+    left: 60%;
+    padding-right: 106px;
+}
 </style>
 
 <div class="personalimage">
@@ -111,7 +123,7 @@ $ViewUser = new ViewUser();
   <h2 class=name><?php echo unserialize($_SESSION['online'])->Type; ?></h2>
   <br>
   <br>
-  <span style="font-size: 15px; color: #847F79;   align-content: flex-end;">
+  <span style="font-size: 15px; color: #E9E8E8;   align-content: flex-end;">
     Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
   </span>
 

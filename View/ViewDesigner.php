@@ -76,7 +76,7 @@ class ViewDesigner extends ViewUser
       if($row['id'])
       {
         $html.="<div class=image' id='color'>";
-        $html.="<img  src='$firstimage' alt='Project Image' height='150'>";
+        $html.="<a href='project.php' ><img  src='$firstimage' alt='Project Image' height='150'></a>";
         $html.="<h3 style='color:#76323F;'>Project ".$row['id']."</h3>";
         $html.="</div>";
       }
@@ -100,14 +100,14 @@ class ViewDesigner extends ViewUser
     $html.="<textarea type='textarea' class='form-input' name='description' value='project description here'></textarea>";
 
     $html.="<label class='p-input'>Project Budget</label>";
-    $html.= "<input type='number' class='form-input' name='budget' value='32000 L.E'>";
+    $html.= "<input type='number' class='form-input' name='budget'  min='0' value='32000 L.E'>";
 
     $html.="<label class='p-input'>Property Type</label>";
     $html.="<div class='input'>";
     $html.="<select name='type' class ='form-input'>";
     $html.="<option value='1'>Residential</option>";
     $html.="<option value='2'>Retail</option>";
-    $html.="<option value='2'>Commercial</option>";
+    $html.="<option value='3'>Commercial</option>";
     $html.="</select>";
     $html.="</div>";
 

@@ -12,7 +12,6 @@
       <h2>Designs Solutions</h2>
       <div class="links">
         <a href="Login.php">Log Out</a>
-        <a href="profile.php">Profile</a>
       </div>
 
       <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit</p>

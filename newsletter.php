@@ -27,9 +27,48 @@
           position: absolute;
           background-size: cover !important;
 }
+a h2{
+ color: #eceff3;
+   font-size: 20px;
+   letter-spacing: 5px;
+   padding-left: 49px;
+   text-transform: uppercase;
+}
+@media (max-width: 600px) {
+ a h2{
+   display: none;
+ }
+}
         </style>
     </head>
     <body>
+      <a href="New_Galleryhome.php" style="text-decoration: none;"><h2>Back</h2></a>
+      <?php
+      $error = false;
+      $msg="";
+      $success="";
+
+        if(isset($_POST['submit']))
+        {
+          $name = $_POST["name"];
+          $email = $_POST["email"];
+          if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+            $msg="-Please enter a valid email <br>";
+            //echo "-Please enter a valid email<br>";
+            $error = true;
+          }
+
+          if(!$error){
+            $success="Thank you for Subscribing to our Newsletter.";
+
+          }
+        }
+
+
+
+
+       ?>
+
       <section id="subheader" data-speed="8" data-type="background" style="background-position: 50% 0px; margin-left: 8%;">
             <div class="container-about">
                 <div class="row-about">
@@ -54,18 +93,18 @@
                             <div class="col-about-left" data-animation="fadeInRight" data-delay="200">
                                                 <h4 class="heading-decorated">Subscription Newsletter</h4>
                                                 <p>Receive the latest design updates, architecture news and interiors inspiration straight to your inbox</p>
-                                                <form class="rd-mailform rd-mailform_style-1" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
+                                                <h7 style="color:red;"><?php echo $msg; ?></h7>
+                                                <h3 style="color:green;"><?php echo $success; ?></h3>
+                                                <form class="rd-mailform rd-mailform_style-1" data-form-output="form-output-global" data-form-type="contact" method="post" action="">
                                                   <div class="form-wrap form-wrap_icon">
                                                     <i class="far fa-user"></i>
-                                                    <input class="form-input" id="contact-order-name" type="text" name="name" data-constraints="@Required">
-                                                    <label class="form-label" for="contact-order-name">Your name</label>
+                                                    <input class="form-input" id="contact-order-name" type="text" name="name" required placeholder="Your name">
                                                   </div>
                                                   <div class="form-wrap form-wrap_icon">
                                                     <i class="far fa-envelope"></i>
-                                                    <input class="form-input" id="contact-order-email" type="email" name="email" data-constraints="@Required @Email">
-                                                    <label class="form-label" for="contact-order-email">Your e-mail</label>
+                                                    <input class="form-input" id="contact-order-email" type="email" name="email" required placeholder="Your Email">
                                                   </div>
-                                                  <button class="button button-primary" type="submit">Submit</button>
+                                                  <button class="button button-primary" name="submit" type="submit">Submit</button>
                             </div>
                             <div class="clearfix"></div>
                         </div>

@@ -227,11 +227,23 @@ $result = $admin->DB->FetchByType("project",2);
             margin-bottom: 0;
             padding-bottom: 0;
         }
+        h2{
+         color: #eceff3;
+           font-size: 20px;
+           letter-spacing: 5px;
+           padding-left: 49px;
+           text-transform: uppercase;
+       }
+       @media (max-width: 600px) {
+         h2{
+           display: none;
+         }
+       }
     </style>
 </head>
 
 <body>
-
+<a href="New_Galleryhome.php" style="text-decoration: none;"><h2>Back</h2></a>
   <section id="subheader" data-speed="8" data-type="background" style="background-position: 50% 0px; margin-left: 8%;">
         <div class="container-about">
             <div class="row-about">

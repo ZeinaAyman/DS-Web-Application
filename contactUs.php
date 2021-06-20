@@ -9,10 +9,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/gif/png" href="dslogo.png">
         <title>Design Solutions</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Oswald:400" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
         <style media="screen">
         #section-about-us-2 .image-container {
             background: url(images/aboutus-photo.jpg);
@@ -32,7 +33,7 @@
 }
 h2{
   color: #eceff3;
-    font-size: 32px;
+    font-size: 20px;
     letter-spacing: 5px;
     float: left;
         padding: 46px;
@@ -42,9 +43,51 @@ h2{
 .col-md-4 h3{
   color: #fff;
 }
+
+@media (max-width: 600px) {
+ a h2{
+   display: none;
+ }
+}
+
         </style>
     </head>
     <body>
+
+      <?php
+      $error = false;
+      $msg="";
+      $success="";
+
+        if(isset($_POST['submit']))
+        {
+          $name = $_POST["name"];
+          $email = $_POST["email"];
+          $phone = $_POST["phone"];
+          $message = $_POST["message"];
+          if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+            $msg="-Please enter a valid email <br>";
+            //echo "-Please enter a valid email<br>";
+            $error = true;
+          }
+          if(strlen($phone) > 12 || strlen($phone) < 11){
+            $msg="-Please enter a valid Phone Number<br>";
+            //echo "-Please enter a valid name <br>";
+            $error = true;
+          }
+
+          if(!$error){
+            $success="Thank you for Sending a message.";
+
+          }
+        }
+
+
+
+
+       ?>
+
+<a href="New_Galleryhome.php" style="text-decoration: none;"><h2>Back</h2></a>
       <section id="subheader" data-speed="8" data-type="background" style="background-position: 50% 0px;margin-left: 8%;">
             <div class="container-about">
                 <div class="row-about">
@@ -69,36 +112,32 @@ h2{
         <div class="form_col">
                 <div class="slider-form context-light bg-default">
                   <h4 class="heading-decorated">Send us a Message</h4>
-                  <!-- RD Mailform-->
-                  <form class="rd-mailform rd-mailform_style-1" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
+                  <h7 style="color:red;"><?php echo $msg; ?></h7>
+                  <h4 style="color:green;"><?php echo $success; ?></h4>
+                  <form class="rd-mailform rd-mailform_style-1" data-form-output="form-output-global" data-form-type="contact" method="post" action="contactUs.php">
                     <div class="form-wrap form-wrap_icon">
                       <i class="far fa-user"></i>
-                      <input class="form-input" id="contact-order-name" type="text" name="name" data-constraints="@Required">
-                      <label class="form-label" for="contact-order-name">Your name</label>
+                      <input class="form-input" id="contact-order-name" type="text" name="name" required placeholder="Your name">
                     </div>
                     <div class="form-wrap form-wrap_icon">
                       <i class="fa fa-phone"></i>
-                      <input class="form-input" id="contact-order-phone" type="text" name="phone" data-constraints="@Required @PhoneNumber">
-                      <label class="form-label" for="contact-order-phone">Your phone</label>
+                      <input class="form-input" id="contact-order-phone" type="text" name="phone" required placeholder="Your Phone">
                     </div>
                     <div class="form-wrap form-wrap_icon">
                       <i class="far fa-envelope"></i>
-                      <input class="form-input" id="contact-order-email" type="email" name="email" data-constraints="@Required @Email">
-                      <label class="form-label" for="contact-order-email">Your e-mail</label>
+                      <input class="form-input" id="contact-order-email" type="email" name="email" required placeholder="Your Email">
                     </div>
                     <div class="form-wrap form-wrap_icon">
                       <i class="far fa-envelope-open"></i>
-                      <textarea class="form-input" id="contact-order-message" name="message" data-constraints="@Required"></textarea>
-                      <label class="form-label" for="contact-order-message">Your message</label>
+                      <textarea class="form-input" id="contact-order-message" name="message" required placeholder="Your Message"></textarea>
                     </div>
-                    <button class="button button-primary" type="submit">Submit</button>
+                    <button class="button button-primary" id="myBtn" type="submit" name="submit">Submit</button>
                   </form>
                 </div>
     </div>
 </div>
 
 
-<div class="container-global">
   <h2>Global Offices</h2><br><br>
   <div class="container-footer">
       <div class="row-footer">
@@ -146,7 +185,6 @@ h2{
         <a href="https://www.snapchat.com/add/design.solution" title="snapchat"><img src="images/snapchat.png" class="others" alt="snapchat"></a>
       </div>
   </div>
-</div>
 
 
 <script>
@@ -183,6 +221,32 @@ h2{
     addMarker(saudia,'Design Solution Saudia Arabia');
 
   }
+
+  // Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
 </script>
 
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtQlLfvyLrxCLLdPm04K0P0Sce4zNs6_o&callback=initMap"></script>
