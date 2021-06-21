@@ -24,7 +24,7 @@ class DesignerController extends UserController
         {
           $filen = $_FILES["file"]['name']["$j"];
           array_push($files,$filen);
-          $path = 'uploads/projects/files/'.$filen;
+          $path = '../../public/uploads/projects/files/'.$filen;
           if(move_uploaded_file($_FILES["file"]['tmp_name']["$j"],$path))
           {
             $str.= "File# ".($j+1)." ($filen) uploaded successfully<br>";
@@ -42,7 +42,7 @@ class DesignerController extends UserController
         {
           $filen = $_FILES["image"]['name']["$j"];
           array_push($images,$filen);
-          $path = 'uploads/projects/images/'.$filen;
+          $path = '../../public/uploads/projects/images/'.$filen;
           if(move_uploaded_file($_FILES["image"]['tmp_name']["$j"],$path))
           {
             $str2.= "Image# ".($j+1)." ($filen) uploaded successfully<br>";

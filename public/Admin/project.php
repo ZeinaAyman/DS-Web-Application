@@ -29,6 +29,7 @@ $DesignerController = new DesignerController(unserialize($_SESSION['$online']));
       <div class='p-h3'>Designer 1: zeina</div><br>
       <div class='p-h3'>Designer ID :4</div>
     </div>
+      <h2><a href="#">See More</a></h2>
     <div class='my-pd-status'>
       <h3>Status:<span class='status-orange'>Ongoing</span></h3>
     </div>
