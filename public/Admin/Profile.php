@@ -116,7 +116,7 @@ $ViewUser = new ViewUser();
 </style>
 
 <div class="personalimage">
-  <img class="photo" alt="personal photo" src="uploads/profilepictures/<?php echo unserialize($_SESSION['online'])->Picture;?>">
+  <img class="photo" alt="personal photo" src="../uploads/profilepictures/<?php echo unserialize($_SESSION['online'])->Picture;?>">
   </img>
 </div>
 <div class="info">
