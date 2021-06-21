@@ -1,6 +1,6 @@
 <?php
 //include('PHP/classes.php') ;
-include_once('Model/Project.php') ;
+include_once($_SERVER['DOCUMENT_ROOT'].'/DS/app/Model/Project.php') ;
 include_once('UserController.php') ;
 class DesignerController extends UserController
 {

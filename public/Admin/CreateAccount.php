@@ -1,7 +1,7 @@
 <?php
-      include 'Model/Admin.php';
-      include 'View/ViewAdmin.php';
-      include 'Controller/AdminController.php';
+      include $_SERVER['DOCUMENT_ROOT'].'/DS/app/Model/Admin.php';
+      include $_SERVER['DOCUMENT_ROOT'].'/DS/app/View/ViewAdmin.php';
+      include $_SERVER['DOCUMENT_ROOT'].'/DS/app/Controller/AdminController.php';
 
       $Model = new Admin();
       $ViewAdmin = new ViewAdmin();

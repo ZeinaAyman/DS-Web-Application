@@ -1,5 +1,5 @@
 <?php
-include "public/navbar.php";
+include $_SERVER['DOCUMENT_ROOT'].'/DS/public/Admin/navbar.php';
 ?>
 <!DOCTYPE html>
 <html>

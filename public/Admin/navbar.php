@@ -1,7 +1,7 @@
 <?php
 session_start();
-include_once('Model/Designer.php');
-include_once('Model/Admin.php');
+include_once($_SERVER['DOCUMENT_ROOT'].'/DS/app/Model/Designer.php');
+include_once($_SERVER['DOCUMENT_ROOT'].'/DS/app/Model/Admin.php');
 if($_SESSION['online']===NULL)
 {
   header("Location: Login.php");
