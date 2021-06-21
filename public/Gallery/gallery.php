@@ -1,5 +1,5 @@
 <?php include "New_Homenavbar.php";
-      include 'Model/Admin.php';
+      include '../../app/Model/Admin.php';
 
 $admin = new Admin();
 $admin->connect();
@@ -277,7 +277,7 @@ $result = $admin->DB->FetchAll("project");
                   $count++;
                   $images=$row['images'];
                   $id = $row['id'];
-                  $firstimage = "uploads/projects/images/".explode(",", $images)[0];
+                  $firstimage = "../uploads/projects/images/".explode(",", $images)[0];
                   echo "<div class=\"img_wrap\">";
                   ?>
                   <a href="gallery2.php?project_id=<?php echo $id?>"> <?php echo "<img src=".$firstimage."></a>";
@@ -297,7 +297,7 @@ $result = $admin->DB->FetchAll("project");
     </div>
     </div>
     <!-- <div class="e338_1408"></div> -->
-    <?php include "includes/footer.php"; ?>
+    <?php include "../includes/footer.php"; ?>
 </body>
 <script type="text/javascript">
   $("a").hover(function(){

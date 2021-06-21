@@ -1,5 +1,5 @@
 <?php include "New_Homenavbar.php";
-      include 'Model/Admin.php';
+      include '../../app/Model/Admin.php';
 
 $projectid = $_GET['project_id'];
 
@@ -12,7 +12,7 @@ $result = $admin->DB->FetchById("project",$projectid);
 <head>
   <meta charset="utf-8">
 
-  <link rel="stylesheet" href="New_master.css">
+  <link rel="stylesheet" href="../css/New_master.css">
   <link rel="icon" type="image/gif/png" href="dslogo.png">
   <link href="https://fonts.googleapis.com/css?family=Oswald:400" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
@@ -283,8 +283,8 @@ $result = $admin->DB->FetchById("project",$projectid);
         $name= $row['name'];
         $desc= $row['description'];
         $id = $row['id'];
-        $first = "uploads/projects/images/".explode(",", $images)[0];
-        $test1 = "uploads/projects/images/".explode(",", $images)[1];
+        $first = "../uploads/projects/images/".explode(",", $images)[0];
+        $test1 = "../uploads/projects/images/".explode(",", $images)[1];
         echo "<img src=".$test1."></a>";
 
         // if($count % 5 == 0){
@@ -294,8 +294,8 @@ $result = $admin->DB->FetchById("project",$projectid);
       }
 
        ?>
-       <?php $test2 = "uploads/projects/images/".explode(",", $images)[2];
-       $test3 = "uploads/projects/images/".explode(",", $images)[3];
+       <?php $test2 = "../uploads/projects/images/".explode(",", $images)[2];
+       $test3 = "../uploads/projects/images/".explode(",", $images)[3];
         echo "<img src=".$test2."></a>";
         echo "<img src=".$test3."></a>";
 
@@ -331,7 +331,7 @@ $result = $admin->DB->FetchById("project",$projectid);
   <!-- footer and logos -->
 
 
-  <?php include "includes/footer.php"; ?>
+  <?php include "../includes/footer.php"; ?>
 
 </body>
 

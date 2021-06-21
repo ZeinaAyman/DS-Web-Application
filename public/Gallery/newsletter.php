@@ -5,7 +5,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <link rel="stylesheet" href="css/about.css">
+        <link rel="stylesheet" href="../css/about.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/gif/png" href="dslogo.png">
         <title>Design Solutions</title>
@@ -16,7 +16,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <style media="screen">
         #section-about-us-2 .image-container {
-            background: url(images/aboutus-photo.jpg);
+            background: url(../images/aboutus-photo.jpg);
             background-size: cover;
         }
         .side-bg .image-container {

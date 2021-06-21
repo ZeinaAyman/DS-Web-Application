@@ -5,7 +5,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <link rel="stylesheet" href="New_master.css">
+        <link rel="stylesheet" href="../css/New_master.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/gif/png" href="dslogo.png">
         <title>Design Solutions</title>
@@ -83,7 +83,7 @@
 
         </div>
         <div class="right-skew fade">
-            <img class="first" id="slide" src="images/Home-Interior-Design0.jpg" alt="">
+            <img class="first" id="slide" src="../images/Home-Interior-Design0.jpg" alt="">
         </div>
         <div class="right-skew fade">
             <img src="images/1.jpg" alt="">
@@ -104,7 +104,7 @@
       <div class="styles_PackageCard__2V_Wv">
         <div class="styles_Root__-2dvc">
           <div class="styles_InfoContainer__3vlk3">
-            <article class="thumb-flat thumb-flat-modern"><img class="thumb-flat__image" src="images/residential.jpg" alt="" width="418" height="245"/>
+            <article class="thumb-flat thumb-flat-modern"><img class="thumb-flat__image" src="../images/residential.jpg" alt="" width="418" height="245"/>
                             <div class="thumb-flat__body">
                               <p class="heading-3"><a href="#">Residential Design</a></p>
                               <p>We take a dedicated approach to help our commercial clients create the interior for their company offices and other spaces.</p><a class="button button-primary" href="gallery_Residential.php">View Projects</a>
@@ -116,7 +116,7 @@
         <div class="styles_PackageCard__2V_Wv">
         <div class="styles_Root__-2dvc">
           <div class="styles_InfoContainer__3vlk3">
-            <article class="thumb-flat thumb-flat-modern"><img class="thumb-flat__image" src="images/retail.jpg" alt="" width="418" height="245"/>
+            <article class="thumb-flat thumb-flat-modern"><img class="thumb-flat__image" src="../images/retail.jpg" alt="" width="418" height="245"/>
                             <div class="thumb-flat__body">
                               <p class="heading-3"><a href="#">Retail Design</a></p>
                               <p>We take a dedicated approach to help our commercial clients create the interior for their company offices and other spaces.</p><a class="button button-primary" href="gallery_Retail.php">View Projects</a>
@@ -129,7 +129,7 @@
     <div class="styles_PackageCard__2V_Wv">
       <div class="styles_Root__-2dvc">
         <div class="styles_InfoContainer__3vlk3">
-          <article class="thumb-flat thumb-flat-modern"><img class="thumb-flat__image" src="images/corporate.png" alt="" width="418" height="245"/>
+          <article class="thumb-flat thumb-flat-modern"><img class="thumb-flat__image" src="../images/corporate.png" alt="" width="418" height="245"/>
                           <div class="thumb-flat__body">
                             <p class="heading-3"><a href="#">Commercial Design</a></p>
                             <p>We take a dedicated approach to help our commercial clients create the interior for their company offices and other spaces.</p><a class="button button-primary" href="gallery_Commercial">View Projects</a>
@@ -236,7 +236,7 @@
       </div>
   </div>
 </div>
-<?php include "includes/footer.php"; ?>
+<?php include "../includes/footer.php"; ?>
 
 
     </body>
