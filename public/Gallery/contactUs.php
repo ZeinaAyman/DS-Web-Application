@@ -140,10 +140,10 @@ h2{
 
       </div>
       <div class="icons2">
-        <a href="https://twitter.com/Design_Solu" title="twitter"><img src="../images/twitter.png" class="first" alt="twitter" style="width: 5%;"></a>
-        <a href="https://www.facebook.com/I.DesignSolu" title="facebook"><img src="../images/facebook (2).png" class="others" alt="facebook" style="margin-right: 8px;"></a>
-        <a href="https://www.instagram.com/interior.design.solution" title="instagram"><img src="../images/instagram.png" class="others" alt="instagram" style="margin-right: 10px;"></a>
-        <a href="https://www.snapchat.com/add/design.solution" title="snapchat"><img src="../images/snapchat.png" class="others" alt="snapchat"></a>
+        <a href="https://twitter.com/Design_Solu" title="twitter" target="_blank" rel="noopener noreferrer"><img src="../images/twitter.png" class="first" alt="twitter" style="width: 5%;"></a>
+        <a href="https://www.facebook.com/I.DesignSolu" title="facebook" target="_blank" rel="noopener noreferrer"><img src="../images/facebook (2).png" class="others" alt="facebook" style="margin-right: 8px;"></a>
+        <a href="https://www.instagram.com/interior.design.solution" title="instagram" target="_blank" rel="noopener noreferrer"><img src="../images/instagram.png" class="others" alt="instagram" style="margin-right: 10px;"></a>
+        <a href="https://www.snapchat.com/add/design.solution" title="snapchat" target="_blank" rel="noopener noreferrer"><img src="../images/snapchat.png" class="others" alt="snapchat"></a>
       </div>
   </div>
 

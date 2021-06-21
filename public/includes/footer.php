@@ -121,10 +121,10 @@ footer a {
                             <img src="../images/dslogo.jpg" class="logo-small" alt="SK-Touch"><br>
                             We are an Interior Design studio with a twist based in Egypt and Kingdom of Saudi Arabia, offering turnkey Interior Design services and Smart living Solutions.
                             <div class="icons">
-                              <a href="https://twitter.com/Design_Solu"><img src="../images/twitter.png" alt="" style=" width: 13%;"></a>
-                              <a href="https://www.facebook.com/I.DesignSolu"><img src="../images/facebook (2).png" alt="" style=" width: 8%; margin-right: 8px;"></a>
-                              <a href="https://www.instagram.com/interior.design.solution"><img src="../images/instagram.png" alt="" style=" width: 8%; margin-right: 10px;"></a>
-                              <a href="https://www.snapchat.com/add/design.solution"><img src="../images/snapchat.png" alt="" style=" width: 8%;"></a>
+                              <a href="https://twitter.com/Design_Solu" target="_blank" rel="noopener noreferrer"><img src="../images/twitter.png" alt="twitter" style=" width: 13%;"></a>
+                              <a href="https://www.facebook.com/I.DesignSolu" target="_blank" rel="noopener noreferrer"><img src="../images/facebook (2).png" alt="facebook" style=" width: 8%; margin-right: 8px;"></a>
+                              <a href="https://www.instagram.com/interior.design.solution" target="_blank" rel="noopener noreferrer"><img src="../images/instagram.png" alt="instagram"  style=" width: 8%; margin-right: 10px;"></a>
+                              <a href="https://www.snapchat.com/add/design.solution" target="_blank" rel="noopener noreferrer"><img src="../images/snapchat.png" alt="snapchat" style=" width: 8%;"></a>
                             </div>
                         </div>
                         <div class="col-md-6">
