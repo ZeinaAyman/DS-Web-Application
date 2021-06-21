@@ -6,7 +6,7 @@
 <?php
 
 include_once("ViewUser.php") ;
-include_once("Model/Designer.php");
+include_once($_SERVER['DOCUMENT_ROOT'].'/DS/app/Model/Designer.php');
 class ViewDesigner extends ViewUser
 {
 

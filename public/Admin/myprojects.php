@@ -1,7 +1,7 @@
 <?php
 include 'navbar.php';
-include 'View/ViewDesigner.php';
-include 'Controller/DesignerController.php';
+include $_SERVER['DOCUMENT_ROOT'].'/DS/app/View/ViewDesigner.php';
+include $_SERVER['DOCUMENT_ROOT'].'/DS/app/Controller/DesignerController.php';
 ?>
  <link rel="stylesheet" href="Project.css">
 <h1 class="title">My Projects</h1>

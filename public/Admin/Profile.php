@@ -1,7 +1,7 @@
 <?php
 include 'navbar.php';
-include 'View/ViewUser.php';
-include 'Controller/UserController.php';
+include $_SERVER['DOCUMENT_ROOT'].'/DS/app/View/ViewUser.php';
+include $_SERVER['DOCUMENT_ROOT'].'/DS/app/Controller/UserController.php';
 
 $err = false;
 $ViewUser = new ViewUser();

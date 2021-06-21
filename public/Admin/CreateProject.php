@@ -2,8 +2,8 @@
 <?php
 
 //include 'Model/Designer.php';
-include_once('View/ViewDesigner.php');
-include_once('Controller/DesignerController.php');
+include_once($_SERVER['DOCUMENT_ROOT'].'/DS/app/View/ViewDesigner.php');
+include_once($_SERVER['DOCUMENT_ROOT'].'/DS/app/Controller/DesignerController.php');
 include_once('navbar.php') ;
 ?>
 <link rel="stylesheet" href="css/createproject.css">

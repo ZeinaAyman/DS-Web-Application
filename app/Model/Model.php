@@ -1,5 +1,5 @@
 <?php
-include_once('PHP/DB.php');
+include_once($_SERVER['DOCUMENT_ROOT'].'/DS/PHP/DB.php');
   abstract class Model{
       public $DB;
 
