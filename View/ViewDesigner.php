@@ -56,7 +56,6 @@ class ViewDesigner extends ViewUser
         }
       }
     }
-    $html.="<h2 style='color:#76323F;'>My Projects</h2>";
 
     $html.="</div>";
     $html.="<a href='myprojects.php'><h4 style='color:#76323F;''>See More...</h4></a>";

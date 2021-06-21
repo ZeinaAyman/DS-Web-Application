@@ -4,10 +4,10 @@ include_once('Model/Project.php') ;
 include_once('UserController.php') ;
 class AdminController extends UserController
 {
+  public $msg="";
   public function C_CreateAccount()
   {
       $err="";
-      $msg="";
       if(isset($_POST['submit']) && !empty($_POST['submit']))
       {
           $name = $_POST["Name"];
@@ -39,11 +39,15 @@ class AdminController extends UserController
          $flag=0;
       }
           if(!preg_match('/[a-z0-9._%+-]+@+[a-z0-9._%+-]+.+[a-z0-9._%+-]/',$email)){
-            $msg="-Please enter a valid email <br>";
+            $this->msg="-Please enter a valid email <br>";
             //echo "-Please enter a valid name <br>";
             $err = true;
           }
-          echo $msg;
+          if(!preg_match('/^(?=.*[0-9])(?=.*[A-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}$/',$pass)){
+            $this->msg =  "Password should be at least 8 characters should include at least: <br> -One upper case letter <br> -One number <br> -One special character.";
+            $err=true;
+            }
+
           if(!$err)
           {
             $EMP = new Employee();

@@ -74,6 +74,11 @@ include_once('Controller.php') ;
                    $err = true;
                  }
 
+                 if(!preg_match('/^(?=.*[0-9])(?=.*[A-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}$/',$newpassword)){
+                   $msg =  "Password should be at least 8 characters <br> should include at least: <br> -One upper case letter <br> -One number <br> -One special character.";
+                   $err=true;
+                   }
+
                  if ($newpassword!=$confirmpassword) {
                    $msg="Password doesn't match";
                    $err = true;

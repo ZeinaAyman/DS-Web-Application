@@ -3,6 +3,7 @@ body{
   margin: 0px;
   background: #E9E8E8;
   height: 1200px;
+  overflow-x: hidden;
 }
 .title{
   color: #151515;
@@ -29,6 +30,19 @@ body{
   position: relative;
   width: 80%;
   height: 250px;
+  left: 60px;
+  top: 140px;
+  margin-top: 20px;
+  background: #B89D5F;
+  border: 2px solid #E3B7A5;
+  box-sizing: border-box;
+  border-radius: 45px;
+}
+.projectdetails_container{
+  font-size: 17px;
+  position: relative;
+  width: 80%;
+  height: 50%;
   left: 60px;
   top: 140px;
   margin-top: 20px;
@@ -67,6 +81,38 @@ body{
   left: 20%;
 }
 .my-p-status{
+  margin: 0px;
+  position: relative;
+  top: 80%;
+  left: 70%;
+}
+
+.pd-img{
+  display: flex;
+  position: relative;
+  width: 25%;
+  height: 80%;
+  margin: 40px;
+  background-color: transparent;
+  border-radius: 45px;
+  float: left;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.pd-info{
+  color: #76323F;
+  position: relative;
+  left: 30%;
+  top: 10%;
+  float: left;
+}
+.pd-status{
+  margin: 0px;
+  position: relative;
+  top: 80%;
+  left: 20%;
+}
+.my-pd-status{
   margin: 0px;
   position: relative;
   top: 80%;

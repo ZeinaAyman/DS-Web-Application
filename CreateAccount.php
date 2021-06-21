@@ -28,7 +28,7 @@
   position: relative;
   top: 10%;
     width: 30%;
-  height: 80%;
+  height: 85%;
   background-color: #B89D5F;
   border-width: 2px;
   border-color: #E3B7A5;
@@ -107,6 +107,7 @@ a h2{
  ?>
 
   <div class="createacccontainer">
+    <h4 style="color:red; font-size: 14px; float:left; left: 27px;"><?php echo $DesignerController->msg; ?></h4>
     <?php echo $ViewAdmin->CreateAccountForm(); ?>
 
   </div>
