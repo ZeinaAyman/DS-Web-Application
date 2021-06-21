@@ -1,7 +1,7 @@
 <?php
-include 'navbar.php';
-include '../../app/View/ViewUser.php';
-include '../../app/Controller/UserController.php';
+include_once('navbar.php') ;
+include_once('../../app/View/ViewUser.php');
+include_once('../../app/Controller/UserController.php') ;
 
 $err = false;
 $ViewUser = new ViewUser();
