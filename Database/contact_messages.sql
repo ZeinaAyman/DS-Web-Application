@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 21, 2021 at 05:05 PM
+-- Generation Time: Jun 22, 2021 at 12:36 AM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.10
 
@@ -32,8 +32,20 @@ CREATE TABLE `contact_messages` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
+  `phone` int(22) NOT NULL,
   `message` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `contact_messages`
+--
+
+INSERT INTO `contact_messages` (`id`, `name`, `email`, `phone`, `message`) VALUES
+(87, 'Zeina Ayman', 'zeina.ayman@hotmail.com', 1211300998, 'qwe'),
+(88, 'Zeina Ayman', 'zeina.ayman@hotmail.com', 1211300998, 'er'),
+(89, 'Zeina Ayman', 'zeina.ayman@hotmail.com', 1211300998, 'qwe'),
+(94, 'Zeina Ayman', 'zeina.ayman@hotmail.com', 1211300998, 'we'),
+(95, 'Zeina Ayman', 'zeina.ayman@hotmail.com', 1211300997, 'test');
 
 --
 -- Indexes for dumped tables
@@ -53,7 +65,7 @@ ALTER TABLE `contact_messages`
 -- AUTO_INCREMENT for table `contact_messages`
 --
 ALTER TABLE `contact_messages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=96;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
