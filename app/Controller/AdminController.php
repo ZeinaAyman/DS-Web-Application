@@ -1,6 +1,6 @@
 <?php
 //include('PHP/classes.php') ;
-include '../app/Model/Project.php';
+include '../../app/Model/Project.php';
 include_once('UserController.php') ;
 class AdminController extends UserController
 {

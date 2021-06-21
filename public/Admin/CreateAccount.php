@@ -9,7 +9,7 @@
       session_start();
 ?>
 
-<link rel="stylesheet" href="master.css">
+<link rel="stylesheet" href="../css/master.css">
 <style media="screen">
   .create-acc
   {
