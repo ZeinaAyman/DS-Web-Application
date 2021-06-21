@@ -1,7 +1,8 @@
 <?php
 session_start();
-include_once($_SERVER['DOCUMENT_ROOT'].'/DS/app/Model/Designer.php');
-include_once($_SERVER['DOCUMENT_ROOT'].'/DS/app/Model/Admin.php');
+include '../../app/Model/Designer.php';
+include '../../app/Model/Admin.php';
+
 if($_SESSION['online']===NULL)
 {
   header("Location: Login.php");
@@ -27,7 +28,7 @@ else {
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="master.css">
+    <link rel="stylesheet" href="../css/master.css">
     <title></title>
   </head>
   <body>

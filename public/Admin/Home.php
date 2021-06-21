@@ -1,6 +1,7 @@
 <?php include "navbar.php";
-      include $_SERVER['DOCUMENT_ROOT'].'/DS/app/View/ViewDesigner.php';
-      include $_SERVER['DOCUMENT_ROOT'].'/DS/app/Controller/DesignerController.php';
+      include '../../app/View/ViewDesigner.php';
+      include '../../app/Controller/DesignerController.php';
+
       $viewDesigner = new ViewDesigner();
       $Model = new Designer();
       $UserController = new DesignerController($Model);

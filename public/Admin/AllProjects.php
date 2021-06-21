@@ -1,11 +1,12 @@
 <?php include 'navbar.php';
-      include $_SERVER['DOCUMENT_ROOT'].'/DS/app/View/ViewDesigner.php';
-      include $_SERVER['DOCUMENT_ROOT'].'/DS/app/Controller/DesignerController.php';
+
+      include '../../app/View/ViewDesigner.php';
+      include '../../app/Controller/DesignerController.php';
       $viewDesigner = new ViewDesigner();
       $Model = new Designer();
       $DesignerController = new DesignerController($Model);
       ?>
-<link rel="stylesheet" href="Project.css">
+<link rel="stylesheet" href="../css/Project.css">
 /*
 <body onload="ready()">
   <h1 class="title">All Projects</h1>

@@ -2,11 +2,11 @@
 <?php
 
 //include 'Model/Designer.php';
-include_once($_SERVER['DOCUMENT_ROOT'].'/DS/app/View/ViewDesigner.php');
-include_once($_SERVER['DOCUMENT_ROOT'].'/DS/app/Controller/DesignerController.php');
+include '../../app/View/ViewDesigner.php';
+include '../../app/Controller/DesignerController.php';
 include_once('navbar.php') ;
 ?>
-<link rel="stylesheet" href="css/createproject.css">
+<link rel="stylesheet" href="../css/createproject.css">
 <style media="screen">
 body
 {

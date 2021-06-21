@@ -1,7 +1,11 @@
 <?php
-include $_SERVER['DOCUMENT_ROOT'].'/DS/app/Model/Employee.php';
-include $_SERVER['DOCUMENT_ROOT'].'/DS/app/View/ViewUser.php';
-include $_SERVER['DOCUMENT_ROOT'].'/DS/app/Controller/UserController.php';
+      include '../../app/Model/Employee.php';
+      include '../../app/View/ViewUser.php';
+      include '../../app/Controller/UserController.php';
+
+// include $_SERVER['DOCUMENT_ROOT'].'/DS/app/Model/Employee.php';
+// include $_SERVER['DOCUMENT_ROOT'].'/DS/app/View/ViewUser.php';
+// include $_SERVER['DOCUMENT_ROOT'].'/DS/app/Controller/UserController.php';
 $msg='';
 $err = false;
 $Model = new Employee();
@@ -12,7 +16,7 @@ $UserController->C_Login();
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <link rel="stylesheet" href="master.css">
+    <link rel="stylesheet" href="../css/master.css">
     <meta charset="utf-8">
     <title></title>
     <style media="screen">

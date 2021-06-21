@@ -1,11 +1,13 @@
 <?php
-  include $_SERVER['DOCUMENT_ROOT'].'/DS/app/View/ViewDesigner.php';
-  include $_SERVER['DOCUMENT_ROOT'].'/DS/app/Controller/DesignerController.php';
+
+  include '../../app/View/ViewDesigner.php';
+  include '../../app/Controller/DesignerController.php';
+
   $viewDesigner = new ViewDesigner();
   $Model = new Designer();
   $UserController = new DesignerController($Model);
  ?>
-<link rel="stylesheet" href="master.css">
+<link rel="stylesheet" href="../css/master.css">
 <style media="screen">
 table
 {
@@ -145,15 +147,15 @@ a h2{
     <td>DES01</td>
     <td>Designer</td>
     <td>Project01 <br> Project03</td>
-    <td><a href=""><img src="images/edit.png" class="editimg"></a></td>
-    <td><a class="myBtn"><img src="images/delete.png" class="delimg"></a></td>
+    <td><a href=""><img src="../images/edit.png" class="editimg"></a></td>
+    <td><a class="myBtn"><img src="../images/delete.png" class="delimg"></a></td>
   </tr>
   <tr>
     <td>DES02</td>
     <td>Designer</td>
     <td>Project01 <br> Project02</td>
-    <td><a href=""><img src="images/edit.png" class="editimg"></a></td>
-    <td><a class="myBtn"><img src="images/delete.png" class="delimg"></a></td>
+    <td><a href=""><img src="../images/edit.png" class="editimg"></a></td>
+    <td><a class="myBtn"><img src="../images/delete.png" class="delimg"></a></td>
 
     <div id="myModal" class="modal">
   <!-- Modal content -->
@@ -170,8 +172,8 @@ a h2{
     <td>MAN01</td>
     <td>Manager</td>
     <td>Project01 <br> Project04 </td>
-    <td><a href=""><img src="images/edit.png" class="editimg"></a></td>
-    <td><a class="myBtn"><img src="images/delete.png" class="delimg"></a></td>
+    <td><a href=""><img src="../images/edit.png" class="editimg"></a></td>
+    <td><a class="myBtn"><img src="../images/delete.png" class="delimg"></a></td>
   </tr>
 </table>
 <script type="text/javascript">

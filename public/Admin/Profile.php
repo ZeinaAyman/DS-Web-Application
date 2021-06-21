@@ -1,7 +1,7 @@
 <?php
 include 'navbar.php';
-include $_SERVER['DOCUMENT_ROOT'].'/DS/app/View/ViewUser.php';
-include $_SERVER['DOCUMENT_ROOT'].'/DS/app/Controller/UserController.php';
+include '../../app/View/ViewUser.php';
+include '../../app/Controller/UserController.php';
 
 $err = false;
 $ViewUser = new ViewUser();
@@ -12,7 +12,7 @@ $UserController->C_UpdateUser();
 $ViewUser = new ViewUser();
 
 ?>
-<link rel="stylesheet" href="master.css">
+<link rel="stylesheet" href="../css/master.css">
 <style media="screen">
   body {
     margin: 0;

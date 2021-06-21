@@ -1,5 +1,5 @@
 <?php
-include $_SERVER['DOCUMENT_ROOT'].'/DS/public/Admin/navbar.php';
+include 'navbar.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -7,7 +7,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/DS/public/Admin/navbar.php';
 <head>
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="Project.css">
+    <link rel="stylesheet" href="../css/Project.css">
     <title>Project Details</title>
 </head>
 
@@ -15,10 +15,10 @@ include $_SERVER['DOCUMENT_ROOT'].'/DS/public/Admin/navbar.php';
   <div class='projectdetails_container'>
     <h1>Project Details</h1>
     <div class='pd-img'>
-      <img src='images/1.jpg' alt='project image' style="padding: 6px;">
-      <img src='images/1.jpg' alt='project image' style="padding: 6px;">
-      <img src='images/1.jpg' alt='project image' style="padding: 6px;">
-      <img src='images/1.jpg' alt='project image' style="padding: 6px;">
+      <img src='../images/1.jpg' alt='project image' style="padding: 6px;">
+      <img src='../images/1.jpg' alt='project image' style="padding: 6px;">
+      <img src='../images/1.jpg' alt='project image' style="padding: 6px;">
+      <img src='../images/1.jpg' alt='project image' style="padding: 6px;">
     </div>
     <div class='pd-info'>
       <h1>Project ID : 1</h1><br>
