@@ -62,7 +62,7 @@ h2{
           $ClientController->C_ContactForm();
 
           if($ClientController->success == 1){
-            echo $ViewClient->thankYou();
+            echo $ViewClient->thankYou("Thank you for Sending A Message");
           }
 
        ?>

@@ -1,4 +1,12 @@
-<?php include "New_Homenavbar.php"; ?>
+<?php include "New_Homenavbar.php";
+include '../../app/Model/Client.php';
+include '../../app/View/ViewClient.php';
+include '../../app/Controller/ClientController.php';
+
+$Model = new Client();
+$ViewClient = new ViewUser();
+$ClientController = new ClientController($Model);
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -44,31 +52,13 @@ a h2{
     <body>
       <a href="New_Galleryhome.php" style="text-decoration: none;"><h2>Back</h2></a>
       <?php
-      $error = false;
-      $msg="";
-      $success="";
+          $ClientController->C_NewsletterForm();
 
-        if(isset($_POST['submit']))
-        {
-          $name = $_POST["name"];
-          $email = $_POST["email"];
-          if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-            $msg="-Please enter a valid email <br>";
-            //echo "-Please enter a valid email<br>";
-            $error = true;
+          if($ClientController->success == 1){
+            echo $ViewClient->thankYou("Thank you for Subscribing to our Newsletter");
           }
-
-          if(!$error){
-            $success="Thank you for Subscribing to our Newsletter.";
-
-          }
-        }
-
-
-
 
        ?>
-
       <section id="subheader" data-speed="8" data-type="background" style="background-position: 50% 0px; margin-left: 8%;">
             <div class="container-about">
                 <div class="row-about">
@@ -91,20 +81,10 @@ a h2{
                     <div class="row-about">
                         <div class="inner-padding">
                             <div class="col-about-left" data-animation="fadeInRight" data-delay="200">
-                                                <h4 class="heading-decorated">Subscription Newsletter</h4>
-                                                <p>Receive the latest design updates, architecture news and interiors inspiration straight to your inbox</p>
-                                                <h7 style="color:red;"><?php echo $msg; ?></h7>
-                                                <h3 style="color:green;"><?php echo $success; ?></h3>
-                                                <form class="rd-mailform rd-mailform_style-1" data-form-output="form-output-global" data-form-type="contact" method="post" action="">
-                                                  <div class="form-wrap form-wrap_icon">
-                                                    <i class="far fa-user"></i>
-                                                    <input class="form-input" id="contact-order-name" type="text" name="name" required placeholder="Your name">
-                                                  </div>
-                                                  <div class="form-wrap form-wrap_icon">
-                                                    <i class="far fa-envelope"></i>
-                                                    <input class="form-input" id="contact-order-email" type="email" name="email" required placeholder="Your Email">
-                                                  </div>
-                                                  <button class="button button-primary" name="submit" type="submit">Submit</button>
+                                <h4 class="heading-decorated">Newsletter Subscription</h4>
+                                <p>Receive the latest design updates, architecture news and interiors inspiration straight to your inbox</p>
+                                <h7 style="color:red;"><?php echo $ClientController->msg; ?></h7>
+                                <?php echo $ViewClient->NewsletterForm(); ?>
                             </div>
                             <div class="clearfix"></div>
                         </div>
@@ -116,8 +96,19 @@ a h2{
 
 
 
-<?php include "includes/footer.php"; ?>
-
+<?php include "../includes/footer.php"; ?>
+<script type="text/javascript">
+var thank_card = document.getElementById("thank-card-overlay");
+var btn = document.getElementById("myBtn");
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function() {
+  thank_card.className = "hide";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    thank_card.className = "hide";
+}
+</script>
 
     </body>
 </html>

@@ -25,5 +25,12 @@
       $result = $this->DB->query();
     }
 
+    public function AddNewsletter($EMP)
+    {
+
+      $this->DB->query = "INSERT into newsletter (name,email) VALUES('".$EMP->Name."','".$EMP->Email."')";
+      $result = $this->DB->query();
+    }
+
   }
  ?>
