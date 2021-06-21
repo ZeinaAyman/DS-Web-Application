@@ -9,7 +9,7 @@
     }
     public function GetMessages()
     {
-      $result=$this->DB->fetchAll($table);
+      $result=$this->DB->fetchAll('contact_messages');
       return $result;
     }
 }
