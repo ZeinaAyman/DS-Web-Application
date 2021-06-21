@@ -195,7 +195,7 @@ header{
             </a>
         </div>
       <div class="logo_area" id="logo">
-          <img src="images/dslogo.jpg" alt="">
+          <img src=".images/dslogo.jpg" alt="">
       </div>
       <div class="inner_main_menu">
           <ul id="menu">
