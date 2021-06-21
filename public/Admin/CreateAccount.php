@@ -5,7 +5,7 @@
 
       $Model = new Admin();
       $ViewAdmin = new ViewAdmin();
-      $DesignerController = new AdminController($Model);
+      $AdminController = new AdminController($Model);
       session_start();
 ?>
 
@@ -103,7 +103,7 @@ a h2{
   Create Account
 </div>
 <?php
-  $DesignerController->C_CreateAccount();
+  $AdminController->C_CreateAccount();
  ?>
 
   <div class="createacccontainer">

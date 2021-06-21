@@ -86,10 +86,10 @@
             <img class="first" id="slide" src="../images/Home-Interior-Design0.jpg" alt="">
         </div>
         <div class="right-skew fade">
-            <img src="images/1.jpg" alt="">
+            <img src="../images/1.jpg" alt="">
         </div>
         <div class="right-skew fade">
-            <img src="images/livingroom.jpg" alt="">
+            <img src="../images/livingroom.jpg" alt="">
         </div>
       </div>
 
