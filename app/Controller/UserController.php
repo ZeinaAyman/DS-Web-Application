@@ -51,7 +51,7 @@ include_once('Controller.php') ;
 
                    if(empty($errors)==true)
                    {
-                     move_uploaded_file($file_tmp,"uploads/profilepictures/".$file_name);
+                     move_uploaded_file($file_tmp,"../../public/uploads/profilepictures/".$file_name);
                    }
 
 

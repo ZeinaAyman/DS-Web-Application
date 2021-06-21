@@ -20,7 +20,7 @@ class ViewDesigner extends ViewUser
       for ($i=0;$i < 3; $i++){
         $row = $result->fetch_assoc();
         $images=$row['images'];
-        $firstimage = "uploads/projects/images/".explode(",", $images)[0];
+        $firstimage = "../../public/uploads/projects/images/".explode(",", $images)[0];
         if($row['id'])
         {
           $html.="<div class='image'>";
@@ -46,7 +46,7 @@ class ViewDesigner extends ViewUser
       for ($i=0;$i < 4; $i++){
         $row = $result->fetch_assoc();
         $images=$row['images'];
-        $firstimage = "uploads/projects/images/".explode(",", $images)[0];
+        $firstimage = "../../public/uploads/projects/images/".explode(",", $images)[0];
         if($row['id'])
         {
           $html.="<div class=image' id='color'>";
@@ -71,7 +71,7 @@ class ViewDesigner extends ViewUser
     for ($i=0;$i < 4; $i++){
       $row = $result->fetch_assoc();
       $images=$row['images'];
-      $firstimage = "uploads/projects/images/".explode(",", $images)[0];
+      $firstimage = "../../public/uploads/projects/images/".explode(",", $images)[0];
       if($row['id'])
       {
         $html.="<div class=image' id='color'>";
