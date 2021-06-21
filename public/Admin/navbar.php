@@ -2,7 +2,7 @@
 session_start();
 include_once '../../app/Model/Designer.php';
 include_once '../../app/Model/Admin.php';
-
+include_once '../../app/Model/Support.php';
 if($_SESSION['online']===NULL)
 {
   header("Location: Login.php");
@@ -15,6 +15,15 @@ else {
     $NEW->Feed($online->Name,$online->Email,$online->Password,$online->Type,$online->Picture);
     $_SESSION['online'] = serialize($NEW);
     header("Location: Admin.php");
+  }
+  if($online->Type=="4")
+  {
+    $NEW = new Support();
+    $NEW->ID=$online->ID;
+    $NEW->Feed($online->Name,$online->Email,$online->Password,$online->Type,$online->Picture);
+    $_SESSION['online'] = serialize($NEW);
+    header("Location: Support.php");
+
   }
   else {
     $NEW = new Designer();
