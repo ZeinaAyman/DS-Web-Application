@@ -75,7 +75,7 @@ class ViewDesigner extends ViewUser
       if($row['id'])
       {
         $html.="<div class=image' id='color'>";
-        $html.="<a href='project.php' ><img  src='$firstimage' alt='Project Image' height='150'></a>";
+        $html.="<a href='project.php?imid=".$row['id']."'><img  src='$firstimage' alt='Project Image' height='150'></a>";
         $html.="<h3 style='color:#76323F;'>Project ".$row['id']."</h3>";
         $html.="</div>";
       }
@@ -130,29 +130,30 @@ class ViewDesigner extends ViewUser
 
   public function PreviewProject($result)
   {
-    $html.="";
+    $html="";
     $html.="<div class='projectdetails_container'>";
     $html.="<h1>Project Details</h1>";
     $html.="<div class='pd-img'>";
-    $row = $result->fetch_assoc();
 
-    for ($i=0; $i<4 ; $i++4)
-      $row['image'];
-      $ci=explode(",", $images)[i];
-      $html.="<img src='../images/'".$ci." alt='project image' style='padding: 6px;'>";
+    for ($i=0; $i<4 ; $i++)
+    {
+
+      $ci=$result->getImagesArray()[$i];
+      $html.="<img src='../../public/uploads/projects/images/".$ci."' alt='project image' style='padding: 6px;'>";
 
     }
     $html.="</div>";
     $html.="<div class='pd-info'>";
-    $html.="<h1>Project ID :".$row['id']."</h1><br>";
-    $html.="<div class='p-h3'>Project : ".$row['name']."</div><br>";
+    $html.="<h1>Project ID :".$result->getID()."</h1><br>";
+    $html.="<div class='p-h3'>Project : ".$result->getName()."</div><br>";
     $html.="<div class='p-h3'>Designer: zeina</div><br>";
-    $html.="<div class='p-h3'>Designer ID :".$row['AssignedDesigners']."</div>";
+    $html.="<div class='p-h3'>Designer ID :".$result->getDesignersArray()[0]."</div>";
     $html.="</div>";
     $html.="<div class='my-pd-status'>";
-    $html.="<h3>Status:<span class='status-orange'>".$row['Status']."</span></h3>";
+    $html.="<h3>Status:<span class='status-orange'>".$result->getStatus()."</span></h3>";
     $html.="</div>";
     $html.="</div>";
+    return $html;
   }
 
   public function Projectslist($result)
