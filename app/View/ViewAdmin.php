@@ -19,6 +19,7 @@ class ViewAdmin extends ViewUser
    $html.="<option disabled selected>Employee Role</option>";
    $html.="<option value='2'>Designer</option>";
    $html.="<option value='3'>Manager</option>";
+   $html.="<option value='4'>Customer Support</option>";
    $html.="</select>";
    $html.="</div>";
    $html.="<div class='input'>";
