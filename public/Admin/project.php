@@ -1,8 +1,10 @@
 <?php
 include 'navbar.php';
 include_once '../../app/View/ViewDesigner.php';
+include_once '../../app/Controller/DesignerController.php';
 $viewDesigner = new ViewDesigner();
-$DesignerController = new DesignerController(unserialize($_SESSION['$online']));
+$DesignerController = new DesignerController(unserialize($_SESSION['online']));
+$viewDesigner->PreviewProject($DesignerController->C_PreviewProject());
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,25 +17,7 @@ $DesignerController = new DesignerController(unserialize($_SESSION['$online']));
 </head>
 
 <body>
-  <div class='projectdetails_container'>
-    <h1>Project Details</h1>
-    <div class='pd-img'>
-      <img src='../images/1.jpg' alt='project image' style="padding: 6px;">
-      <img src='../images/1.jpg' alt='project image' style="padding: 6px;">
-      <img src='../images/1.jpg' alt='project image' style="padding: 6px;">
-      <img src='../images/1.jpg' alt='project image' style="padding: 6px;">
-    </div>
-    <div class='pd-info'>
-      <h1>Project ID : 1</h1><br>
-      <div class='p-h3'>Client : villa</div><br>
-      <div class='p-h3'>Designer 1: zeina</div><br>
-      <div class='p-h3'>Designer ID :4</div>
-    </div>
-      <h2><a href="#">See More</a></h2>
-    <div class='my-pd-status'>
-      <h3>Status:<span class='status-orange'>Ongoing</span></h3>
-    </div>
-    </div>
+  <?php echo $viewDesigner->PreviewProject($DesignerController->C_PreviewProject()); ?>
 
 </body>
 

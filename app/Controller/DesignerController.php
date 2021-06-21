@@ -2,6 +2,7 @@
 //include('PHP/classes.php') ;
 include '../../app/Model/Project.php';
 include_once('UserController.php') ;
+
 class DesignerController extends UserController
 {
   public function C_CreateProject()
@@ -84,6 +85,16 @@ class DesignerController extends UserController
    return $res;
 
  }
-}
 
+ public function C_PreviewProject()
+ {
+   if(isset($_GET['imid']) && !empty($_GET['imid']))
+   {
+     $project = new Project();
+     $project->connect();
+     $project->ById($_GET['imid']);
+     return $project;
+   }
+ }
+}
 ?>

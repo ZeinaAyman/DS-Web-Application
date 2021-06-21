@@ -29,6 +29,34 @@ class Project extends Model
     $this->files=$files;
 
   }
+
+  public function ById($id)
+  {
+    $this->DB->query = "SELECT * FROM project Where ID='".$id."'";
+    $result = $this->DB->query();
+    if($result->num_rows > 0)
+    {
+      $row = mysqli_fetch_assoc($result);
+      $this->setID($row['id']);
+      $this->setName($row['name']);
+      $this->setDesc($row['description']);
+      $this->setStatus($row['status']);
+      $this->setBudget($row['budget']);
+      $this->setPropertyType($row['Property_Type']);
+      $this->setImages(explode(",",$row['images']));
+      $this->setFiles(explode(",",$row['files']));
+      $this->setdesigner(explode(",",$row['AssignedDesigners']));
+
+      return $this;
+
+    }
+    else
+    {
+      $msg='User not found';
+    }
+
+  }
+
 function setID($ID)
 {
 $this->ID = $ID;
@@ -82,6 +110,11 @@ function getImages()
 return implode(",",$this->images);
 }
 
+function getImagesArray()
+{
+return $this->images;
+}
+
 function setFiles($files)
 {
 $this->files = $files;
@@ -96,9 +129,17 @@ function addDesigner($designer)
 {
 array_push($this->designers,$designer);
 }
+function setdesigner($designer)
+{
+ $this->designers=$designer;
+}
 function getDesigners()
 {
 return print_r($this->designers);
+}
+function getDesignersArray()
+{
+return $this->designers;
 }
 
 function getPropertyType()
