@@ -1,4 +1,12 @@
-<?php include "New_Homenavbar.php"; ?>
+<?php include "New_Homenavbar.php";
+include '../../app/Model/Client.php';
+include '../../app/View/ViewClient.php';
+include '../../app/Controller/ClientController.php';
+
+$Model = new Client();
+$ViewClient = new ViewUser();
+$ClientController = new ClientController($Model);
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -51,35 +59,11 @@ h2{
     <body>
 
       <?php
-      $error = false;
-      $msg="";
-      $success="";
+          $ClientController->C_ContactForm();
 
-        if(isset($_POST['submit']))
-        {
-          $name = $_POST["name"];
-          $email = $_POST["email"];
-          $phone = $_POST["phone"];
-          $message = $_POST["message"];
-          if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-            $msg="-Please enter a valid email <br>";
-            //echo "-Please enter a valid email<br>";
-            $error = true;
+          if($ClientController->success == 1){
+            echo $ViewClient->thankYou();
           }
-          if(strlen($phone) > 12 || strlen($phone) < 11){
-            $msg="-Please enter a valid Phone Number<br>";
-            //echo "-Please enter a valid name <br>";
-            $error = true;
-          }
-
-          if(!$error){
-            $success="Thank you for Sending a message.";
-
-          }
-        }
-
-
-
 
        ?>
 
@@ -108,27 +92,8 @@ h2{
         <div class="form_col">
                 <div class="slider-form context-light bg-default">
                   <h4 class="heading-decorated">Send us a Message</h4>
-                  <h7 style="color:red;"><?php echo $msg; ?></h7>
-                  <h4 style="color:green;"><?php echo $success; ?></h4>
-                  <form class="rd-mailform rd-mailform_style-1" data-form-output="form-output-global" data-form-type="contact" method="post" action="contactUs.php">
-                    <div class="form-wrap form-wrap_icon">
-                      <i class="far fa-user"></i>
-                      <input class="form-input" id="contact-order-name" type="text" name="name" required placeholder="Your name">
-                    </div>
-                    <div class="form-wrap form-wrap_icon">
-                      <i class="fa fa-phone"></i>
-                      <input class="form-input" id="contact-order-phone" type="text" name="phone" required placeholder="Your Phone">
-                    </div>
-                    <div class="form-wrap form-wrap_icon">
-                      <i class="far fa-envelope"></i>
-                      <input class="form-input" id="contact-order-email" type="email" name="email" required placeholder="Your Email">
-                    </div>
-                    <div class="form-wrap form-wrap_icon">
-                      <i class="far fa-envelope-open"></i>
-                      <textarea class="form-input" id="contact-order-message" name="message" required placeholder="Your Message"></textarea>
-                    </div>
-                    <button class="button button-primary" id="myBtn" type="submit" name="submit">Submit</button>
-                  </form>
+                  <h7 style="color:red;"><?php echo $ClientController->msg; ?></h7>
+                  <?php echo $ViewClient->ContactForm(); ?>
                 </div>
     </div>
 </div>
@@ -205,7 +170,7 @@ h2{
         },
         icon: {
             labelOrigin: new google.maps.Point(11, 50),
-            url: 'images/marker_red.png',
+            url: '../images/marker_red.png',
             size: new google.maps.Size(22, 40),
             origin: new google.maps.Point(0, 0),
             anchor: new google.maps.Point(11, 40),
@@ -218,30 +183,15 @@ h2{
 
   }
 
-  // Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
+var thank_card = document.getElementById("thank-card-overlay");
 var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
 span.onclick = function() {
-  modal.style.display = "none";
+  thank_card.className = "hide";
 }
-
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
+    thank_card.className = "hide";
 }
 </script>
 
