@@ -1,7 +1,7 @@
 <?php
 session_start();
-include '../../app/Model/Designer.php';
-include '../../app/Model/Admin.php';
+include_once '../../app/Model/Designer.php';
+include_once '../../app/Model/Admin.php';
 
 if($_SESSION['online']===NULL)
 {

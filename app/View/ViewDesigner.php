@@ -6,7 +6,7 @@
 <?php
 
 include_once("ViewUser.php") ;
-include '../../app/Model/Designer.php';
+include_once '../../app/Model/Designer.php';
 class ViewDesigner extends ViewUser
 {
 

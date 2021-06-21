@@ -1,6 +1,5 @@
 <?php
   include_once('User.php') ;
-  //require_once('Designer.php');
   class Employee extends User
   {
     public $ID;
