@@ -1,5 +1,8 @@
 <?php
 include 'navbar.php';
+include_once '../../app/View/ViewDesigner.php';
+$viewDesigner = new ViewDesigner();
+$DesignerController = new DesignerController(unserialize($_SESSION['$online']));
 ?>
 <!DOCTYPE html>
 <html>

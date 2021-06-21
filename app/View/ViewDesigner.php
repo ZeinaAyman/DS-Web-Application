@@ -127,6 +127,34 @@ class ViewDesigner extends ViewUser
 
 
   }
+
+  public function PreviewProject($result)
+  {
+    $html.="";
+    $html.="<div class='projectdetails_container'>";
+    $html.="<h1>Project Details</h1>";
+    $html.="<div class='pd-img'>";
+    $row = $result->fetch_assoc();
+
+    for ($i=0; $i<4 ; $i++4)
+      $row['image'];
+      $ci=explode(",", $images)[i];
+      $html.="<img src='../images/'".$ci." alt='project image' style='padding: 6px;'>";
+
+    }
+    $html.="</div>";
+    $html.="<div class='pd-info'>";
+    $html.="<h1>Project ID :".$row['id']."</h1><br>";
+    $html.="<div class='p-h3'>Project : ".$row['name']."</div><br>";
+    $html.="<div class='p-h3'>Designer: zeina</div><br>";
+    $html.="<div class='p-h3'>Designer ID :".$row['AssignedDesigners']."</div>";
+    $html.="</div>";
+    $html.="<div class='my-pd-status'>";
+    $html.="<h3>Status:<span class='status-orange'>".$row['Status']."</span></h3>";
+    $html.="</div>";
+    $html.="</div>";
+  }
+
   public function Projectslist($result)
   {
     $online_name=unserialize($_SESSION['online'])->Name;
