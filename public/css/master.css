@@ -7,13 +7,13 @@ body{
 }
 @font-face {
   font-family: "Montserrat";
-  src: url("/Layout/fonts/Montserrat-ExtraBold.ttf") format("opentype");
+  src: url("../Layout/fonts/Montserrat-ExtraBold.ttf") format("opentype");
   font-weight: normal;
 }
 
 @font-face {
   font-family: "Montserrat-regular";
-  src: url("/Layout/fonts/Montserrat-Regular.ttf") format("opentype");
+  src: url("../Layout/fonts/Montserrat-Regular.ttf") format("opentype");
   font-weight: normal;
 }
 

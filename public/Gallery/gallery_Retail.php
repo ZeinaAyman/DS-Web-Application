@@ -1,5 +1,5 @@
 <?php include "New_Homenavbar.php";
-      include 'Model/Admin.php';
+      include('../../app/Model/Admin.php');
 
 $admin = new Admin();
 $admin->connect();
@@ -18,7 +18,7 @@ $result = $admin->DB->FetchByType("project",2);
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="New_master.css">
+    <link rel="stylesheet" href="../New_master.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/gif/png" href="dslogo.png">
     <link href="https://fonts.googleapis.com/css?family=Oswald:400" rel="stylesheet">
@@ -273,7 +273,7 @@ $result = $admin->DB->FetchByType("project",2);
                   $count++;
                   $images=$row['images'];
                   $id = $row['id'];
-                  $firstimage = "uploads/projects/images/".explode(",", $images)[0];
+                  $firstimage = "../uploads/projects/images/".explode(",", $images)[0];
                   echo "<div class=\"img_wrap\">";
                   ?>
                   <a href="gallery2.php?project_id=<?php echo $id?>"> <?php echo "<img src=".$firstimage."></a>";
@@ -293,7 +293,7 @@ $result = $admin->DB->FetchByType("project",2);
     </div>
     </div>
     <!-- <div class="e338_1408"></div> -->
-    <?php include "includes/footer.php"; ?>
+    <?php include "../includes/footer.php"; ?>
 </body>
 <script type="text/javascript">
   $("a").hover(function(){

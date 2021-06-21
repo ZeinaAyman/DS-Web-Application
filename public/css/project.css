@@ -142,6 +142,6 @@ h1{
 }
 @font-face {
   font-family: "Montserrat";
-  src: url("/Layout/fonts/Montserrat-ExtraBold.ttf") format("opentype");
+  src: url("../Layout/fonts/Montserrat-ExtraBold.ttf") format("opentype");
   font-weight: normal;
 }

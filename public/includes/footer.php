@@ -118,13 +118,13 @@ footer a {
                 <div class="container-footer" style="padding-left: 0!important;">
                     <div class="row-footer">
                         <div class="col-md-4 text-center">
-                            <img src="images/dslogo.jpg" class="logo-small" alt="SK-Touch"><br>
+                            <img src="../images/dslogo.jpg" class="logo-small" alt="SK-Touch"><br>
                             We are an Interior Design studio with a twist based in Egypt and Kingdom of Saudi Arabia, offering turnkey Interior Design services and Smart living Solutions.
                             <div class="icons">
-                              <a href="https://twitter.com/Design_Solu"><img src="images/twitter.png" alt="" style=" width: 13%;"></a>
-                              <a href="https://www.facebook.com/I.DesignSolu"><img src="images/facebook (2).png" alt="" style=" width: 8%; margin-right: 8px;"></a>
-                              <a href="https://www.instagram.com/interior.design.solution"><img src="images/instagram.png" alt="" style=" width: 8%; margin-right: 10px;"></a>
-                              <a href="https://www.snapchat.com/add/design.solution"><img src="images/snapchat.png" alt="" style=" width: 8%;"></a>
+                              <a href="https://twitter.com/Design_Solu"><img src="../images/twitter.png" alt="" style=" width: 13%;"></a>
+                              <a href="https://www.facebook.com/I.DesignSolu"><img src="../images/facebook (2).png" alt="" style=" width: 8%; margin-right: 8px;"></a>
+                              <a href="https://www.instagram.com/interior.design.solution"><img src="../images/instagram.png" alt="" style=" width: 8%; margin-right: 10px;"></a>
+                              <a href="https://www.snapchat.com/add/design.solution"><img src="../images/snapchat.png" alt="" style=" width: 8%;"></a>
                             </div>
                         </div>
                         <div class="col-md-6">
