@@ -141,7 +141,7 @@ class ViewDesigner extends ViewUser
           $id= $row["id"];
           $ClientName=$row["name"];
           $images=$row["images"];
-          $firstimage = "uploads/projects/images/".explode(",", $images)[0];
+          $firstimage = "../../public/uploads/projects/images/".explode(",", $images)[0];
           $status=$row["status"];
           $html.="<div class='project'>";
           $html.= "<div class='p-img'>";
@@ -182,7 +182,7 @@ class ViewDesigner extends ViewUser
         $id=$row['id'];
         $Client=$row['name'];
         $images=$row["images"];
-        $firstimage = "uploads/projects/images/".explode(",", $images)[0];
+        $firstimage = "../../public/uploads/projects/images/".explode(",", $images)[0];
         $html.="<div class='project'>";
         $html.="<div class='p-img'>";
         $html.="<img src='$firstimage' height='100%' alt='project image' >";
