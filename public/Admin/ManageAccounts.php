@@ -28,13 +28,12 @@ var btn = document.getElementsByClassName("myBtn");
 var numComments = btn.length;
 for (var i = 0; i < numComments; i++) {
     $(btn[i]).one("click", function() {
-
-        console.log(this.dataset.id);
+      console.log($(this).attr("data-id"));
         jQuery.ajax({
                 type: "POST",
                 url: "DeleteAccount.php",
-                data: {user_id:this.dataset.id}
-            }
+                data: 'user_id='+ $(this).attr("data-id")}
+
         );
 
     });
