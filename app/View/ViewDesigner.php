@@ -153,7 +153,7 @@ class ViewDesigner extends ViewUser
       $html.="</tr>";
       $html.="<tr>";
         $html.="<td>Designer</td>";
-        $html.="<td><a href=''><img src='../images/edit.png' class='editimg'></a></td>";
+        $html.="<td><a href='OwnerAccess.php'><img src='../images/edit.png' class='editimg'></a></td>";
         $html.="<td><a class='myBtn'><img src='../images/delete.png' class='delimg'></a></td>";
       $html.="</tr>";
 
@@ -173,6 +173,33 @@ class ViewDesigner extends ViewUser
       $html.="</tr>";
 
     $html.="</table>";
+    return $html;
+  }
+
+
+  public function AddOwner($res){
+    $html="";
+    $html.="<table>";
+    $html.="<tr class='r1'>";
+    $html.="  <th>Employee ID</th>";
+    $html.="<th>Employee Name</th>";
+    $html.="<th>Add</th>";
+    $html.="</tr>";
+    while($row = $res->fetch_assoc()){
+      $id=$row["ID"];
+      $name=$row['Name'];
+
+      $html.="<tr>";
+      $html.="<td>$id</td>";
+      $html.="<td>$name</td>";
+      $html.="<td><a href=''>Add</a></td>";
+      $html.="  </tr>";
+      $html.="  <tr>";
+      $html.="</tr>";
+    }
+    $html.="</table>";
+
+
     return $html;
   }
 

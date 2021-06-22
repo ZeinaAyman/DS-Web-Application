@@ -40,6 +40,13 @@
         return $result;
       }
 
+      public function fetchByUserType($table, $type)
+      {
+        $this->query="SELECT * FROM $table Where Type='".$type."'";
+        $result = $this->query();
+        return $result;
+      }
+
       public function fetchByType($table, $type)
       {
         $this->query="SELECT * FROM $table Where Property_Type='".$type."'";

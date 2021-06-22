@@ -98,6 +98,14 @@ class DesignerController extends UserController
 
  }
 
+ public function C_GetAllUsersType($user, $type)
+{
+  $this->Model->connect();
+  $res=$this->Model->DB->fetchByUserType($user,$type);
+  return $res;
+
+}
+
  public function C_PreviewProject()
  {
    if(isset($_GET['imid']) && !empty($_GET['imid']))
