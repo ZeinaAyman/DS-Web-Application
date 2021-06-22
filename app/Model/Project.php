@@ -14,12 +14,13 @@ class Project extends Model
   private $files=array();
   private $designers=array();
   private $origin;
+  private $deadline;
   function __construct()
   {
 
   }
 
-  public function Feed($name,$desc,$budget,$property,$images,$files)
+  public function Feed($name,$desc,$budget,$property,$images,$files,$deadline)
   {
     $this->name=$name;
     $this->desc=$desc;
@@ -28,6 +29,7 @@ class Project extends Model
     $this->property=$property;
     $this->images=$images;
     $this->files=$files;
+    $this->deadline=$deadline;
 
   }
 
@@ -85,6 +87,10 @@ $this->name = $name;
 function getName()
 {
 return $this->name;
+}
+function getdeadline()
+{
+return $this->deadline;
 }
 function setDesc($desc)
 {

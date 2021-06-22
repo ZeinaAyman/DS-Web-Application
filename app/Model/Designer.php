@@ -12,7 +12,7 @@
     {
       $Project->addDesigner($Des);
       $assignedID=$Des->ID;
-      $this->DB->query = "INSERT into project (origin,name,description,budget,Property_Type,images,files,status) VALUES('".$Des->ID."','".$Project->getName()."', '".$Project->getDesc()."','".$Project->getBudget()."','".$Project->getPropertyType()."','".$Project->getImages()."','".$Project->getFiles()."','".$Project->getStatus()."')";
+      $this->DB->query = "INSERT into project (origin,name,description,budget,Property_Type,images,files,status,deadline) VALUES('".$Des->ID."','".$Project->getName()."', '".$Project->getDesc()."','".$Project->getBudget()."','".$Project->getPropertyType()."','".$Project->getImages()."','".$Project->getFiles()."','".$Project->getStatus()."','".$Project->getdeadline()."')";
       $result = $this->DB->query();
 
 

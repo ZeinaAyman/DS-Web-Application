@@ -3,6 +3,7 @@
 }
 body{
   background-color: #E9E8E8;
+  overflow-x:hidden;
 }
 @font-face {
   font-family: "Montserrat";

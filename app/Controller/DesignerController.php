@@ -28,6 +28,7 @@ class DesignerController extends UserController
       $description = $_POST["description"];
       $budget = $_POST["budget"];
       $property = $_POST["type"];
+      $deadline = $_POST["deadline"];
 
 
       if(count($_FILES["file"]['name'])>0)
@@ -66,15 +67,12 @@ class DesignerController extends UserController
         $str2 = "No Images found to upload"; //No file upload message
       }
 
-      echo $str;
-      echo $str2;
-
       if(!$err)
       {
         $CurrentDes = unserialize($_SESSION['online']);
         //$CurrentDes->CreateProject($DB,$Project);
         $Project = new Project();
-        $Project->Feed($name,$description,$budget,$property,$images,$files);
+        $Project->Feed($name,$description,$budget,$property,$images,$files,$deadline);
         $this->Model->connect();
         $this->Model->CreateProject($Project,$CurrentDes);
 
@@ -103,7 +101,6 @@ class DesignerController extends UserController
   $this->Model->connect();
   $res=$this->Model->DB->fetchByUserType($user,$type);
   return $res;
-
 }
 
  public function C_PreviewProject()

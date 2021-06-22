@@ -62,7 +62,25 @@ class ViewDesigner extends ViewUser
     return $html;
 
   }
+  public function ViewTimeline($result)
+  {
+    $html='';
+    $html.="<div class='timeline'>";
+        $html.="<h1 style='color:#151515; padding: 20px; padding-bottom: 10px; margin-bottom: 0px;'>Timeline</h1>";
+      $html.="<div class='test'>";
+        $html.="<ul>";
+        for ($i=0;$i < 4; $i++){
+          $row = $result->fetch_assoc();
+          $deadline=$row['deadline'];
+          $name = $row['name'];
+          $html.="<li>Project $name end date $deadline</li>";
+        }
+        $html.="</ul>";
+      $html.="</div>";
+    $html.="</div>";
 
+    return $html;
+  }
   public function Allprojects($result)
   {
     $html='';
@@ -109,8 +127,9 @@ class ViewDesigner extends ViewUser
     $html.="<option value='3'>Commercial</option>";
     $html.="</select>";
     $html.="</div>";
-
-    $html.="<label class='p-input'>Images</label>";
+    $html.="<label class='p-input'>Project Deadline</label>";
+    $html.="<input class='form-input' type='date' name='deadline' value='2021-06-21'";
+    $html.="<br><label class='p-input'>Images</label>";
 
     $html.="<input type='file' class='form-file' id='imageupload' name='image[]' value='Upload'  onchange='getUploadedImages(this.id)' multiple>";
     $html.="<div id='uploadedimages'>  </div>";
@@ -149,13 +168,16 @@ class ViewDesigner extends ViewUser
     $html.="<table style='margin-top: 12%; position: relative;left: 14%;'>";
       $html.="<tr class='r1'>";
         $html.="<th>Owners</th>";
-        $html.="<th>Add Owner Access</th>";
-        $html.="<th>Delete Owner Access</th>";
+        $html.="<th>Edit Access</th>";
       $html.="</tr>";
       $html.="<tr>";
         $html.="<td>Designer</td>";
+<<<<<<< HEAD
         $html.="<td><a href='OwnerAccess.php?imid=".$_GET['imid']."'><img src='../images/edit.png' class='editimg'></a></td>";
         $html.="<td><a class='myBtn'><img src='../images/delete.png' class='delimg'></a></td>";
+=======
+        $html.="<td><a href='OwnerAccess.php'><img src='../images/edit.png' class='editimg'></a></td>";
+>>>>>>> ecf6c0732d0015620f297475d58951a2626f4977
       $html.="</tr>";
 
     $html.="</table>";
@@ -164,13 +186,11 @@ class ViewDesigner extends ViewUser
     $html.="<table style='margin-top: 12%;     bottom: 14%;position: relative;left: 14%;''>";
       $html.="<tr class='r1'>";
         $html.="<th>Assigned Designers</th>";
-        $html.="<th>Add Edit Access</th>";
-        $html.="<th>Delete Edit Access</th>";
+        $html.="<th>Edit Access</th>";
       $html.="</tr>";
       $html.="<tr>";
         $html.="<td>Designer</td>";
-        $html.="<td><a href=''><img src='../images/edit.png' class='editimg'></a></td>";
-        $html.="<td><a class='myBtn'><img src='../images/delete.png' class='delimg'></a></td>";
+        $html.="<td><a href='EditAccess.php'><img src='../images/edit.png' class='editimg'></a></td>";
       $html.="</tr>";
 
     $html.="</table>";
@@ -194,6 +214,42 @@ class ViewDesigner extends ViewUser
       $html.="<td>$id</td>";
       $html.="<td>$name</td>";
       $html.="<td><button class='add' data-pid='".$_GET['imid']."' data-eid='".$id."'>Add</button></td>";
+      $html.="  </tr>";
+      $html.="  <tr>";
+      $html.="</tr>";
+    }
+    $html.="</table>";
+
+
+    return $html;
+  }
+
+
+
+
+
+
+
+
+
+  public function AddEdit($res){
+    $html="";
+    $html.="<table>";
+    $html.="<tr class='r1'>";
+    $html.="  <th>Employee ID</th>";
+    $html.="<th>Employee Name</th>";
+    $html.="<th>Add</th>";
+    $html.="<th>Delete</th>";
+    $html.="</tr>";
+    while($row = $res->fetch_assoc()){
+      $id=$row["ID"];
+      $name=$row['Name'];
+
+      $html.="<tr>";
+      $html.="<td>$id</td>";
+      $html.="<td>$name</td>";
+      $html.="<td><a href=''>Add</a></td>";
+      $html.="<td><a class='myBtn'><img src='../images/delete.png' class='delimg'></a></td>";
       $html.="  </tr>";
       $html.="  <tr>";
       $html.="</tr>";
