@@ -148,13 +148,11 @@ class ViewDesigner extends ViewUser
     $html.="<table style='margin-top: 12%; position: relative;left: 14%;'>";
       $html.="<tr class='r1'>";
         $html.="<th>Owners</th>";
-        $html.="<th>Add Owner Access</th>";
-        $html.="<th>Delete Owner Access</th>";
+        $html.="<th>Edit Access</th>";
       $html.="</tr>";
       $html.="<tr>";
         $html.="<td>Designer</td>";
         $html.="<td><a href='OwnerAccess.php'><img src='../images/edit.png' class='editimg'></a></td>";
-        $html.="<td><a class='myBtn'><img src='../images/delete.png' class='delimg'></a></td>";
       $html.="</tr>";
 
     $html.="</table>";
@@ -163,13 +161,11 @@ class ViewDesigner extends ViewUser
     $html.="<table style='margin-top: 12%;     bottom: 14%;position: relative;left: 14%;''>";
       $html.="<tr class='r1'>";
         $html.="<th>Assigned Designers</th>";
-        $html.="<th>Add Edit Access</th>";
-        $html.="<th>Delete Edit Access</th>";
+        $html.="<th>Edit Access</th>";
       $html.="</tr>";
       $html.="<tr>";
         $html.="<td>Designer</td>";
-        $html.="<td><a href=''><img src='../images/edit.png' class='editimg'></a></td>";
-        $html.="<td><a class='myBtn'><img src='../images/delete.png' class='delimg'></a></td>";
+        $html.="<td><a href='EditAccess.php'><img src='../images/edit.png' class='editimg'></a></td>";
       $html.="</tr>";
 
     $html.="</table>";
@@ -193,6 +189,42 @@ class ViewDesigner extends ViewUser
       $html.="<td>$id</td>";
       $html.="<td>$name</td>";
       $html.="<td><a href=''>Add</a></td>";
+      $html.="  </tr>";
+      $html.="  <tr>";
+      $html.="</tr>";
+    }
+    $html.="</table>";
+
+
+    return $html;
+  }
+
+
+
+
+
+
+
+
+
+  public function AddEdit($res){
+    $html="";
+    $html.="<table>";
+    $html.="<tr class='r1'>";
+    $html.="  <th>Employee ID</th>";
+    $html.="<th>Employee Name</th>";
+    $html.="<th>Add</th>";
+    $html.="<th>Delete</th>";
+    $html.="</tr>";
+    while($row = $res->fetch_assoc()){
+      $id=$row["ID"];
+      $name=$row['Name'];
+
+      $html.="<tr>";
+      $html.="<td>$id</td>";
+      $html.="<td>$name</td>";
+      $html.="<td><a href=''>Add</a></td>";
+      $html.="<td><a class='myBtn'><img src='../images/delete.png' class='delimg'></a></td>";
       $html.="  </tr>";
       $html.="  <tr>";
       $html.="</tr>";

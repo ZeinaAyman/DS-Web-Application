@@ -107,7 +107,7 @@ a h2{
     <h2>Designs Solutions</h2>
     <!-- <h3>LOGO</h3> -->
   </div>
-  <a href="Admin.php" style="text-decoration: none;"><h2>Back</h2></a>
+  <a href="home.php" style="text-decoration: none;"><h2>Back</h2></a>
   <div class="create-acc">
     Manage Files
   </div>
