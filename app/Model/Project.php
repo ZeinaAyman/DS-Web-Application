@@ -32,7 +32,7 @@ class Project extends Model
 
   public function ById($id)
   {
-    $this->DB->query = "SELECT * FROM project Where ID='".$id."'";
+    $this->DB->query = "SELECT * FROM project INNER JOIN assign ON project.id = assign.PID  WHERE assign.PID='".$id."'";
     $result = $this->DB->query();
     if($result->num_rows > 0)
     {
@@ -45,7 +45,7 @@ class Project extends Model
       $this->setPropertyType($row['Property_Type']);
       $this->setImages(explode(",",$row['images']));
       $this->setFiles(explode(",",$row['files']));
-      $this->setdesigner(explode(",",$row['AssignedDesigners']));
+      $this->setdesigner(explode(",",$row['UID']));
 
       return $this;
 

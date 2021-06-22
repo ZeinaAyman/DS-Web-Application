@@ -71,20 +71,25 @@
   {
     $this->DB->query = "SELECT * FROM user Where ID='".$id."'";
     $result = $this->DB->query();
-    if($result->num_rows > 0)
-    {
-      $row = mysqli_fetch_assoc($result);
-      $this->ID=$row['ID'];
-      $this->Name=$row['Name'];
-      $this->Email=$row['Email'];
-      $this->Password=$row['Password'];
-      $this->Type=$row['Type'];
+    if (!is_string($result)) {
+
+      if($result->num_rows > 0)
+      {
+        $row = mysqli_fetch_assoc($result);
+        $this->ID=$row['ID'];
+        $this->Name=$row['Name'];
+        $this->Email=$row['Email'];
+        $this->Password=$row['Password'];
+        $this->Type=$row['Type'];
+
+      }
+      else
+      {
+        $msg='User not found';
+      }
 
     }
-    else
-    {
-      $msg='User not found';
-    }
+
 
   }
 
