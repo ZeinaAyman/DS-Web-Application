@@ -13,6 +13,7 @@ class Project extends Model
   private $images=array();
   private $files=array();
   private $designers=array();
+  private $origin;
   function __construct()
   {
 
@@ -34,32 +35,44 @@ class Project extends Model
   {
     $this->DB->query = "SELECT * FROM project INNER JOIN assign ON project.id = assign.PID  WHERE assign.PID='".$id."'";
     $result = $this->DB->query();
-    if($result->num_rows > 0)
-    {
-      $row = mysqli_fetch_assoc($result);
-      $this->setID($row['id']);
-      $this->setName($row['name']);
-      $this->setDesc($row['description']);
-      $this->setStatus($row['status']);
-      $this->setBudget($row['budget']);
-      $this->setPropertyType($row['Property_Type']);
-      $this->setImages(explode(",",$row['images']));
-      $this->setFiles(explode(",",$row['files']));
-      $this->setdesigner(explode(",",$row['UID']));
+    if (!is_string($result))
+        {
+          if($result->num_rows > 0)
+          {
+            $row = mysqli_fetch_assoc($result);
+            $this->setID($row['id']);
+            $this->setName($row['name']);
+            $this->setDesc($row['description']);
+            $this->setStatus($row['status']);
+            $this->setBudget($row['budget']);
+            $this->setPropertyType($row['Property_Type']);
+            $this->setImages(explode(",",$row['images']));
+            $this->setFiles(explode(",",$row['files']));
+            $this->setOrigin($row['origin']);
+            return $this;
 
-      return $this;
+          }
+          else
+          {
+            $msg='User not found';
+          }
+        }
 
     }
-    else
-    {
-      $msg='User not found';
-    }
 
-  }
+
 
 function setID($ID)
 {
 $this->ID = $ID;
+}
+function setOrigin($origin)
+{
+$this->origin = $origin;
+}
+function getOrigin()
+{
+ return $this->origin;
 }
 function getID()
 {
@@ -154,5 +167,6 @@ return print_r($this->property);
 }
 
 }
+
 
  ?>
