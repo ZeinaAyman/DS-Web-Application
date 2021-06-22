@@ -193,7 +193,7 @@ class ViewDesigner extends ViewUser
       $html.="<tr>";
       $html.="<td>$id</td>";
       $html.="<td>$name</td>";
-      $html.="<td><a href=''>Add</a></td>";
+      $html.="<td><button class='add' data-pid='".$_GET['imid']."' data-eid='".$id."'>Add</button></td>";
       $html.="  </tr>";
       $html.="  <tr>";
       $html.="</tr>";
