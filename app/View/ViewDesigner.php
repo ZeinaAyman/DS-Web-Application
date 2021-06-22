@@ -172,7 +172,7 @@ class ViewDesigner extends ViewUser
     $html.="<h1>Project ID :".$result->getID()."</h1><br>";
     $html.="<div class='p-h3'>Project : ".$result->getName()."</div><br>";
     $html.="<div class='p-h3'>Designer: zeina</div><br>";
-    $html.="<div class='p-h3'>Designer ID :".$result->getDesignersArray()[0]."</div>";
+    $html.="<div class='p-h3'>Designer ID :".$result->getOrigin()."</div>";
     $html.="<div class='my-pd-manage'>";
     $html.="<a href='managefiles.php?imid=".$result->getID()."'><button type='button' class='manage-button' name='button'>Manage</button>";
     $html.="</div>";
