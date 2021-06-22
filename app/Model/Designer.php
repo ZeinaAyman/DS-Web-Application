@@ -12,7 +12,12 @@
     {
       $Project->addDesigner($Des);
       $assignedID=$Des->ID;
-      $this->DB->query = "INSERT into project (name,description,budget,Property_Type,images,files,status,AssignedDesigners) VALUES('".$Project->getName()."', '".$Project->getDesc()."','".$Project->getBudget()."','".$Project->getPropertyType()."','".$Project->getImages()."','".$Project->getFiles()."','".$Project->getStatus()."',$assignedID)";
+      $this->DB->query = "INSERT into project (origin,name,description,budget,Property_Type,images,files,status) VALUES('".$Des->ID."','".$Project->getName()."', '".$Project->getDesc()."','".$Project->getBudget()."','".$Project->getPropertyType()."','".$Project->getImages()."','".$Project->getFiles()."','".$Project->getStatus()."')";
+      $result = $this->DB->query();
+
+
+
+      $this->DB->query = "INSERT into assign (UID,PID,OwnerA,EditA) VALUES('".$Des->ID."',(SELECT max(id) FROM project WHERE origin='".$Des->ID."'),'1','1')";
       $result = $this->DB->query();
       echo $result;
     }
@@ -20,7 +25,7 @@
     public function getMyProjects()
     {
      $DesId = unserialize($_SESSION['online'])->ID;
-     $this->DB->query="SELECT *from project Where AssignedDesigners=$DesId";
+     $this->DB->query="SELECT * from project INNER JOIN assign ON project.id=assign.PID WHERE assign.UID=".$DesId;
      $result=$this->DB->query();
      return $result;
     }

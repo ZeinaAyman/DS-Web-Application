@@ -231,7 +231,7 @@ class ViewDesigner extends ViewUser
 
       while($row = $result->fetch_assoc())
       {
-        $DesignersID=$row['AssignedDesigners'];
+        $DesignersID=$row['origin'];
         $Des=new Designer();
         $Des->connect();
         $Des->ById($DesignersID);
@@ -245,12 +245,12 @@ class ViewDesigner extends ViewUser
         $html.="<img src='$firstimage' height='100%' alt='project image' >";
         $html.="</div>";
         $html.="<div class='p-info'>";
-        $html.="<h1>Project:$id </h1><br>";
-        $html.="<div class='p-h3'>Client: $Client";
+        $html.="<h1>Project: ".$id."</h1><br>";
+        $html.="<div class='p-h3'>Client: ".$Client;
         $html.="</div>";
         $html.="<br>";
-        $html.="<div class='p-h3'>Designer 1 : $DesName</div><br>";
-        $html.="<div class='p-h3'>Designer 1 ID : $DesignersID</div>";
+        $html.="<div class='p-h3'>Designer 1 : ".$DesName."</div><br>";
+        $html.="<div class='p-h3'>Designer 1 ID : ".$DesignersID."</div>";
         $html.="</div>";
         $html.="</div>";
       }
