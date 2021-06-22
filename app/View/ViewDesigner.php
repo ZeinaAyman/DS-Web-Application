@@ -136,8 +136,8 @@ class ViewDesigner extends ViewUser
     $length=sizeof($result->getFilesArray());
     for ($i=0; $i < $length ; $i++) {
 
-      $html.="<h1 style='width:80%;margin:0px;float:left;'>-".$result->getFilesArray()[$i]."</h1>";
-      $html.="<a download target='_blank' href='../../public/uploads/projects/files/".$result->getFilesArray()[$i]."'><img src='../images/download.png' alt='' style='width:20px;height:30px;float:right;'></a>";
+      $html.="<h1 style='width:80%;margin:0px;float:left; font-size: 30px;'><img src='../images/right-arrow.png' alt='' style='width: 24px; height: 14px; margin-top: 11px; float: left;'>".$result->getFilesArray()[$i]."</h1>";
+      $html.="<a download target='_blank' href='../../public/uploads/projects/files/".$result->getFilesArray()[$i]."'><img src='../images/download.png' alt='' style='width:20px;height:20px;float:right;'></a>";
       $html.="<br>";
 
     }

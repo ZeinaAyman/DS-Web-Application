@@ -28,8 +28,8 @@
   position: relative;
   top: 10%;
     width: 30%;
-  height: 85%;
   background-color: #B89D5F;
+  padding: 45px;
   border-width: 2px;
   border-color: #E3B7A5;
   border-style: solid;
@@ -108,6 +108,12 @@ a h2{
 
   <?php
   echo $Viewdesigner->ListFiles($DesignerController->C_PreviewProject()); ?>
+  <div class="createacccontainer">
+    <h1>Owner Access</h1>
+  </div>
+  <div class="createacccontainer">
+    <h1>Edit Access</h1>
+  </div>
 <script type="text/javascript">
 var inputs = document.querySelectorAll('.input input');
 for (let i = 0; i < inputs.length; i++) {
