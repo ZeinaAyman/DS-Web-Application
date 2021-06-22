@@ -172,12 +172,7 @@ class ViewDesigner extends ViewUser
       $html.="</tr>";
       $html.="<tr>";
         $html.="<td>Designer</td>";
-<<<<<<< HEAD
         $html.="<td><a href='OwnerAccess.php?imid=".$_GET['imid']."'><img src='../images/edit.png' class='editimg'></a></td>";
-        $html.="<td><a class='myBtn'><img src='../images/delete.png' class='delimg'></a></td>";
-=======
-        $html.="<td><a href='OwnerAccess.php'><img src='../images/edit.png' class='editimg'></a></td>";
->>>>>>> ecf6c0732d0015620f297475d58951a2626f4977
       $html.="</tr>";
 
     $html.="</table>";
