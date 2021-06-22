@@ -46,7 +46,17 @@ class ViewUser extends View
 
     return $html;
   }
+  public function Home_NewsletterForm()
+  {
+    $html="";
+    $html.="<form data-name='Newsletter' name='wf-form-Newsletter' class='flex-2'>";
+    $html.="<input type='text' class='text-field-2 w-input' name='name' placeholder='Your name' required>";
+    $html.="<input type='email' class='text-field-2 _2 w-input'  name='email' placeholder='Your email' required>";
+    $html.="<button class='submit-button-2 w-button' name='submit' type='submit'>Subscribe</button>";
+    $html.="</form>";
 
+    return $html;
+  }
 
   public function thankYou($result)
   {

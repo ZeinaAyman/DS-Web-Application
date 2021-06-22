@@ -24,7 +24,7 @@ class ViewDesigner extends ViewUser
         if($row['id'])
         {
           $html.="<div class='image'>";
-          $html.="<img class='img2' src='$firstimage' alt='Project Image' height='150'>";
+          $html.="<a href='project.php?imid=".$row['id']."'><img  src='$firstimage' alt='Project Image' height='150'></a>";
           $html.="<h3 style='padding: 5px 66px;''>Project ".$row['id']."</h3>";
           $html.="</div>";
         }
@@ -50,7 +50,7 @@ class ViewDesigner extends ViewUser
         if($row['id'])
         {
           $html.="<div class=image' id='color'>";
-          $html.="<img  src='$firstimage' alt='Project Image' height='150'>";
+          $html.="<a href='project.php?imid=".$row['id']."'><img  src='$firstimage' alt='Project Image' height='150'></a>";
           $html.="<h3 style='color:#76323F;'>Project ".$row['id']."</h3>";
           $html.="</div>";
         }
@@ -128,14 +128,128 @@ class ViewDesigner extends ViewUser
 
   }
 
+  public function ListFiles($result)
+  {
+    $html="";
+    $html.="<div class='createacccontainer' style='width:50%;'>";
+    $html.="<div class='file-row'>";
+    $length=sizeof($result->getFilesArray());
+    for ($i=0; $i < $length ; $i++) {
+
+      $html.="<h1 style='width:80%;margin:0px;float:left; font-size: 30px;'><img src='../images/right-arrow.png' alt='' style='width: 24px; height: 14px; margin-top: 11px; float: left;'>".$result->getFilesArray()[$i]."</h1>";
+      $html.="<a download target='_blank' href='../../public/uploads/projects/files/".$result->getFilesArray()[$i]."'><img src='../images/download.png' alt='' style='width:20px;height:20px;float:right;'></a>";
+      $html.="<br>";
+
+    }
+    $html.="</div>";
+    $html.="</div>";
+
+    $html.="<h3 style=' position: relative;top: 24%;font-size: 24px;left: 45%; font-size: 24px; padding: 0px;'>Owner Permission</h3>";
+    $html.="<table style='margin-top: 12%; position: relative;left: 14%;'>";
+      $html.="<tr class='r1'>";
+        $html.="<th>Owners</th>";
+        $html.="<th>Edit Access</th>";
+      $html.="</tr>";
+      $html.="<tr>";
+        $html.="<td>Designer</td>";
+        $html.="<td><a href='OwnerAccess.php'><img src='../images/edit.png' class='editimg'></a></td>";
+      $html.="</tr>";
+
+    $html.="</table>";
+
+    $html.="<h3 style=' position: relative;top: 10%;font-size: 24px;left: 45%; font-size: 24px; padding: 0px;''>Edit Permission</h3>";
+    $html.="<table style='margin-top: 12%;     bottom: 14%;position: relative;left: 14%;''>";
+      $html.="<tr class='r1'>";
+        $html.="<th>Assigned Designers</th>";
+        $html.="<th>Edit Access</th>";
+      $html.="</tr>";
+      $html.="<tr>";
+        $html.="<td>Designer</td>";
+        $html.="<td><a href='EditAccess.php'><img src='../images/edit.png' class='editimg'></a></td>";
+      $html.="</tr>";
+
+    $html.="</table>";
+    return $html;
+  }
+
+
+  public function AddOwner($res){
+    $html="";
+    $html.="<table>";
+    $html.="<tr class='r1'>";
+    $html.="  <th>Employee ID</th>";
+    $html.="<th>Employee Name</th>";
+    $html.="<th>Add</th>";
+    $html.="</tr>";
+    while($row = $res->fetch_assoc()){
+      $id=$row["ID"];
+      $name=$row['Name'];
+
+      $html.="<tr>";
+      $html.="<td>$id</td>";
+      $html.="<td>$name</td>";
+      $html.="<td><a href=''>Add</a></td>";
+      $html.="  </tr>";
+      $html.="  <tr>";
+      $html.="</tr>";
+    }
+    $html.="</table>";
+
+
+    return $html;
+  }
+
+
+
+
+
+
+
+
+
+  public function AddEdit($res){
+    $html="";
+    $html.="<table>";
+    $html.="<tr class='r1'>";
+    $html.="  <th>Employee ID</th>";
+    $html.="<th>Employee Name</th>";
+    $html.="<th>Add</th>";
+    $html.="<th>Delete</th>";
+    $html.="</tr>";
+    while($row = $res->fetch_assoc()){
+      $id=$row["ID"];
+      $name=$row['Name'];
+
+      $html.="<tr>";
+      $html.="<td>$id</td>";
+      $html.="<td>$name</td>";
+      $html.="<td><a href=''>Add</a></td>";
+      $html.="<td><a class='myBtn'><img src='../images/delete.png' class='delimg'></a></td>";
+      $html.="  </tr>";
+      $html.="  <tr>";
+      $html.="</tr>";
+    }
+    $html.="</table>";
+
+
+    return $html;
+  }
+
   public function PreviewProject($result)
   {
     $html="";
     $html.="<div class='projectdetails_container'>";
     $html.="<h1>Project Details</h1>";
+    $html.="<a class'myBtn'><img src='../../public/images/delete.png' class='delete'></a>";
     $html.="<div class='pd-img'>";
-
-    for ($i=0; $i<4 ; $i++)
+    $length=sizeof($result->getImagesArray());
+    if ($length>4) {
+      $limit=4;
+    }
+    else {
+      $limit=$length;
+    }
+    for ($i=0; $i<$limit ; $i++)
     {
 
       $ci=$result->getImagesArray()[$i];
@@ -147,9 +261,13 @@ class ViewDesigner extends ViewUser
     $html.="<h1>Project ID :".$result->getID()."</h1><br>";
     $html.="<div class='p-h3'>Project : ".$result->getName()."</div><br>";
     $html.="<div class='p-h3'>Designer: zeina</div><br>";
-    $html.="<div class='p-h3'>Designer ID :".$result->getDesignersArray()[0]."</div>";
+    $html.="<div class='p-h3'>Designer ID :".$result->getOrigin()."</div>";
+    $html.="<div class='my-pd-manage'>";
+    $html.="<a href='managefiles.php?imid=".$result->getID()."'><button type='button' class='manage-button' name='button'>Manage</button>";
+    $html.="</div>";
     $html.="</div>";
     $html.="<div class='my-pd-status'>";
+    $html.="<a href='managefiles.php?imid=".$result->getID()."'></a>";
     $html.="<h3>Status:<span class='status-orange'>".$result->getStatus()."</span></h3>";
     $html.="</div>";
     $html.="</div>";
@@ -203,7 +321,7 @@ class ViewDesigner extends ViewUser
 
       while($row = $result->fetch_assoc())
       {
-        $DesignersID=$row['AssignedDesigners'];
+        $DesignersID=$row['origin'];
         $Des=new Designer();
         $Des->connect();
         $Des->ById($DesignersID);
@@ -217,12 +335,12 @@ class ViewDesigner extends ViewUser
         $html.="<img src='$firstimage' height='100%' alt='project image' >";
         $html.="</div>";
         $html.="<div class='p-info'>";
-        $html.="<h1>Project:$id </h1><br>";
-        $html.="<div class='p-h3'>Client: $Client";
+        $html.="<h1>Project: ".$id."</h1><br>";
+        $html.="<div class='p-h3'>Client: ".$Client;
         $html.="</div>";
         $html.="<br>";
-        $html.="<div class='p-h3'>Designer 1 : $DesName</div><br>";
-        $html.="<div class='p-h3'>Designer 1 ID : $DesignersID</div>";
+        $html.="<div class='p-h3'>Designer 1 : ".$DesName."</div><br>";
+        $html.="<div class='p-h3'>Designer 1 ID : ".$DesignersID."</div>";
         $html.="</div>";
         $html.="</div>";
       }
@@ -235,6 +353,7 @@ class ViewDesigner extends ViewUser
   }
 }
   ?>
+
   <script type="text/javascript">
   var arr = new DataTransfer();
   var arr2=new DataTransfer();

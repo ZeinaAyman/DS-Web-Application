@@ -1,0 +1,13 @@
+intro 3anena ( name - speciality )
+
+intro 3an el sherka 
+w leh me7tagena
+
+eh el mashakel el webapp hay7elhalko
+fe webapp aw ay app adeem 
+fe haga mo3yna wala neshtghal from scratch
+
+types of clients( meen han communicate m3ahom through el web app )
+basic client procedure sequence
+
+types of adminstrative accounts
