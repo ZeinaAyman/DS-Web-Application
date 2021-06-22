@@ -22,11 +22,6 @@ class ViewSupport extends ViewUser
         $name=$row['name'];
         $email=$row["email"];
         $msg=$row["message"];
-
-
-
-
-
         $html.="<tr>";
         $html.="<td>$id</td>";
         $html.="<td>$name</td>";
@@ -34,8 +29,6 @@ class ViewSupport extends ViewUser
         $html.="<td>$msg</td>";
         $html.="<td><a href='mailto:$email'><img src='../images/email.png' class='editimg'></a></td>";
         $html.="</tr>";
-
-
       }
     $html.="</table>";
     }

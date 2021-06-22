@@ -14,7 +14,6 @@
       $this->DB->query = "INSERT into user (Name,Email,Type,Password,Picture) VALUES('".$EMP->Name."','".$EMP->Email."','".$EMP->Type."','".$EMP->Password."','".$EMP->Picture."')";
       $result = $this->DB->query();
     }
-    
 
   }
 
