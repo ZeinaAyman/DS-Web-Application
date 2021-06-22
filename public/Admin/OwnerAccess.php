@@ -17,7 +17,7 @@ include '../../app/Controller/DesignerController.php';
     <a href="Login.php">Log Out</a>
   </div>
 </div>
-<a href="managefiles.php" style="text-decoration: none;"><h2>Back</h2></a>
+<a href="project.php" style="text-decoration: none;"><h2>Back</h2></a>
 <?php echo $Viewdesigner->AddOwner($DesignerController->C_GetAllUsersType('user',2)); ?>
 <script type="text/javascript">
 

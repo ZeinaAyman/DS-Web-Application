@@ -260,7 +260,6 @@ class ViewDesigner extends ViewUser
     $html="";
     $html.="<div class='projectdetails_container'>";
     $html.="<h1>Project Details</h1>";
-    $html.="<a class'myBtn'><img src='../../public/images/delete.png' class='delete'></a>";
     $html.="<div class='pd-img'>";
     $length=sizeof($result->getImagesArray());
     if ($length>4) {

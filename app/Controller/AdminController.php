@@ -60,6 +60,7 @@ class AdminController extends UserController
 
   public function C_DeleteAccount($user_id)
   {
+    $EMP = new Employee();
     $this->Model->connect();
     $this->Model->DeleteAccount($user_id);
   }

@@ -23,6 +23,10 @@
     width: 80%;
     margin-left: 0;
   }
+  form{
+    position: absolute;
+    top:10%;
+  }
   .createacccontainer
   {
   position: relative;
