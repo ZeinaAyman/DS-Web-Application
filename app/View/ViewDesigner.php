@@ -177,18 +177,7 @@ class ViewDesigner extends ViewUser
 
     $html.="</table>";
 
-    $html.="<h3 style=' position: relative;top: 10%;font-size: 24px;left: 45%; font-size: 24px; padding: 0px;''>Edit Permission</h3>";
-    $html.="<table style='margin-top: 12%;     bottom: 14%;position: relative;left: 14%;''>";
-      $html.="<tr class='r1'>";
-        $html.="<th>Assigned Designers</th>";
-        $html.="<th>Edit Access</th>";
-      $html.="</tr>";
-      $html.="<tr>";
-        $html.="<td>Designer</td>";
-        $html.="<td><a href='EditAccess.php'><img src='../images/edit.png' class='editimg'></a></td>";
-      $html.="</tr>";
-
-    $html.="</table>";
+  
     return $html;
   }
 
@@ -220,40 +209,6 @@ class ViewDesigner extends ViewUser
   }
 
 
-
-
-
-
-
-
-
-  public function AddEdit($res){
-    $html="";
-    $html.="<table>";
-    $html.="<tr class='r1'>";
-    $html.="  <th>Employee ID</th>";
-    $html.="<th>Employee Name</th>";
-    $html.="<th>Add</th>";
-    $html.="<th>Delete</th>";
-    $html.="</tr>";
-    while($row = $res->fetch_assoc()){
-      $id=$row["ID"];
-      $name=$row['Name'];
-
-      $html.="<tr>";
-      $html.="<td>$id</td>";
-      $html.="<td>$name</td>";
-      $html.="<td><a href=''>Add</a></td>";
-      $html.="<td><a class='myBtn'><img src='../images/delete.png' class='delimg'></a></td>";
-      $html.="  </tr>";
-      $html.="  <tr>";
-      $html.="</tr>";
-    }
-    $html.="</table>";
-
-
-    return $html;
-  }
 
   public function PreviewProject($result)
   {

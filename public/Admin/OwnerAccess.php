@@ -29,7 +29,7 @@ for (var i = 0; i < adds.length; i++) {
     jQuery.ajax({
                     type: "POST",
                     url: "addowner.php",
-                    data: {eid:$(this).attr("data-eid"),pid:$(this).attr("data-pid")}
+                    data: {'eid=':$(this).attr("data-eid"),'pid=':$(this).attr("data-pid")}
                 }
             );
 
