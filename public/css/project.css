@@ -116,7 +116,7 @@ body{
 .my-pd-status{
   margin: 0px;
   position: relative;
-  top: 80%;
+  top: 81%;
   left: 70%;
 }
 .status-orange{
@@ -138,8 +138,27 @@ body{
 }
 h1{
   color: #E9E8E8;
-  margin: 0px;
+  margin: 26px 0px 0px 30px;
   width: 300px;
+}
+
+.manage-button{
+  margin-top: 12.5%;
+      width: 120px;
+      height: 50px;
+      cursor: pointer;
+      font-size: 23px;
+      margin-left: 27%;
+      border-radius: 6%;
+      color: #B89D5F;
+      background-color: #E9E8E8;
+}
+.delete{
+  width: 2%;
+  position: relative;
+  cursor: pointer;
+  margin-right: 40px;
+  float: right;
 }
 @font-face {
   font-family: "Montserrat";

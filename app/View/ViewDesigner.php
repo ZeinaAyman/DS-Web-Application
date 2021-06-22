@@ -151,6 +151,7 @@ class ViewDesigner extends ViewUser
     $html="";
     $html.="<div class='projectdetails_container'>";
     $html.="<h1>Project Details</h1>";
+    $html.="<a class'myBtn'><img src='../../public/images/delete.png' class='delete'></a>";
     $html.="<div class='pd-img'>";
     $length=sizeof($result->getImagesArray());
     if ($length>4) {
@@ -172,13 +173,13 @@ class ViewDesigner extends ViewUser
     $html.="<div class='p-h3'>Project : ".$result->getName()."</div><br>";
     $html.="<div class='p-h3'>Designer: zeina</div><br>";
     $html.="<div class='p-h3'>Designer ID :".$result->getDesignersArray()[0]."</div>";
+    $html.="<div class='my-pd-manage'>";
+    $html.="<a href='managefiles.php?imid=".$result->getID()."'><button type='button' class='manage-button' name='button'>Manage</button>";
+    $html.="</div>";
     $html.="</div>";
     $html.="<div class='my-pd-status'>";
-    $html.="<a href='managefiles.php?imid=".$result->getID()."'><button type='button' name='button'></button></a>";
+    $html.="<a href='managefiles.php?imid=".$result->getID()."'></a>";
     $html.="<h3>Status:<span class='status-orange'>".$result->getStatus()."</span></h3>";
-    $html.="</div>";
-    $html.="<div class='my-pd-manage'>";
-    $html.="<a href='managefiles.php?imid=".$result->getID()."'><button type='button' name='button' style='width:50px;height:50px;'></button>";
     $html.="</div>";
     $html.="</div>";
     return $html;

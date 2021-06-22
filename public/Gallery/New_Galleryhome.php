@@ -1,4 +1,12 @@
-<?php include "New_Homenavbar.php"; ?>
+<?php include "New_Homenavbar.php";
+include '../../app/Model/Client.php';
+include '../../app/View/ViewClient.php';
+include '../../app/Controller/ClientController.php';
+
+$Model = new Client();
+$ViewClient = new ViewUser();
+$ClientController = new ClientController($Model);
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -31,30 +39,14 @@
     </head>
     <body>
       <?php
-      $error = false;
-      $msg="";
-      $success="";
+          $ClientController->C_NewsletterForm();
 
-        if(isset($_POST['submit']))
-        {
-          $name = $_POST["name"];
-          $email = $_POST["email"];
-          if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-            $msg="-Please enter a valid email <br>";
-            //echo "-Please enter a valid email<br>";
-            $error = true;
+          if($ClientController->success == 1){
+            echo $ViewClient->thankYou("Thank you for Subscribing to our Newsletter");
           }
-
-          if(!$error){
-            $success="Thank you for Subscribing to our Newsletter.";
-
-          }
-        }
-
-
-
 
        ?>
+
 
       <div class="container">
         <div class="left-skew">
@@ -221,15 +213,10 @@
       <div class="mini-title">NEWSLETTER</div>
       <div class="top-border-2 _10">
         <p>Receive the latest design updates, architecture news and interiors inspiration straight to your inbox</p>
-        <h7 style="color:red;"><?php echo $msg; ?></h7>
-        <h3 style="color:green;"><?php echo $success; ?></h3>
         <div class="top-border _20">
           <div class="form-block-2 w-form">
-            <form data-name="Newsletter" name="wf-form-Newsletter" class="flex-2">
-              <input type="text" class="text-field-2 w-input" maxlength="256" name="name" placeholder="Your name" required="">
-              <input type="email" class="text-field-2 _2 w-input" maxlength="256" name="email" placeholder="Your email" required="">
-              <input type="submit" value="Subscribe" name="submit" class="submit-button-2 w-button">
-            </form>
+            <h7 style="color:red;"><?php echo $ClientController->msg; ?></h7>
+            <?php echo $ViewClient->Home_NewsletterForm(); ?>
             </div>
           </div>
         </div>
