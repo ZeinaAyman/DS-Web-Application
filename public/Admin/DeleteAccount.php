@@ -1,11 +1,10 @@
 <?php
-include '../../app/Model/Admin.php';
-include '../../app/View/ViewAdmin.php';
-include '../../app/Controller/AdminController.php';
+include "databasehandler.php";
 
-$Model = new Admin();
-$AdminController = new AdminController($Model);
+$id = $_POST['user_id'];
 
-$AdminController->C_DeleteAccount($_POST["user_id"]);
+$sql = "DELETE from user WHERE ID ='". $id."'";
+echo $sql;
+mysqli_query($mysqli,$sql);
 
  ?>

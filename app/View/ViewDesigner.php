@@ -149,6 +149,7 @@ class ViewDesigner extends ViewUser
 
   public function ListFiles($result)
   {
+    echo $_GET['imid'];
     $html="";
     $html.="<div class='createacccontainer' style='width:50%;'>";
     $html.="<div class='file-row'>";
@@ -171,7 +172,12 @@ class ViewDesigner extends ViewUser
       $html.="</tr>";
       $html.="<tr>";
         $html.="<td>Designer</td>";
+<<<<<<< HEAD
+        $html.="<td><a href='OwnerAccess.php?imid=".$_GET['imid']."'><img src='../images/edit.png' class='editimg'></a></td>";
+        $html.="<td><a class='myBtn'><img src='../images/delete.png' class='delimg'></a></td>";
+=======
         $html.="<td><a href='OwnerAccess.php'><img src='../images/edit.png' class='editimg'></a></td>";
+>>>>>>> ecf6c0732d0015620f297475d58951a2626f4977
       $html.="</tr>";
 
     $html.="</table>";
@@ -207,7 +213,7 @@ class ViewDesigner extends ViewUser
       $html.="<tr>";
       $html.="<td>$id</td>";
       $html.="<td>$name</td>";
-      $html.="<td><a href=''>Add</a></td>";
+      $html.="<td><button class='add' data-pid='".$_GET['imid']."' data-eid='".$id."'>Add</button></td>";
       $html.="  </tr>";
       $html.="  <tr>";
       $html.="</tr>";
