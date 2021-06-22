@@ -1,4 +1,4 @@
-<?php include 'navbar.php';
+<?php include_once('navbar.php') ;
 
       include '../../app/View/ViewDesigner.php';
       include '../../app/Controller/DesignerController.php';
