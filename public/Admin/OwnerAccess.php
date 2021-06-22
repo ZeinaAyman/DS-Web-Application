@@ -17,7 +17,7 @@ include '../../app/Controller/DesignerController.php';
     <a href="Login.php">Log Out</a>
   </div>
 </div>
-<a href="project.php" style="text-decoration: none;"><h2>Back</h2></a>
+<a href="home.php" style="text-decoration: none;"><h2>Back</h2></a>
 <?php echo $Viewdesigner->AddOwner($DesignerController->C_GetAllUsersType('user',2)); ?>
 <script type="text/javascript">
 
@@ -29,7 +29,7 @@ for (var i = 0; i < adds.length; i++) {
     jQuery.ajax({
                     type: "POST",
                     url: "addowner.php",
-                    data: {project:this.dataset.pid,employee:this.dataset.eid}
+                    data: {eid:$(this).attr("data-eid"),pid:$(this).attr("data-pid")}
                 }
             );
 
