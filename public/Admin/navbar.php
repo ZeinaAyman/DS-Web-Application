@@ -35,7 +35,6 @@ else {
 
   }
    if($online->Type=="2"){
-    echo "this is designer";
     $NEW = new Designer();
     $NEW->ID=$online->ID;
     $NEW->Feed($online->Name,$online->Email,$online->Password,$online->Type,$online->Picture);

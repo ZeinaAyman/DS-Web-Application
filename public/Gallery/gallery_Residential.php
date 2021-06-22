@@ -60,6 +60,7 @@ $result = $admin->DB->FetchByType("project",1);
             background-color: #6e5c38;
             padding: 12px;
             padding-right: 15px;
+            overflow-y: auto;
             margin-top: 100px;
         }
 

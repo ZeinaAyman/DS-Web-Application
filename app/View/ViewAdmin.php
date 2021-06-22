@@ -60,23 +60,21 @@ class ViewAdmin extends ViewUser
  public function EmployeeList($result)
  {
    $html="";
-      html.="<table>";
-     html.="<tr class='r1'>";
-       html.="<th>Employee Namehtml.</th>";
-       html.="<th>Employee Rolehtml.</th>";
-       html.="<th>Employee Projects.</th>";
-       html.="<th>Edit Profile</th>";
-       html.="<th>Delete</html>";
-     html.="</tr>";
-     html.="<tr>";
-       html."<td>DES01html."</td>
-       html."<td>Designerhtml."</td>
-       html."<td>Project01 html."<br> Project03</td>
-       html."<td>"<a href=""><img src="../images/edit.png" class="editimg"></a>html."</td>
-       html."<td>"<a class="myBtn"><img src="../images/delete.png" class="delimg">/a>/td>
-     html."</tr>
-   html."</table>
+      $html.="<table>";
+     $html.="<tr class='r1'>";
+       $html.="<th>Employee Namehtml.</th>";
+       $html.="<th>Employee Rolehtml.</th>";
+       $html.="<th>Employee Projects.</th>";
+       $html.="<th>Edit Profile</th>";
+       $html.="<th>Delete</html>";
+     $html.="</tr>";
+     $html.="<tr>";
+      $html.="<td>DES01html.</td>";
+       $html.="<td>Designerhtml.</td>";
+       $html.="<td>Project01 html.<br> Project03</td>";
+       $html.="<td><a href=''><img src='../images/edit.png' class='editimg'></a>html.</td>";
+       $html.="<td><a class='myBtn'><img src=''../images/delete.png' class='delimg'>/a>/td>";
+     $html.="</tr>";
+   $html.="</table>";
  }
 }
-
- ?>

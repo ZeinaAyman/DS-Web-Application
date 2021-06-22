@@ -31,18 +31,7 @@
         else {
           echo $viewDesigner->Recentprojects($UserController->C_GetAllProjects());
         } ?>
-
-        <div class="timeline">
-            <h1 style="color: #151515; padding: 20px; padding-bottom: 10px; margin-bottom: 0px;">Timeline</h1>
-          <div class="test">
-            <ul>
-              <li>project 35 end date 19/7/2021</li>
-              <li>project 35 end date 19/7/2021</li>
-              <li>project 35 end date 19/7/2021</li>
-              <li>project 35 end date 19/7/2021</li>
-            </ul>
-          </div>
-        </div>
+        <?php  echo $viewDesigner->ViewTimeline($UserController->C_GetAllProjects());?>
       </div>
 
       <div class="color">

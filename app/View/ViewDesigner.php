@@ -62,7 +62,25 @@ class ViewDesigner extends ViewUser
     return $html;
 
   }
+  public function ViewTimeline($result)
+  {
+    $html='';
+    $html.="<div class='timeline'>";
+        $html.="<h1 style='color:#151515; padding: 20px; padding-bottom: 10px; margin-bottom: 0px;'>Timeline</h1>";
+      $html.="<div class='test'>";
+        $html.="<ul>";
+        for ($i=0;$i < 4; $i++){
+          $row = $result->fetch_assoc();
+          $deadline=$row['deadline'];
+          $name = $row['name'];
+          $html.="<li>Project $name end date $deadline</li>";
+        }
+        $html.="</ul>";
+      $html.="</div>";
+    $html.="</div>";
 
+    return $html;
+  }
   public function Allprojects($result)
   {
     $html='';
@@ -109,8 +127,9 @@ class ViewDesigner extends ViewUser
     $html.="<option value='3'>Commercial</option>";
     $html.="</select>";
     $html.="</div>";
-
-    $html.="<label class='p-input'>Images</label>";
+    $html.="<label class='p-input'>Project Deadline</label>";
+    $html.="<input class='form-input' type='date' name='deadline' value='2021-06-21'";
+    $html.="<br><label class='p-input'>Images</label>";
 
     $html.="<input type='file' class='form-file' id='imageupload' name='image[]' value='Upload'  onchange='getUploadedImages(this.id)' multiple>";
     $html.="<div id='uploadedimages'>  </div>";
