@@ -56,7 +56,7 @@ class ViewAdmin extends ViewUser
    }
      $html.="</table>";
  }
-
+ /*
  public function EmployeeList($result)
  {
    $html="";
@@ -78,5 +78,6 @@ class ViewAdmin extends ViewUser
    html."</table>
  }
 }
-
+ */
+}
  ?>
