@@ -23,7 +23,7 @@
      $this->DB->query="SELECT *from project Where AssignedDesigners=$DesId";
      $result=$this->DB->query();
      return $result;
-
     }
+
   }
  ?>

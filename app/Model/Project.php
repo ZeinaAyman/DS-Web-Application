@@ -125,6 +125,12 @@ function getFiles()
 return implode(",",$this->files);
 }
 
+function getFilesArray()
+{
+
+return $this->files;
+}
+
 function addDesigner($designer)
 {
 array_push($this->designers,$designer);

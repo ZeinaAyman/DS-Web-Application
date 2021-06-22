@@ -24,7 +24,7 @@ class ViewDesigner extends ViewUser
         if($row['id'])
         {
           $html.="<div class='image'>";
-          $html.="<img class='img2' src='$firstimage' alt='Project Image' height='150'>";
+          $html.="<a href='project.php?imid=".$row['id']."'><img  src='$firstimage' alt='Project Image' height='150'></a>";
           $html.="<h3 style='padding: 5px 66px;''>Project ".$row['id']."</h3>";
           $html.="</div>";
         }
@@ -50,7 +50,7 @@ class ViewDesigner extends ViewUser
         if($row['id'])
         {
           $html.="<div class=image' id='color'>";
-          $html.="<img  src='$firstimage' alt='Project Image' height='150'>";
+          $html.="<a href='project.php?imid=".$row['id']."'><img  src='$firstimage' alt='Project Image' height='150'></a>";
           $html.="<h3 style='color:#76323F;'>Project ".$row['id']."</h3>";
           $html.="</div>";
         }
@@ -128,14 +128,38 @@ class ViewDesigner extends ViewUser
 
   }
 
+  public function ListFiles($result)
+  {
+    $html="";
+    $html.="<div class='createacccontainer' style='width:50%;'>";
+    $html.="<div class='file-row'>";
+    $length=sizeof($result->getFilesArray());
+    for ($i=0; $i < $length ; $i++) {
+
+      $html.="<h1 style='width:80%;margin:0px;float:left;'>-".$result->getFilesArray()[$i]."</h1>";
+      $html.="<a download target='_blank' href='../../public/uploads/projects/files/".$result->getFilesArray()[$i]."'><img src='../images/download.png' alt='' style='width:20px;height:30px;float:right;'></a>";
+      $html.="<br>";
+
+    }
+    $html.="</div>";
+    $html.="</div>";
+    return $html;
+  }
+
   public function PreviewProject($result)
   {
     $html="";
     $html.="<div class='projectdetails_container'>";
     $html.="<h1>Project Details</h1>";
     $html.="<div class='pd-img'>";
-
-    for ($i=0; $i<4 ; $i++)
+    $length=sizeof($result->getImagesArray());
+    if ($length>4) {
+      $limit=4;
+    }
+    else {
+      $limit=$length;
+    }
+    for ($i=0; $i<$limit ; $i++)
     {
 
       $ci=$result->getImagesArray()[$i];
@@ -150,7 +174,11 @@ class ViewDesigner extends ViewUser
     $html.="<div class='p-h3'>Designer ID :".$result->getDesignersArray()[0]."</div>";
     $html.="</div>";
     $html.="<div class='my-pd-status'>";
+    $html.="<a href='managefiles.php?imid=".$result->getID()."'><button type='button' name='button'></button></a>";
     $html.="<h3>Status:<span class='status-orange'>".$result->getStatus()."</span></h3>";
+    $html.="</div>";
+    $html.="<div class='my-pd-manage'>";
+    $html.="<a href='managefiles.php?imid=".$result->getID()."'><button type='button' name='button' style='width:50px;height:50px;'></button>";
     $html.="</div>";
     $html.="</div>";
     return $html;
@@ -235,6 +263,7 @@ class ViewDesigner extends ViewUser
   }
 }
   ?>
+
   <script type="text/javascript">
   var arr = new DataTransfer();
   var arr2=new DataTransfer();
