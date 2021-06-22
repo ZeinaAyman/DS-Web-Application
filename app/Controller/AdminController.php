@@ -57,7 +57,20 @@ class AdminController extends UserController
       }
     }
   }
- 
+
+  public function C_DeleteAccount($user_id)
+  {
+    $this->Model->connect();
+    $this->Model->DeleteAccount($user_id);
+  }
+
+  public function C_GetAllUsers()
+ {
+   $this->Model->connect();
+   $res=$this->Model->DB->fetchAllUsers();
+   return $res;
+ }
+
 }
 
 ?>

@@ -35,24 +35,31 @@ class ViewAdmin extends ViewUser
 
  public function ListEmployees($result)
  {
-   $html.="";
+   $html="";
    $html.="<table>";
-   $html.="<tr class='r1>";
-   $html.="<th>Employee Name</th>";
+   $html.="<tr class='r1'>";
+   $html.="  <th>Employee Name</th>";
    $html.="<th>Employee Role</th>";
-   $html.="<th>Employee Projects</th>";
-   $html.="<th>Edit Profile</th>";
    $html.="<th>Delete</th>";
    $html.="</tr>";
-   while ($row = $result->fetch_assoc())
-   {
+   while($row = $result->fetch_assoc()){
+     $type=$row["Type"];
+     $name=$row['Name'];
+     $id=$row['ID'];
+
      $html.="<tr>";
-     $html.="<td>DES01</td>";
-     $html.="<td>Designer</td>";
-     $html.="<td>Project01 <br> Project03</td>";
-     $html.="<td><a href='page.html'><img src='images/edit.png' class='editimg'></a></td>";
-     $html.="<td><a href='page.html'><img src='images/delete.png' class='delimg'></a></td>";
+     $html.="<td>$name</td>";
+     $html.="<td>$type</td>";
+     $html.="<td><a class='myBtn' id='mybtn' data-id='". $id ."'><img src='../images/delete.png' class='delimg'></a></td>";
+     $html.="  </tr>";
+     $html.="  <tr>";
      $html.="</tr>";
    }
-     $html.="</table>";
+   $html.="</table>";
+
+
+   return $html;
  }
+
+
+}

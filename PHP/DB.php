@@ -47,6 +47,13 @@
         return $result;
       }
 
+      public function fetchAllUsers()
+      {
+        $this->query="SELECT * FROM user";
+        $result = $this->query();
+        return $result;
+      }
+
       public function fetchByType($table, $type)
       {
         $this->query="SELECT * FROM $table Where Property_Type='".$type."'";

@@ -101,7 +101,6 @@ class DesignerController extends UserController
   $this->Model->connect();
   $res=$this->Model->DB->fetchByUserType($user,$type);
   return $res;
-
 }
 
  public function C_PreviewProject()
