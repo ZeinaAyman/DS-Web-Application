@@ -20,26 +20,23 @@ include '../../app/Controller/DesignerController.php';
 <a href="managefiles.php" style="text-decoration: none;"><h2>Back</h2></a>
 <?php echo $Viewdesigner->AddOwner($DesignerController->C_GetAllUsersType('user',2)); ?>
 <script type="text/javascript">
-// Get the modal
-var modal = document.getElementById("myModal");
 
-var span = document.getElementsByClassName("close")[0];
-span.onclick = function() {
-modal.style.display = "none";
-}
-window.onclick = function(event) {
-if (event.target == modal) {
-  modal.style.display = "none";
-}
+var adds = document.getElementsByClassName('add');
+for (var i = 0; i < adds.length; i++) {
+  adds[i].addEventListener("click", function(){
+    console.log(this.dataset.pid);
+    console.log(this.dataset.eid);
+    jQuery.ajax({
+                    type: "POST",
+                    url: "addowner.php",
+                    data: {project:this.dataset.pid,employee:this.dataset.eid}
+                }
+            );
+
+  });
 }
 
 
-var btn = document.getElementsByClassName("myBtn");
-var numComments = btn.length;
-for (var i = 0; i < numComments; i++) {
-btn[i].addEventListener("click", function() {
-  modal.style.display = "block";
 
-});
-}
+
 </script>
