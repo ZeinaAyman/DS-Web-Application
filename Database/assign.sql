@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 22, 2021 at 04:53 AM
--- Server version: 10.1.37-MariaDB
--- PHP Version: 7.2.12
+-- Generation Time: Jun 22, 2021 at 05:57 AM
+-- Server version: 10.4.8-MariaDB
+-- PHP Version: 7.3.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -42,7 +42,16 @@ CREATE TABLE `assign` (
 
 INSERT INTO `assign` (`ID`, `UID`, `PID`, `OwnerA`, `EditA`) VALUES
 (4, 2, 85, 1, 1),
-(5, 2, 86, 1, 1);
+(5, 2, 86, 1, 1),
+(6, 15, 62, 1, 1),
+(7, 15, 63, 1, 1),
+(8, 15, 68, 1, 1),
+(9, 15, 69, 1, 1),
+(10, 15, 65, 1, 1),
+(11, 15, 70, 1, 1),
+(12, 15, 64, 1, 1),
+(13, 15, 72, 1, 1),
+(14, 15, 67, 1, 1);
 
 --
 -- Indexes for dumped tables
@@ -64,7 +73,7 @@ ALTER TABLE `assign`
 -- AUTO_INCREMENT for table `assign`
 --
 ALTER TABLE `assign`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- Constraints for dumped tables
