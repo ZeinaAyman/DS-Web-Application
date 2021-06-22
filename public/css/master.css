@@ -1,6 +1,5 @@
 *{
   margin:0;
-  box-sizing: border-box;
 }
 body{
   background-color: #E9E8E8;
@@ -294,4 +293,24 @@ width: 93%;
 img {
   border-radius: 10%;
   width: 95%;
+}
+
+.managecontainer{
+  display: flex;
+      position: relative;
+      top: 12%;
+      height: 26%;
+      justify-content: space-evenly;
+}
+
+.accesscccontainer
+{
+position: relative;
+top: 10%;
+  width: 10%;
+background-color: #B89D5F;
+padding: 45px;
+border-width: 2px;
+border-color: #E3B7A5;
+border-style: solid;
 }

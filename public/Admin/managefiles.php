@@ -10,14 +10,21 @@
 ?>
 
 <link rel="stylesheet" href="../css/master.css">
+<link rel="stylesheet" href="../css/Tables.css">
 <style media="screen">
+body{
+  overflow-x:hidden;
+}
   .create-acc
   {
-   margin-left: 42%;
-    color: #151515;
-    font-size: 36;
-    font-family: : "Montserrat";
-    opacity: 1;
+    margin-left: 42%;
+        color: #151515;
+        position: absolute;
+        font-size: 36;
+        top: 15%;
+        font-family: : "Montserrat";
+        opacity: 1;
+    }
   }
   .info{
     width: 80%;
@@ -30,6 +37,7 @@
     width: 30%;
   background-color: #B89D5F;
   padding: 45px;
+  height: 30%;
   border-width: 2px;
   border-color: #E3B7A5;
   border-style: solid;
@@ -94,26 +102,24 @@ a h2{
  }
 }
 </style>
-<div class="topnav">
-  <h2>Designs Solutions</h2>
-  <!-- <h3>LOGO</h3> -->
-</div>
-<a href="Admin.php" style="text-decoration: none;"><h2>Back</h2></a>
-<div class="create-acc">
-  Manage Files
-</div>
-<?php
-  //$AdminController->C_CreateAccount();
- ?>
-
+<body>
+  <div class="topnav">
+    <h2>Designs Solutions</h2>
+    <!-- <h3>LOGO</h3> -->
+  </div>
+  <a href="Admin.php" style="text-decoration: none;"><h2>Back</h2></a>
+  <div class="create-acc">
+    Manage Files
+  </div>
   <?php
-  echo $Viewdesigner->ListFiles($DesignerController->C_PreviewProject()); ?>
-  <div class="createacccontainer">
-    <h1>Owner Access</h1>
-  </div>
-  <div class="createacccontainer">
-    <h1>Edit Access</h1>
-  </div>
+    //$AdminController->C_CreateAccount();
+   ?>
+
+    <?php
+    echo $Viewdesigner->ListFiles($DesignerController->C_PreviewProject()); ?>
+
+</body>
+
 <script type="text/javascript">
 var inputs = document.querySelectorAll('.input input');
 for (let i = 0; i < inputs.length; i++) {

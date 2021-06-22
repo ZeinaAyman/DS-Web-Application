@@ -143,6 +143,36 @@ class ViewDesigner extends ViewUser
     }
     $html.="</div>";
     $html.="</div>";
+
+    $html.="<h3 style=' position: relative;top: 24%;font-size: 24px;left: 45%; font-size: 24px; padding: 0px;'>Owner Permission</h3>";
+    $html.="<table style='margin-top: 12%; position: relative;left: 14%;'>";
+      $html.="<tr class='r1'>";
+        $html.="<th>Owners</th>";
+        $html.="<th>Add Owner Access</th>";
+        $html.="<th>Delete Owner Access</th>";
+      $html.="</tr>";
+      $html.="<tr>";
+        $html.="<td>Designer</td>";
+        $html.="<td><a href=''><img src='../images/edit.png' class='editimg'></a></td>";
+        $html.="<td><a class='myBtn'><img src='../images/delete.png' class='delimg'></a></td>";
+      $html.="</tr>";
+
+    $html.="</table>";
+
+    $html.="<h3 style=' position: relative;top: 10%;font-size: 24px;left: 45%; font-size: 24px; padding: 0px;''>Edit Permission</h3>";
+    $html.="<table style='margin-top: 12%;     bottom: 14%;position: relative;left: 14%;''>";
+      $html.="<tr class='r1'>";
+        $html.="<th>Assigned Designers</th>";
+        $html.="<th>Add Edit Access</th>";
+        $html.="<th>Delete Edit Access</th>";
+      $html.="</tr>";
+      $html.="<tr>";
+        $html.="<td>Designer</td>";
+        $html.="<td><a href=''><img src='../images/edit.png' class='editimg'></a></td>";
+        $html.="<td><a class='myBtn'><img src='../images/delete.png' class='delimg'></a></td>";
+      $html.="</tr>";
+
+    $html.="</table>";
     return $html;
   }
 
